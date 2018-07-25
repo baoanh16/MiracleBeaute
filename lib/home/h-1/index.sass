@@ -1,0 +1,86 @@
+@import ../../_includes
+.canhcam-home-1
+	background: color-get($mau, xam-7)
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(3.5rem 0)
+	.procedure
+		.cam-ket
+			margin-bottom: 30px
+			.text
+				+pad(2rem 2.5rem 2rem 1.75rem)
+				background: color-get($mau, den-2)
+				color: color-get($mau, trang)
+				h3
+					+fz(1.5rem)
+					color: color-get($mau, trang)
+					margin-bottom: 1rem
+				p
+					display: flex
+				.mdi
+					margin-right: .8rem
+					+fz(1.75rem)
+					vertical-align: top
+					color: color-get($mau, main)
+					&:before
+						vertical-align: top
+						line-height: 0.9
+		.procedure-step
+			margin-bottom: 30px
+			.text
+				background: color-get($mau, trang)
+				height: 100%
+				+pad(2rem)
+				h3
+					line-height: 1
+					+fz(6rem)
+					color: color-get($mau, xam-4)
+				h4
+					+fz(1.25rem)
+					text-transform: uppercase
+					color: color-get($mau, main)
+					border-bottom: 1px solid color-get($mau, main)
+					padding-bottom: .85rem
+					margin-bottom: .85rem
+				p
+					+fz(1.07rem)
+				.lead
+					+fz(inherit)
+					+fw(700)
+.fancybox-inner
+	.fancybox-slide
+		padding: 0
+		&:before
+			margin-right: 0
+	.home-popup
+		max-width: 400px
+		width: calc(100% - 30px)
+		box-shadow: 0 0 10px color-rgba(color-get($mau, den), .4)
+		h4
+			+fz(1.25rem)
+			text-transform: uppercase
+			color: color-get($mau, main)
+			border-bottom: 1px solid color-get($mau, main)
+			padding-bottom: .85rem
+			margin-bottom: .85rem
+		label
+			+fz(1.1rem)
+			+fw(600)
+		.form-group
+			button
+				display: block
+				margin: auto
+				+pad(null 2rem)
+				+bor-rad(16px)
+	.fancybox-content
+		background: lighten(color-get($mau, main), 35%)
+		+media-breakpoint-up(md)
+			position: fixed
+			top: 10%
+			left: 50%
+			transform: translateX(-50%)
+			vertical-align: sub
++media-breakpoint-up(md)
+	.fancybox-is-open
+		.fancybox-bg
+			opacity: 0.3

@@ -1,26 +1,29 @@
 @import ../_includes
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700i,800i,900i')
-// +font-face('CenturyGothic', "../fonts/", "CenturyGothic")
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
 
 html, body
-	font-family: 'Montserrat', sans-serif
+	font-family: 'Muli', sans-serif
 	font-size: 14px
-	font-weight: 500
+	font-weight: 400
 	height: 100%
-	width: 100%
+	max-width: 1600px
+	+mar(0 auto)
 	+selection
 		background-color: color-get($mau,main)
 		color: #fff
 
 h1, h2, h3, h4, h5, h6
 	font-size: initial
-
+	line-height: 1.4
+*
+	+transition(all .3s ease-in-out)
 a
-	color: color-get($mau,main)
+	color: color-get($mau, den)
 	&:hover
-		color: color-get($mau,extra)
-	&:visited, &:active
 		color: color-get($mau,main)
+		text-decoration: none
+	// &:visited, &:active
+	// 	color: color-get($mau,main)
 
 [ripple]
 	z-index: 1
@@ -213,4 +216,18 @@ header
 				&:after
 					+pos(abs, -19px 1.2rem null initial)
 
-
+.miracle-title
+	h2
+		+fz(2rem)
+		margin-bottom: 3.5rem
+		position: relative
+		text-transform: uppercase
+		+fw(400)
+		&:before
+			content: ''
+			+pos(abs,calc(100% + 0.86rem) 0 0 50%)
+			transform: translateX(-50%)
+			width: 100px
+			height: 1px
+			+bor-rad(50%)
+			background: radial-gradient(color-get($mau, cam-1) 1%,color-get($mau, trang) 98%)

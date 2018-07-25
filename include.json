@@ -2,11 +2,8 @@
     "SETUP": {
         "index": {
             "body": [
-                "nav/n-2",
-                "boxes/b-16",
-                "nav/n-2",
-                "carousel/c-3",
-                "carousel/c-3"
+                "carousel/c-1",
+                "home/h-1"
             ],
             "footer": [
                 "footer/f-1"
