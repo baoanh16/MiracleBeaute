@@ -3,7 +3,8 @@
         "index": {
             "body": [
                 "carousel/c-1",
-                "home/h-1"
+                "home/h-1",
+                "home/h-2"
             ],
             "footer": [
                 "footer/f-1"

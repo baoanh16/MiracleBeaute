@@ -220,14 +220,20 @@ header
 	h2
 		+fz(2rem)
 		margin-bottom: 3.5rem
-		position: relative
 		text-transform: uppercase
 		+fw(400)
-		&:before
-			content: ''
-			+pos(abs,calc(100% + 0.86rem) 0 0 50%)
-			transform: translateX(-50%)
-			width: 100px
-			height: 1px
-			+bor-rad(50%)
-			background: radial-gradient(color-get($mau, cam-1) 1%,color-get($mau, trang) 98%)
+		+tagline(none)
+	&.sub-title
+		h2
+			margin-bottom: .25rem
+			&:before
+				content: none
+		h3
+			margin-bottom: 3.5rem
+			+fz(1.4rem)
+			+fw(400)
+			text-transform: uppercase
+			+tagline('')
+	&.bold
+		h2
+			+fw(700)

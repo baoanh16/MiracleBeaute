@@ -22,3 +22,19 @@
 			background-color: #{$hover}
 		&:active, &:focus , &.active, &.activated
 			background-color: #{$active}
+
+
+=mrc-padding
+	padding: 2rem 0
+	+media-breakpoint-up(lg)
+		padding: 3.5rem 0
+=tagline($content)
+	position: relative
+	&:before
+		content: $content
+		+pos(abs,calc(100% + 0.86rem) 0 0 50%)
+		transform: translateX(-50%)
+		width: 100px
+		height: 1px
+		+bor-rad(50%)
+		background: radial-gradient(color-get($mau, cam-1) 1%,color-get($mau, trang) 98%)

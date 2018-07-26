@@ -1,9 +1,7 @@
 @import ../../_includes
 .canhcam-home-1
+	+mrc-padding
 	background: color-get($mau, xam-7)
-	+pad(2rem 0)
-	+media-breakpoint-up(lg)
-		+pad(3.5rem 0)
 	.procedure
 		.cam-ket
 			margin-bottom: 30px
@@ -47,6 +45,24 @@
 				.lead
 					+fz(inherit)
 					+fw(700)
+				.btn-primary
+					+bor-rad(17px)
+					position: relative
+					padding-left: 3rem
+					height: 34px
+					vertical-align: middle
+					.mdi
+						position: absolute
+						width: 30px
+						height: 30px
+						+bor-rad(50%)
+						background: color-get($mau, vang-2)
+						vertical-align: middle
+						left: 2px
+						top: 50%
+						transform: translateY(-50%)
+						color: color-get($mau, main)
+						+fz(20px)
 .fancybox-inner
 	.fancybox-slide
 		padding: 0
