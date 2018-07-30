@@ -19,3 +19,14 @@ section.canhcam-shop-details-1
 				.col-md-7.order-md-1.slider-img
 					article.product-item
 						img(src="./img/miracle/product/product-1.jpg")
+			.row.mt-4.tab-product
+				.col-12
+					nav
+						#nav-tab.nav.nav-tabs(role='tablist')
+							a#tab1-tab.nav-item.nav-link.active(data-toggle='tab', href='#tab1', role='tab', aria-controls='tab1', aria-selected='true') Home	
+							a#tab2-tab.nav-item.nav-link(data-toggle='tab', href='#tab2', role='tab', aria-controls='tab2', aria-selected='false') Profile
+							a#tab3-tab.nav-item.nav-link(data-toggle='tab', href='#tab3', role='tab', aria-controls='tab3', aria-selected='false') Contact
+					#nav-tabContent.tab-content
+						#tab1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tab1-tab') ...
+						#tab2.tab-pane.fade(role='tabpanel', aria-labelledby='tab2-tab') ...
+						#tab3.tab-pane.fade(role='tabpanel', aria-labelledby='tab3-tab') ...
