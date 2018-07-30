@@ -43,6 +43,12 @@
             "body": [
                 "lib/lieutrinh/l-1"
             ]
+        },
+        "lieutrinhchitiet": {
+            "body": [
+                "lib/lieutrinhchitiet/l-1",
+                "carousel/c-3"
+            ]
         }
     }
 }
