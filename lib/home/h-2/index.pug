@@ -1,19 +1,81 @@
 section.canhcam-home-2
-	.container.miracle-title.sub-title.bold
-		.row
-			.col.text-center
-				h2 Miracle Beaute
-				h3 PHỤC HỒI LÀN DA TỔN THƯƠNG NHẠY CẢM
-	article.recover
-		.container
-			ul#tab.nav.nav-pills.mb-3(role='tablist')
+	.container
+		.miracle-title.sub-title.bold.text-center
+			h2 Miracle Beaute
+			h3 PHỤC HỒI LÀN DA TỔN THƯƠNG NHẠY CẢM
+		.recover
+			ul#tab.nav.nav-pills.mb-3.canhcam-nav-1(role='tablist' data-select)
 				li.nav-item
-					a#home-tab.nav-link.active(data-toggle="pill" href='#home' aria-selected='true') PHÂN TÍCH
+					a#phantich-tab.nav-link.active(data-toggle="pill" href='#phantich' aria-selected='true') PHÂN TÍCH
 				li.nav-item
-					a#profile-tab.nav-link(data-toggle="pill" href='#profile' aria-selected='false') SẢN PHẨM ĐẶC TRỊ
+					a#sp-dactri-tab.nav-link(data-toggle="pill" href='#sp-dactri' aria-selected='false') SẢN PHẨM ĐẶC TRỊ
 				li.nav-item
-					a#contact-tab.nav-link(data-toggle="pill" href='#contact' aria-selected='false') LIỆU TRÌNH PHỤC HỒI
+					a#lieutrinh-phuchoi-tab.nav-link(data-toggle="pill" href='#lieutrinh-phuchoi' aria-selected='false') LIỆU TRÌNH PHỤC HỒI
 			#tabContent.tab-content
-				#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab') abc
-				#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') 123
-				#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') xyz
+				#phantich.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='phantich-tab')
+					.owl-carousel
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-4.png")
+								figcaption
+									h3 Xác định nguyên nhân
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-5.png")
+								figcaption
+									h3 Mô tả quy trình phục hồi
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-6.png")
+								figcaption
+									h3 Thay đổi liệu trình phù hợp
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-7.png")
+								figcaption
+									h3 Theo dõi da thường xuyên
+				#sp-dactri.tab-pane.fade(role='tabpanel', aria-labelledby='sp-dactri-tab')
+					.owl-carousel
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-6.png")
+								figcaption
+									h3 Thay đổi liệu trình phù hợp
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-7.png")
+								figcaption
+									h3 Theo dõi da thường xuyên
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-4.png")
+								figcaption
+									h3 Xác định nguyên nhân
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-5.png")
+								figcaption
+									h3 Mô tả quy trình phục hồi
+				#lieutrinh-phuchoi.tab-pane.fade(role='tabpanel', aria-labelledby='lieutrinh-phuchoi-tab')
+					.owl-carousel
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-5.png")
+								figcaption
+									h3 Mô tả quy trình phục hồi
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-4.png")
+								figcaption
+									h3 Xác định nguyên nhân
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-7.png")
+								figcaption
+									h3 Theo dõi da thường xuyên
+						a.item(href='#')
+							figure
+								img(src="./img/miracle/home/home-6.png")
+								figcaption
+									h3 Thay đổi liệu trình phù hợp
+		.w-100

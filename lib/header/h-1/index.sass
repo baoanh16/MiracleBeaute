@@ -1,0 +1,55 @@
+@import ../../_includes
+
+.canhcam-header-1
+	background: color-get($mau, den-2)
+	+pad(.3rem 0)
+	max-width: 1600px
+	p
+		margin-bottom: 0
+	.search, .lang, .phone
+		display: flex
+		align-items: center
+	.phone
+		.mdi
+			+mar(0 .25rem 0 .75rem)
+		a
+			color: color-get($mau, main)
+			+fz(0.92rem)
+			+fw(700)
+		p
+			color: color-get($mau, xam-3)
+			+fz(0.92rem)
+	.search
+		margin-left: 2.5rem
+		position: relative
+		input
+			+pad(.2rem .75rem)
+			+bor-rad(16px)
+			background: color-get($mau, xam-11)
+			border: none
+			color: color-get($mau, xam-3)
+			&:focus
+				outline: none
+		&:before
+			content: '\f349'
+			font: normal normal normal 24px/1 "Material Design Icons"
+			+pos(abs, 50% 3px null null)
+			color: color-get($mau, trang)
+			+fz(20px)
+			transform: translateY(-50%)
+
+	.lang
+		margin-left: 1.5rem
+		a
+			margin-left: .3rem
+	.toggle-menu
+		margin-left: auto
+		margin-right: 1rem
+		display: flex
+		align-items: center
+		span
+			color: white
+			+fz(24px)
+	&.fixedheader
+		left: 50%
+		transform: translateX(-50%)

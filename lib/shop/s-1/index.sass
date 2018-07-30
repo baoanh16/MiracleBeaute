@@ -1,0 +1,148 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-shop-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+	.product-lists
+		.boxprice
+			// +pad(1rem)
+			+bor-rad(5px)
+			.title
+				h3
+					color: color-get($mau,main)
+					+fz(1.5rem)
+					margin-bottom: 0
+				.btn
+					background: white!important
+					color: black!important
+					&.collapsed
+						background: color-get($mau,main) !important
+						color: white!important
+			#filterSearch
+				padding-top: .5rem
+				margin-top: .5rem
+				border-top: 1px dashed darken(color-get($mau,trang) ,20%)
+				+media-breakpoint-up(md)
+					padding: 0
+					margin: 0
+					border: 0
+				h4
+					color: color-get($mau,trang)
+					background: color-get($mau, main)
+					+fz(1.5rem)
+					+fw(600)
+					margin-bottom: 0rem
+					text-transform: uppercase
+					+pad(0 1.75rem)
+					line-height: 3rem
+					vertical-align: middle
+					border-top-left-radius: 1rem
+					border-top-right-radius: 1rem
+				hr
+					border-top: 1px dashed darken(color-get($mau,trang) ,20%)
+
+				.list-group
+					+pad(0)
+					border: none
+					.list-group-item
+						border: 1px solid color-rgba(color-get($mau, xam-5), .4)
+						+pad(.75rem 0 0 0)
+						.nav-link
+							+transition(all .3s ease-in-out)
+							&.active, &:hover
+								color: color-get($mau, main)
+								+fw(600)
+
+		.boxproducts
+			padding: 2rem 0
+			.item
+				overflow: hidden
+				border-top: 1px solid darken(color-get($mau,trang),5%)
+				padding-top: 1rem
+				&:first-child
+					border-top: 0
+					padding-top: 0
+				+media-breakpoint-up(sm)
+					padding-top: 0
+					border-right: 1px solid darken(color-get($mau,trang),5%)
+					&:nth-child(2)
+						border-top: 0
+						padding-top: 0
+					&:nth-child(2n)
+						border-right: 0
+				+media-breakpoint-up(lg)
+					&:nth-child(3)
+						border-top: 0
+						padding-top: 0
+					&:nth-child(2n)
+						border-right: 1px solid darken(color-get($mau,trang),5%)
+					&:nth-child(3n)
+						border-right: 0
+				.item-detail
+					position: relative
+					display: block
+					text-decoration: none
+					padding: 1rem
+					height: 100%
+					.bagde
+						+pos(abs, 0 0 null null)
+						span
+							background: color-get($mau,main)
+							color: color-get($mau,trang)
+							text-align: center
+							+pad(.25rem .5rem)
+							display: inline-block
+							&.bagde-hot
+								background: color-get($mau,do-1)
+							&.bagde-success
+								background: color-get($mau,la-1)
+					h2
+						+fz(1.1rem)
+						+fw(600)
+						color: darken(color-get($mau,trang) ,50%)
+						+transition(all .3s ease-in-out)
+					.price
+						color: color-get($mau,do-1)
+						+fz(1.4rem)
+					.price-out
+						color: darken(color-get($mau,trang) ,50%)
+						+fz(.85rem)
+						text-decoration: line-through
+					figure
+						overflow: hidden
+						text-align: center
+						.img
+							overflow: hidden
+						img
+							max-width: 100%
+							transform: scale(1)
+							transition: all .3s ease-in-out
+						figcaption
+							padding-top: .5rem
+					&:hover
+						figure
+							img
+								transform: scale(1.2)
+						figcaption
+							h2
+								color: color-get($mau, main)
+
+		.pager
+			.pagination
+				.page-item
+					.page-link
+						+bor-rad(3px)
+						color: darken(color-get($mau,trang) ,20%)
+						margin-left: 3px
+					&:first-child
+						.page-link
+							margin-left: 0
+					&.active, &:hover
+						.page-link
+							background: none
+							color: color-get($mau,main)
+							border-color: color-get($mau,main)

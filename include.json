@@ -1,13 +1,42 @@
 {
     "SETUP": {
         "index": {
+            "header": [
+                "header/h-1"
+            ],
             "body": [
+                "banner/b-1",
                 "carousel/c-1",
                 "home/h-1",
-                "home/h-2"
+                "home/h-2",
+                "home/h-3",
+                "home/h-4"
             ],
             "footer": [
                 "footer/f-1"
+            ]
+        },
+        "contact": {
+            "body": [
+                "form/f-1",
+                "map/m-1"
+            ]
+        },
+        "job": {
+            "body": [
+                "boxes/b-2",
+                "boxes/b-1"
+            ]
+        },
+        "product": {
+            "body": [
+                "shop/s-1"
+            ]
+        },
+        "product-detail": {
+            "body": [
+                "carousel/c-2",
+                "shop-details/s-1"
             ]
         }
     }

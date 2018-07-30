@@ -1,0 +1,40 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-boxes-1
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(4rem 0)
+		+fw(600)
+	.job
+		border-bottom: 1px solid color-get($mau, xam-5)
+		.job-title
+			+pad(.75rem 0)
+			cursor: pointer
+			background: color-rgba(color-get($mau, main),0)
+			transition: all .3s ease-in-out
+			p
+				margin-bottom: 0
+			.col-1
+				padding-left: 1.75rem
+				p
+					+fz(1.5rem)
+					text-align: left
+			.col-9
+				align-items: center
+				span
+					margin-left: auto
+			&.active
+				background: color-rgba(color-get($mau, main),.5)
+				p
+					color: color-get($mau, trang)
+		.job-content
+			display: none
+			.content
+				+pad( 1.75rem)
+			.btn
+				+bor-rad(0)
+				+fw(700)
+				+pad(.75rem 2rem)

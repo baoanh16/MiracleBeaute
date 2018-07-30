@@ -4,25 +4,25 @@
 //////////////////////////////////////
 
 .canhcam-footer-1
-	background-color: darken(color-get($mau,trang) ,85%)
+	background-color: color-get($mau, den-2)
 	position: relative
 	z-index: 1
-	color: darken(color-get($mau,trang) ,50%)
 	overflow: hidden
 	+media-breakpoint-down(xs)
 	h4
 		text-transform: uppercase
 		color: color-get($mau,trang)
 		position: relative
-		+fz(1rem)
+		+fz(1.07rem)
+		+fw(700)
 		margin-bottom: 1.5rem
-		&:after
-			width: 40px
-			height: 1px
-			background: color-get($mau,main)
-			content: ''
-			display: block
-			+pos(abs, null null -10px 0)
+		// &:after
+		// 	width: 40px
+		// 	height: 1px
+		// 	background: color-get($mau,main)
+		// 	content: ''
+		// 	display: block
+		// 	+pos(abs, null null -10px 0)
 
 	.linkfooter
 		padding: 3rem 0 2rem
@@ -31,45 +31,78 @@
 				display: inline-block
 				+bg(none, none, none)
 				border: 0
-				+pad(.5rem 0)
+				+pad(.75rem 0)
 				+media-breakpoint-up(md)
-					+pad(.15rem 0)
+					+pad(.45rem 0)
 				a
-					font-size: .9rem
-					+link(darken(color-get($mau,trang),15%),color-get($mau,main),color-get($mau,main))
+					font-size: 1rem
+					color: color-get($mau,xam-3)
 		.socials
-			h4
-				&:after
-					+pos(abs, null null -10px 50%)
-					+transform(translateX(-50%))
-					+media-breakpoint-up(md)
-						+pos(abs, null null -10px 50%)
-						+transform(translateX(-50%))
-					+media-breakpoint-up(lg)
-						+pos(abs, null null -10px 0)
-						+transform(translateX(0))
-			.social-list
-				+media-breakpoint-down(sm)
-					+mar(2rem null null null)
-				.list-inline
-					+mar(0)
-					.list-inline-item
-						+fz(.9rem)
-						+link(darken(color-get($mau,trang), 85%), color-get($mau,trang), color-get($mau,trang))
-						+mar(null 1rem null null)
-						a
-							display: block
-							height: 2rem
-							width: 2rem
-							+lh(2rem)
-							+bg(darken(color-get($mau,trang),40%), color-get($mau,main), color-get($mau,main))
-							+link(darken(color-get($mau,trang),85%), darken(color-get($mau,trang),0%))
-							+border-radius(50%)
-							text-align: center
-							i
-								+lh(2rem)
-						&:last-child
-							+mar(0)
+			p
+				font-size: 1rem
+				color: color-get($mau,xam-3)
+				display: flex
+				.mdi
+					margin-right: 0.75rem
+		// 	h4
+		// 		&:after
+		// 			+pos(abs, null null -10px 50%)
+		// 			+transform(translateX(-50%))
+		// 			+media-breakpoint-up(md)
+		// 				+pos(abs, null null -10px 50%)
+		// 				+transform(translateX(-50%))
+		// 			+media-breakpoint-up(lg)
+		// 				+pos(abs, null null -10px 0)
+		// 				+transform(translateX(0))
+			// .social-list
+			// 	+media-breakpoint-down(sm)
+			// 		+mar(2rem null null null)
+			// 	.list-inline
+			// 		+mar(0)
+			// 		.list-inline-item
+			// 			+fz(.9rem)
+			// 			+link(darken(color-get($mau,trang), 85%), color-get($mau,trang), color-get($mau,trang))
+			// 			+mar(null 1rem null null)
+			// 			a
+			// 				display: block
+			// 				height: 2rem
+			// 				width: 2rem
+			// 				+lh(2rem)
+			// 				+bg(darken(color-get($mau,trang),40%), color-get($mau,main), color-get($mau,main))
+			// 				+link(darken(color-get($mau,trang),85%), darken(color-get($mau,trang),0%))
+			// 				+border-radius(50%)
+			// 				text-align: center
+			// 				i
+			// 					+lh(2rem)
+			// 			&:last-child
+			// 				+mar(0)
 	.copyright
-		padding: 1rem
-		background-color: darken(color-get($mau,trang) ,95%)
+		background-color: color-get($mau, den-1)
+		p
+			color: color-get($mau, xam-12)
+			margin-bottom: 0.75rem
+			+media-breakpoint-up(md)
+				margin-bottom: 0
+		.list-group
+			.list-group-item
+				+pad(0)
+				background: none
+				border: none
+				a
+					width: 50px
+					height: 50px
+					display: flex
+					justify-content: center
+					align-items: center
+					border: 1px solid color-get($mau, xam-12)
+					margin: 0 5px
+					+media-breakpoint-up(md)
+						margin: 0
+						border-top: none
+						border-bottom: none
+				+ .list-group-item
+					a
+						border-left: none
+				span
+					+fz(18px)
+					color: color-get($mau, xam-12)

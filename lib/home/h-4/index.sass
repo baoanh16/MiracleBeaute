@@ -1,0 +1,36 @@
+@import ../../includes
+.canhcam-home-4
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(3.5rem 0)
+	.knowledge
+		.nav
+			margin-bottom: 30px
+		.tab-content
+			.news
+				.item
+					margin-bottom: 30px
+					img
+						filter: grayscale(100%)
+						+transition(all .3s ease-in-out)
+						width: 100%
+					figcaption
+						padding-top: 1.5rem
+					time
+						+fz(1rem)
+						color: color-get($mau, xam-3)
+					h3
+						+fw(700)
+						+fz(1.07rem)
+						color: color-get($mau, xam-11)
+						text-transform: uppercase
+						+mar(.5rem null)
+						+transition(all .3s ease-in-out)
+					p
+						+fz(1.07rem)
+						color: color-get($mau, xam-8)
+					&:hover
+						img
+							filter: grayscale(0%)
+						h3
+							color: color-get($mau, main)

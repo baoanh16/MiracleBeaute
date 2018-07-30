@@ -1,0 +1,50 @@
+section.canhcam-form-1
+	.container
+		.row.miracle-title.text-center
+			.col
+				h2 Liên hệ
+	.container
+		.row.info
+			.col-md-5.col-lg-4
+				article.inf.h-100
+					figure.text-center(bg-img='./img/bg/bg.png')
+						img.img-fluid(src="./img/miracle/logo.png", alt="alt")
+						figcaption
+					h2.h2.text-center.text-md-left Miracle Beaute
+					p.text-center.text-md-left 
+						span Công ty: 
+						span 122/19 Đặng Văn Ngữ, P.14, Quận.Phú Nhuận, Tp.HCM. 
+					p.text-center.text-md-left 
+						span Chi nhánh: 
+						span 3 Nguyễn Như Đổ, Quận. Đống Đa, Hà Nội.
+
+			.col-md-7.col-lg-8
+				h3.h3.mt-5.mt-md-0.mb-4 Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho Miracle Beaute, chúng tôi sẽ phản hồi email của Quý khách trong thời gian sớm nhất.
+				form.validator
+					.row
+						.form-group.col-md-6
+							label(for='name') Name
+								span.text-danger (*)
+							input#name.form-control(type='text', data-error="Vui lòng nhập thông tin", required)
+							.help-block.with-errors
+						.form-group.col-md-6
+							label(for='Email') Email
+							input#Email.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", required)
+							.help-block.with-errors
+					.row
+						.form-group.col-md-6
+							label(for='Phone') Phone
+							input#Phone.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[_A-z0-9]{1,}$", required)
+							.help-block.with-errors
+						.form-group.col-md-6
+							label(for='Address') Address
+							input#Address.form-control(type='text', )
+					.row
+						.form-group.col
+							label(for='sms') Message
+							textarea#sms.form-control(name="sms", cols="30", rows="5")
+
+					.row
+						.col
+							button.btn.btn-outline-primary.text-uppercase(type="submit")
+								| Submit
