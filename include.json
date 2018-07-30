@@ -38,6 +38,11 @@
                 "carousel/c-2",
                 "shop-details/s-1"
             ]
+        },
+        "lieutrinh": {
+            "body": [
+                "lib/lieutrinh/l-1"
+            ]
         }
     }
 }

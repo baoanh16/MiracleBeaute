@@ -92,5 +92,11 @@
 					img
 						border: 2px solid color-get($mau,main)
 		.tab-product
+			.tab-content
+				margin-top: 30px
 			.nav-link
-				+bor-rad(10px 10px null null)
+				border: none
+				&.active, &:hover
+					border: none
+					border-bottom: 2px solid color-get($mau, main)
+					color: color-get($mau, main)
