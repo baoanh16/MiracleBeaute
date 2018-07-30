@@ -27,3 +27,27 @@
 						filter: grayscale(0)
 					h3
 						+fw(700)
+			.owl-nav
+				text-align: center
+				button
+					width: 40px
+					+mar(null 5px)
+					height: 40px
+					border: 1px solid color-get($mau, main)
+					color: color-get($mau, main)
+					+bor-rad(50%)
+					i
+						width: 100%
+						height: 100%
+						display: flex
+						align-items: center
+						justify-content: center
+						&:before
+							+fz(2rem)
+					&:focus
+						outline: none
+					&:hover
+						background: lighten(color-get($mau, main), 25%)
+						color: color-get($mau, trang)
+					&.disabled
+						+opacity(.5)
