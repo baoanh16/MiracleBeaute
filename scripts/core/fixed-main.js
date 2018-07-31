@@ -12,7 +12,8 @@ function setMain() {
                 $("main").css('padding-top', 'initial')
             } else {
                 // $("main").css('padding-top', headerHeight + 'px')
-                $("main").css('padding-top', '0px')
+                $("main").css('padding-top', '3rem')
+                $("main").css('padding-bottom', '3rem')
             }
         }
     }
