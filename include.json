@@ -44,6 +44,18 @@
                 "lieutrinh/l-1"
             ]
         },
+        "giaphap": {
+            "body": [
+                "giaiphap/g-1"
+            ]
+        },
+        "giaphapchitiet": {
+            "body": [
+                "giaiphapchitiet/g-1",
+                "giaiphapchitiet/g-2",
+                "giaiphapchitiet/g-3"
+            ]
+        },
         "lieutrinhchitiet": {
             "body": [
                 "lieutrinhchitiet/l-1",
