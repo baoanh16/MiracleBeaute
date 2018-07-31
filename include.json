@@ -49,6 +49,13 @@
                 "lieutrinhchitiet/l-1",
                 "carousel/c-3"
             ]
+        },
+        "gioithieu": {
+            "body": [
+                "boxes/b-3",
+                "carousel/c-4",
+                "boxes/b-4"
+            ]
         }
     }
 }
