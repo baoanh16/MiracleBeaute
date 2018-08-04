@@ -1,0 +1,77 @@
+@import ../../_includes
+
+.canhcam-hotro-1
+	padding-top: 35px
+	padding-bottom: 35px
+	+media-breakpoint-up(lg)
+		padding-top: 0
+		padding-bottom: 0
+	.list-faq
+		+pad(0)
+		.list-item
+			border-bottom: 1px solid color-get($mau, xam-4)
+			.nav-link
+				+pad(1rem)
+			&.active, &:hover
+				.nav-link
+					background: color-get($mau, main)
+					color: color-get($mau, trang)
+	.question-list
+		.list-group-item
+			border: none
+			.list-item
+				border: 1px solid color-get($mau, xam-5)
+				margin-bottom: 1rem
+				+fz(16px)
+				+fw(300)
+				.question
+					+pad(1rem)
+					display: flex
+					align-items: center
+					justify-content: space-between
+					cursor: pointer
+					p
+						+fw(600)
+						margin-bottom: 0
+					span
+						+pad(0 1rem)
+						+fz(24px)
+						color: color-get($mau, main)
+				.answer
+					+pad(1rem)
+					display: none
+				&.active, &:hover
+					.question
+						background: color-get($mau, main)
+						p
+							color: color-get($mau, trang)
+						span
+							color: color-get($mau, trang)
+				&.active
+					.answer
+						display: block
+
+	form
+		margin-bottom: 4rem
+		label
+			+fz(15px)
+			+fw(300)
+		.text-main
+			color: color-get($mau, main)
+		.help-block
+			ul
+				margin-bottom: 0
+				+fz(.9rem)
+				color: color-get($mau, main)
+		input, textarea
+			background: color-get($mau, xam-7)
+			&:focus, &:focus-within
+				background: color-get($mau, xam-7)
+		input
+			+pad(.5rem 1rem)
+		button
+			+pad(.375rem 1.75rem)
+			+fw(600)
+			display: block
+			margin: auto
+

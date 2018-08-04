@@ -2,10 +2,17 @@
     "SETUP": {
         "index": {
             "header": [
-                "header/h-1"
+                "header/h-1",
+                "header/h-2"
             ],
             "body": [
                 "banner/b-1",
+                "banner/b-2",
+                "banner/b-3",
+                "banner/b-4",
+                "banner/b-5",
+                "banner/b-6",
+                "banner/b-7",
                 "carousel/c-1",
                 "home/h-1",
                 "home/h-2",
@@ -44,7 +51,7 @@
                 "lieutrinh/l-1"
             ]
         },
-        "lieutrinhchitiet": {
+        "lieutrinh-chitiet": {
             "body": [
                 "lieutrinhchitiet/l-1",
                 "carousel/c-3"
@@ -54,7 +61,54 @@
             "body": [
                 "boxes/b-3",
                 "carousel/c-4",
-                "boxes/b-4"
+                "boxes/b-7"
+            ]
+        },
+        "giaiphap": {
+            "body": [
+                "boxes/b-5"
+            ]
+        },
+        "giaiphap-chitiet": {
+            "body": [
+                "giaiphapchitiet/g-1",
+                "carousel/c-5",
+                "carousel/c-6"
+            ]
+        },
+        "tintuc": {
+            "body": [
+                "news/n-1",
+                "nav/n-1"
+            ]
+        },
+        "tintuc-chitiet": {
+            "body": [
+                "news-details/n-1"
+            ]
+        },
+        "gallery": {
+            "body": [
+                "gallery/g-1"
+            ]
+        },
+        "video": {
+            "body": [
+                "gallery/g-2"
+            ]
+        },
+        "hotro": {
+            "body": [
+                "hotro/h-1",
+                "hotro/h-2",
+                "hotro/h-3",
+                "hotro/h-4",
+                "form/f-2"
+            ]
+        },
+        "qt-tuvan": {
+            "body": [
+                "boxes/b-6"
             ]
         }
     }

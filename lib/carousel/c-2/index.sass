@@ -4,7 +4,10 @@
 //////////////////////////////////////
 
 .canhcam-carousel-2
-	+mrc-padding
+	padding-top: 35px
+	padding-bottom: 35px
+	+media-breakpoint-up(lg)
+		padding-bottom: 0
 	.owl-carousel
 		position: relative
 		// Main
@@ -56,15 +59,21 @@
 				h2
 					+fz(1.1rem)
 					+fw(600)
-					color: darken(color-get($mau,trang) ,50%)
 					+transition(all .3s ease-in-out)
+					margin-bottom: 1.5rem
+					position: relative
+					&:after
+						content: ''
+						+pos(abs, calc(.8rem + 100%) 0 0 50%)
+						width: 50px
+						height: 1px
+						background: color-get($mau, xam-3)
+						transform: translateX(-50%)
 				.price
-					color: color-get($mau,do-1)
 					+fz(1.4rem)
-				.price-out
-					color: darken(color-get($mau,trang) ,50%)
-					+fz(.85rem)
-					text-decoration: line-through
+					color: color-get($mau, den)
+				.btn-primary
+					+pad(.375rem 1.75rem)
 				figure
 					overflow: hidden
 					text-align: center
@@ -77,6 +86,8 @@
 					figcaption
 						padding-top: .5rem
 				&:hover
+					.price
+						color: color-get($mau, den)
 					figure
 						img
 							transform: scale(1.2)

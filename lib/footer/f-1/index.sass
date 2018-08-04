@@ -15,19 +15,14 @@
 		position: relative
 		+fz(1.07rem)
 		+fw(700)
-		margin-bottom: 1.5rem
-		// &:after
-		// 	width: 40px
-		// 	height: 1px
-		// 	background: color-get($mau,main)
-		// 	content: ''
-		// 	display: block
-		// 	+pos(abs, null null -10px 0)
+		margin-bottom: 1.25rem
 
 	.linkfooter
 		padding: 3rem 0 2rem
 		.list-group
 			.list-group-item
+				
+				+fw(300)
 				display: inline-block
 				+bg(none, none, none)
 				border: 0
@@ -38,46 +33,20 @@
 					font-size: 1rem
 					color: color-get($mau,xam-3)
 		.socials
-			p
+			.add
 				font-size: 1rem
-				color: color-get($mau,xam-3)
-				display: flex
 				+mar(0)
 				+pad(.45rem null)
+				display: flex
+				+fw(300)
 				.mdi
 					margin-right: 0.75rem
-		// 	h4
-		// 		&:after
-		// 			+pos(abs, null null -10px 50%)
-		// 			+transform(translateX(-50%))
-		// 			+media-breakpoint-up(md)
-		// 				+pos(abs, null null -10px 50%)
-		// 				+transform(translateX(-50%))
-		// 			+media-breakpoint-up(lg)
-		// 				+pos(abs, null null -10px 0)
-		// 				+transform(translateX(0))
-			// .social-list
-			// 	+media-breakpoint-down(sm)
-			// 		+mar(2rem null null null)
-			// 	.list-inline
-			// 		+mar(0)
-			// 		.list-inline-item
-			// 			+fz(.9rem)
-			// 			+link(darken(color-get($mau,trang), 85%), color-get($mau,trang), color-get($mau,trang))
-			// 			+mar(null 1rem null null)
-			// 			a
-			// 				display: block
-			// 				height: 2rem
-			// 				width: 2rem
-			// 				+lh(2rem)
-			// 				+bg(darken(color-get($mau,trang),40%), color-get($mau,main), color-get($mau,main))
-			// 				+link(darken(color-get($mau,trang),85%), darken(color-get($mau,trang),0%))
-			// 				+border-radius(50%)
-			// 				text-align: center
-			// 				i
-			// 					+lh(2rem)
-			// 			&:last-child
-			// 				+mar(0)
+					color: color-get($mau, xam-3)
+				p
+					color: color-get($mau, xam-3)
+					margin-bottom: 0
+					.bold
+						+fw(700)
 	.copyright
 		+pad(1rem null)
 		background-color: color-get($mau, den-1)
@@ -97,7 +66,7 @@
 					display: flex
 					justify-content: center
 					align-items: center
-					border: 1px solid color-get($mau, xam-12)
+					border: 1px solid #2d2c2c
 					margin: 0 5px
 				span
 					+fz(18px)

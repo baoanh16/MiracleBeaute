@@ -1,0 +1,13 @@
+extends _layout/layout.pug
+block variables
+	- var title = "Tin tức chi tiết"
+	- var description = "Description for news page"
+	- var bodyclass = "news-details"
+	- var href = "/news-details.html"
+block header
+	include ../lib/header/h-1/index.pug
+	include ../lib/banner/b-6/index.pug
+block body
+	include ../lib/news-details/n-1/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

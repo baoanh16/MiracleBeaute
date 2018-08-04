@@ -1,0 +1,23 @@
+@import ../../_includes
+
+.canhcam-hotro-2
+	padding-bottom: 0
+	padding-top: 35px
+	+media-breakpoint-up(lg)
+		padding-top: 0
+	.list-faq
+		+pad(0)
+		.list-item
+			border-bottom: 1px solid color-get($mau, xam-4)
+			.nav-link
+				+pad(1rem)
+			&.active, &:hover
+				.nav-link
+					background: color-get($mau, main)
+					color: color-get($mau, trang)
+	.content
+		p
+			+fz(16px)
+			+fw(300)
+			strong
+				+fw(700)

@@ -1,0 +1,206 @@
+@import ../../_includes
+
++media-breakpoint-down(md)
+	.navbar-mobile
+		+pad(0 15px)
+		// padding-top: 70px
+		transition: all .3s ease-in-out
+		top: 0
+		left: 0
+		position: fixed
+		width: 100%
+		background: darken(color-get($mau, xam-3),15%)
+		z-index: 1100
+		height: 100vh
+		transform: translateX(-100%)
+		&.active
+			transform: translateX(0)
+		.search,.navbar-nav
+			margin-top: .5rem
+		.navbar-control
+			+pad(.3rem null)
+			display: flex
+			justify-content: space-between
+			.close-navbar
+				display: flex
+				align-items: center
+				margin-right: 1rem
+			span
+				color: white
+				+fz(24px)
+		.search
+			display: flex
+			.form-group
+				position: relative
+				input
+					+pad(.2rem .75rem)
+					+bor-rad(16px)
+					background: color-get($mau, xam-11)
+					border: none
+					color: color-get($mau, xam-3)
+					&:focus
+						outline: none
+				&:before
+					content: '\f349'
+					font: normal normal normal 24px/1 "Material Design Icons"
+					+pos(abs, 50% 3px null null)
+					color: color-get($mau, trang)
+					+fz(20px)
+					transform: translateY(-50%)
+		.nav-link
+			+pad(.75rem null)
+			color: color-get($mau, trang)
+			+fw(500)
+		.lang
+			margin-top: 1rem
+			a
+				margin-right: 1rem
++media-breakpoint-up(lg)
+	.navbar-mobile
+		transform: unset
+		position: relative
+		height: unset
+		// transform: translateY(-50%)
+		margin-top: -30px
+		transition: all .3s ease-in-out
+		z-index: 1100
+		.navbar-nav
+			flex-direction: row
+			justify-content: space-between
+			background: color-get($mau, xam-1)
+		.nav-item
+			.nav-link
+				+pad(1.25rem 0.92rem)
+				+media-breakpoint-up(xl)
+					+pad(1.25rem 1.73rem)
+				text-transform: uppercase
+				color: color-get($mau, trang)
+				+fz(1.15rem)
+			&.active, &:hover
+				.nav-link
+					background: color-get($mau, main)
+		&.fixed
+			position: fixed
+			width: 100%
+			top: 0
+			left: 0
+			margin-top: 0
+			background: color-get($mau, xam-1)
+	.owl-nav
+		position: absolute
+		top: 50%
+		width: 100%
+		display: none
+		+media-breakpoint-up(md)
+			display: block
+		button
+			position: absolute
+			cursor: pointer
+			z-index: 9999
+			&.owl-prev
+				left: 50px
+			&.owl-next
+				right: 50px
+			span
+				+fz(4rem)
+				color: color-get($mau, trang)
+			&:focus
+				outline: none
+
+.lieutrinh
+	.lieutrinh-menu
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+		visibility: hidden
+		opacity: 0
+		position: absolute
+		width: 100%
+		left: 50%
+		transform: translateX(-50%)
+		top: 130%
+		transition: all .2s ease-in-out
+		>.row
+			+pad(2rem 0)
+			box-shadow: 0 0 5px color-get($mau, xam-3)
+			background: color-get($mau, trang)
+			box-sizing: border-box
+		figure
+			margin-bottom: 0
+		.img
+			overflow: hidden
+		img
+			width: 100%
+			transition: all .3s ease-in-out
+		figcaption
+			+pad(.75rem)
+			transition: all .3s ease-in-out
+			h3 
+				margin-bottom: 0
+		.lieutrinh-list
+			.list-group-item
+				background: color-get($mau, xam-7)
+				cursor: pointer
+				border: none
+				border-bottom: 1px solid color-get($mau, xam-7)
+				a
+					+fw(600)
+				&.active
+					background: color-get($mau, main)
+					a
+						color: color-get($mau, trang)
+		.lieutrinh-content
+			display: none
+			&.active
+				display: flex
+	+media-breakpoint-up(lg)
+		&:hover
+			.lieutrinh-menu
+				visibility: visible
+				opacity: 1
+				top: 100%
+				.item
+					&:hover
+						img
+							transform: scale(1.2)
+							filter: grayscale(0)
+						figcaption
+							color: color-get($mau, main)
+.giaiphap
+	position: relative
+	.giaiphap-menu
+		position: absolute
+		width: 150px
+		left: 0
+		top: 100%
+		display: none
+		+media-breakpoint-up(lg)
+			display: block
+		visibility: hidden
+		opacity: 0
+		.list-group
+			+bor-rad(0)
+			box-shadow: 0 0 5px color-get($mau, xam-3)
+			.list-group-item
+				background: color-get($mau, xam-7)
+				cursor: pointer
+				border: none
+				a
+					+fw(600)
+				&:hover
+					background: color-get($mau, main)
+					a
+						color: color-get($mau, trang)
+	+media-breakpoint-up(lg)
+		&:hover
+			.giaiphap-menu
+				visibility: visible
+				opacity: 1
+				top: 100%
+				.item
+					&:hover
+						img
+							transform: scale(1.2)
+							filter: grayscale(0)
+						figcaption
+							color: color-get($mau, main)

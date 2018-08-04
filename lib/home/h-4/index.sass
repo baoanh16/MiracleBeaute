@@ -1,13 +1,14 @@
 @import ../../includes
 .canhcam-home-4
-	+pad(2rem 0)
+	padding-top: 35px
+	padding-bottom: 35px
 	+media-breakpoint-up(lg)
-		+pad(3.5rem 0)
+		padding-bottom: 0
 	.knowledge
 		.nav
 			margin-bottom: 30px
 		.tab-content
-			.news
+			.row
 				.item
 					margin-bottom: 30px
 					img
@@ -34,3 +35,6 @@
 							filter: grayscale(0%)
 						h3
 							color: color-get($mau, main)
+					iframe
+						width: 100%
+						min-height: 170px

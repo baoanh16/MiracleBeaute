@@ -1,24 +1,32 @@
 @import ../../_includes
 
 .canhcam-lieutrinh-1
+	margin-bottom: 0
+	margin-top: 35px
+	+media-breakpoint-up(lg)
+		margin-top: 0
+		margin-bottom: -30px
 	.item
 		.img
 			overflow: hidden
 		img
 			transition: all .3s ease-in-out
+		figure
+			margin-bottom: 30px
 		figcaption
-			+pad(.75rem)
+			+pad(.75rem 0 0 0)
 			display: flex
 			flex-direction: column
 			align-items: center
 		h3
 			margin-bottom: 1rem
 			+transition(all .3s ease-in-out)
+			+fw(600)
 		.btn-primary
 			+pad(null 1.75rem)
 			border: 1px solid color-get($mau, main)
-			background: white
-			color: color-get($mau, main)
+			// background: white
+			// color: color-get($mau, main)
 			+transition(all .3s ease-in-out)
 		.price
 			color: color-get($mau, den)
@@ -28,6 +36,6 @@
 				transform: scale(1.2)
 			h3
 				color: color-get($mau, main)
-			.btn-primary
-				background: color-get($mau, main)
-				color: color-get($mau, trang)
+			// .btn-primary
+			// 	background: color-get($mau, main)
+			// 	color: color-get($mau, trang)

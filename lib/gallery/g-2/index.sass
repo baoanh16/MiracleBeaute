@@ -1,0 +1,91 @@
+@import ../../_includes
+
+.canhcam-gallery-2
+	+pad(0 0 2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(0 0 3rem 0)
+	.gallery-details
+		.item
+			display: flex
+			text-decoration: none
+			height: 100%
+			overflow: hidden
+			cursor: pointer
+			figure
+				overflow: hidden
+				width: 100%
+				margin-bottom: 30px
+				position: relative
+				.boxzoom
+					overflow: hidden
+					position: relative
+					height: 100%
+					&:after
+					&:after
+						content: ''
+						display: block
+						z-index: -1
+						background: color-get($mau, den)
+						width: 100%
+						height: 100%
+						+pos(abs, 0 0 null null)
+						+transition(all .5s ease-in-out)
+						opacity: 0
+					.zoom-item
+						color: color-get($mau,trang)
+						+pos(abs, 50% null null 50%)
+						+transform(translateX(-50%) translateY(-50%))
+						z-index: 12
+						+fz(4rem)
+						+transition(all .2s ease-in-out)
+					img
+						+transition(all .5s ease-in-out)
+						width: 100%
+					.d-none.d-lg-block
+						+transition(all .5s ease-in-out)
+						height: 100%
+				figcaption
+					padding: 1rem
+					+transition(all .5s ease-in-out)
+					+pos(abs, null null 0 0)
+					// +transform(translateX(-50%) translateY(-45%))
+					z-index: 100
+					width: 100%
+					z-index: 11
+					h3
+						+fw(600)
+						+fz(1.1rem)
+						margin-bottom: 0
+						opacity: 0
+						color: color-get($mau, main)
+						+transition(all .5s ease-in-out)
+			&:hover
+				figure
+					.boxzoom
+						&:after
+							opacity: .75
+							z-index: 10
+						.d-none.d-lg-block, >img
+							+transform(scale(1.1))
+					figcaption
+						h3
+							opacity: 1
+		
+	&.canhcam-video-fixed-size.lg-outer
+		padding: 0
+		z-index: 1300
+		.lg-inner
+			background-color: color-get($mau, den)
+		.lg-sub-html
+			position: absolute
+			text-align: left
+		.lg-toolbar
+			background-color: transparent
+			height: 0
+			.lg-icon
+				color: #FFF
+		.lg-img-wrap
+			padding: 0
+
+.lg-backdrop.in
+	background: rgba(255,255,255,.8)

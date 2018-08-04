@@ -1,19 +1,119 @@
 @import ../../_includes
 
 .lieutrinhchitiet-1
-	+pad(2rem 0 0 0)
+	padding-top: 35px
+	+media-breakpoint-up(lg)
+		padding-top: 0
 	.chitiet
 		img
 			margin: auto
-	.step
-		+pad(2rem 0)
-		background: lighten(color-get($mau, main), 35%)
-		h4
-			color: color-get($mau, main)
-			+fz( 1.25rem)
-		figure
-			background: color-get($mau, trang)
-			img
-				width: 100%
-			figcaption
-				+pad(0.75rem)
+			width: 100%
+		.text
+			h1
+				+fz(30px)
+			h3
+				+fz(1.1rem)
+			.html
+				+fz(15px)
+				+fw(200)
+				line-height: 22px
+			hr
+				border-top: 1px dashed darken(color-get($mau,trang) ,5%)
+			.table
+				border: none
+				tr
+					border-bottom: 1px solid darken(color-get($mau,trang) ,5%)
+					td
+						border: none
+						padding-left: 0
+						vertical-align: bottom
+						+fz(1.02rem)
+						&:first-child
+							+fw(600)
+							width: 50%
+							display: flex
+							+media-breakpoint-up(md)
+								width: 150px
+						&.price
+							color: color-get($mau,main)
+							margin-bottom: 0
+							+fz(1.3rem)
+			.btn-primary
+				margin-top: 1rem
+				width: 180px
+				height: 40px
+				display: flex
+				justify-content: center
+				align-items: center
+				+pad(0)
+				+bor-rad(20px)
+	.slider-img
+		+clearfix
+		.slider-control
+			margin-top: 2rem
+			text-align: center
+			position: relative
+			+media-breakpoint-up(md)
+				margin-top: 0
+				padding-top: 3rem
+				float: left
+				width: 80px
+			.slick-track
+				margin-bottom: 1rem
+				+media-breakpoint-up(md)
+					flex-direction: column
+					margin-bottom: 1rem
+					width: initial !important
+					cursor: pointer
+					float: none
+				.slick-slide
+					text-align: center !important
+					cursor: pointer
+					+media-breakpoint-up(md)
+						margin-bottom: .5rem
+					&:focus
+						outline: none
+					img
+						border: 2px solid transparent
+						display: inline-block
+						+bor-rad(5px)
+						width: 70px
+						height: 70px
+						max-width: 100%
+					&.slick-current, &:hover
+						img
+							border: 2px solid color-get($mau,main)
+			.top-arrow, .bottom-arrow
+				margin: .5rem
+				height: 40px
+				width: 40px
+				+bor-rad(50%)
+				border: 1px solid color-get($mau, main)
+				color: color-get($mau, main)
+				background: none
+				+media-breakpoint-up(md)
+					margin: 0
+					i
+						+transform(rotate(90deg))
+				&.active, &:hover
+					background: lighten(color-get($mau, main), 25%)
+					color: color-get($mau, trang)
+				&:focus, &:active, &:focus-within
+					outline: none
+					box-shadow: none
+			.top-arrow
+				+media-breakpoint-up(md)
+					+pos(abs, 0 null null 50%)
+					transform: translateX(-50%)
+		.slider-for
+			.item
+				text-align: center
+				img
+					text-align: center
+					max-width: 100%
+					display: inline-block
+				&:focus
+					outline: none
+			+media-breakpoint-up(md)
+				float: right
+				width: calc(100% - 80px)

@@ -2,31 +2,71 @@ section.canhcam-shop-details-1
 	article.product-details
 		.container
 			.row.d-flex
-				.col-md-5.order-md-2.mb-4.infomation
-					h1 Sữa rửa mặt 2 trong 1 (Ref 1000)
+				.col-md-6.order-md-2.mb-4.infomation
+					h1 Sữa rửa mặt sáng da (Ref 8310)
+					//- .html Để lại làn da tinh khiết, sạch sẽ và tươi mới. sử dụng Thấm một lượng vừa đủ sản phẩm vào bông tẩy trang, lau nhẹ nhàng vùng mắt trước,...
 					hr
-					.html Để lại làn da tinh khiết, sạch sẽ và tươi mới. sử dụng Thấm một lượng vừa đủ sản phẩm vào bông tẩy trang, lau nhẹ nhàng vùng mắt trước,...
-					hr
-					table.table.table-bordered
-						tbody
-							tr
-								td Giá: 
-								td.text-bold 1.290.000 ₫
-							tr
-								td Dung tích: 
-								td.text-bold 250 ml
+					.table-responsive
+						table.table
+							tbody
+								tr
+									td Giá:
+									td.price 1000.000 đ
+								tr
+									td Dung tích:
+									td 250 ml
+								tr
+									td Công dụng chính
+									td Giúp da tươi mát và tinh khiết, phục hồi độ sáng và khỏe mạnh cho làn da từ bên trong
+				.col-md-6.order-md-1.slider-img
+					article.slider-for
+						.item
+							img(src="./img/product/product-1.jpg", alt="")
+						.item
+							img(src="./img/product/product-2.jpg", alt="")
+						.item
+							img(src="./img/product/product-3.jpg", alt="")
+						.item
+							img(src="./img/product/product-4.jpg", alt="")
+						.item
+							img(src="./img/product/product-5.jpg", alt="")
+						.item
+							img(src="./img/product/product-6.jpg", alt="")
 
-				.col-md-7.order-md-1.slider-img
-					article.product-item
-						img(src="./img/miracle/product/product-1.jpg")
-			.row.mt-4.tab-product
+					article.slider-control
+						.slider-nav
+							.item
+								img(src="./img/product/product-1.jpg", alt="")
+							.item
+								img(src="./img/product/product-2.jpg", alt="")
+							.item
+								img(src="./img/product/product-3.jpg", alt="")
+							.item
+								img(src="./img/product/product-4.jpg", alt="")
+							.item
+								img(src="./img/product/product-5.jpg", alt="")
+							.item
+								img(src="./img/product/product-6.jpg", alt="")
+						button.btn.top-arrow
+							i.fa.fa-chevron-left
+						button.btn.bottom-arrow
+							i.fa.fa-chevron-right
+			.row.tab-product
 				.col-12
 					nav
 						#nav-tab.nav.nav-tabs(role='tablist')
-							a#tab1-tab.nav-item.nav-link.active(data-toggle='tab', href='#tab1', role='tab', aria-controls='tab1', aria-selected='true') Home	
-							a#tab2-tab.nav-item.nav-link(data-toggle='tab', href='#tab2', role='tab', aria-controls='tab2', aria-selected='false') Profile
-							a#tab3-tab.nav-item.nav-link(data-toggle='tab', href='#tab3', role='tab', aria-controls='tab3', aria-selected='false') Contact
+							a#tab1-tab.nav-item.nav-link.active(data-toggle='tab', href='#tab1', role='tab', aria-controls='tab1', aria-selected='true') MÔ TẢ SẢN PHẨM
+							a#tab2-tab.nav-item.nav-link(data-toggle='tab', href='#tab2', role='tab', aria-controls='tab2', aria-selected='false') HƯỚNG DẪN SỬ DỤNG
+							a#tab3-tab.nav-item.nav-link(data-toggle='tab', href='#tab3', role='tab', aria-controls='tab3', aria-selected='false') BÌNH LUẬN
 					#nav-tabContent.tab-content
-						#tab1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tab1-tab') ...
-						#tab2.tab-pane.fade(role='tabpanel', aria-labelledby='tab2-tab') ...
+						#tab1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='tab1-tab')
+							.text
+								h3 MÔ TẢ SẢN PHẨM
+								p Làm sạch da và loại bỏ các chất bẩn hằng ngày bằng sữa rửa mặt 2 trong 1 là bước đầu tiên và quan trọng đem lại một làn da sạch và tươi sáng hơn. Đây chính là sự lựa chọn phù hợp với mọi loại da, không chỉ giúp bảo vệ mà còn lưu giữ một mùi hương tự nhiên trên làn da mềm mịn. 
+								p Sữa rửa mặt chứa các thành phần dưỡng ẩm, tái tạo da từ lô hội và dưỡng chất vitamin giúp da luôn mịn màng và tươi sáng.
+								p Sữa rửa mặt bọt mềm mịn với tinh chất củ cải đường và hạt làm cuốn trôi mọi tạp chất sâu bên trong và lớp trang điểm trên da mà không gây khô da.
+						#tab2.tab-pane.fade(role='tabpanel', aria-labelledby='tab2-tab') 
+							.text
+								h3 HƯỚNG DẪN SỬ DỤNG
+								p Làm ướt mặt với nước sạch, lấy một lượng sữa rửa mặt vừa đủ cho vào lòng bàn tay, tạo bọt và mát xa nhẹ nhàng khắp mặt, sau đó rửa lại mặt bằng nước hoa hồng để hoàn tất.
 						#tab3.tab-pane.fade(role='tabpanel', aria-labelledby='tab3-tab') ...

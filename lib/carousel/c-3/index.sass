@@ -4,7 +4,13 @@
 //////////////////////////////////////
 
 .canhcam-carousel-3
-	+pad(2rem 0 0 0)
+	padding-top: 35px
+	padding-bottom: 35px
+	+media-breakpoint-up(lg)
+		padding-bottom: 0
+	h2
+		+fz(25px)
+		+fw(300)
 	.owl-carousel
 		position: relative
 		// Main
@@ -15,6 +21,7 @@
 				display: flex
 		// Dots
 		.owl-dots
+			margin-top: 1.25rem!important
 			.owl-dot
 				&:focus
 					outline: none
@@ -32,13 +39,11 @@
 			display: flex
 			text-decoration: none
 			height: 100%
-			+bor-rad(5px)
 			overflow: hidden
 			margin: auto
-			
+			+bor-rad(0)
 			.item-detail
 				position: relative
-				// display: block
 				text-decoration: none
 				height: 100%
 				.bagde
@@ -60,9 +65,13 @@
 				.price
 					color: color-get($mau,main)
 					+fz(1.4rem)
+					margin-bottom: .75rem
+				.btn-primary
+					+pad(.375rem 1.75rem)
 				figure
 					overflow: hidden
 					text-align: center
+					margin-bottom: 0
 					.img
 						overflow: hidden
 					img
@@ -70,7 +79,11 @@
 						transform: scale(1)
 						transition: all .3s ease-in-out
 					figcaption
-						padding-top: .5rem
+						padding-top: 20px
+					h2
+						margin-bottom: 0
+					p
+						margin-bottom: 0
 				&:hover
 					figure
 						img

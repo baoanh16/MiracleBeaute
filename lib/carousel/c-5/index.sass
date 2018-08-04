@@ -1,0 +1,96 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-carousel-5
+	padding-top: 35px
+	padding-bottom: 35px
+	.owl-carousel
+		position: relative
+		// Main
+		.owl-stage-outer
+			.owl-stage
+				display: flex
+			.owl-item
+				display: flex
+		// Dots
+		.owl-dots
+			margin-top: 1.25rem!important
+			.owl-dot
+				&:focus
+					outline: none
+				span
+					background: none
+					border: 1px solid color-get($mau, main)
+					width: .65rem
+					height: .65rem
+				&.active
+					span
+						box-shadow: 0 0 1.5px 5px color-rgba(color-get($mau, main), .35)
+						background: color-get($mau,main)
+	.news-list
+		.item
+			display: flex
+			text-decoration: none
+			height: 100%
+			+bor-rad(5px)
+			overflow: hidden
+			margin: auto
+			
+			.item-detail
+				position: relative
+				// display: block
+				text-decoration: none
+				height: 100%
+				.bagde
+					+pos(abs, 0 0 null null)
+					span
+						background: color-get($mau,main)
+						color: color-get($mau,trang)
+						text-align: center
+						+pad(.25rem .5rem)
+						display: inline-block
+						&.bagde-hot
+							background: color-get($mau,do-1)
+						&.bagde-success
+							background: color-get($mau,la-1)
+				h2
+					+fz(1.1rem)
+					+fw(600)
+					+transition(all .3s ease-in-out)
+					margin-bottom: 1.5rem
+					position: relative
+					&:after
+						content: ''
+						+pos(abs, calc(.8rem + 100%) 0 0 50%)
+						width: 50px
+						height: 1px
+						background: color-get($mau, xam-3)
+						transform: translateX(-50%)
+				.price
+					+fz(1.4rem)
+					color: color-get($mau, den)
+				.btn-primary
+					+pad(.375rem 1.75rem)
+				figure
+					overflow: hidden
+					text-align: center
+					margin-bottom: 0
+					.img
+						overflow: hidden
+					img
+						max-width: 100%
+						transform: scale(1)
+						transition: all .3s ease-in-out
+					figcaption
+						padding-top: .5rem
+				&:hover
+					.price
+						color: color-get($mau, den)
+					figure
+						img
+							transform: scale(1.2)
+					figcaption
+						h2
+							color: color-get($mau, main)

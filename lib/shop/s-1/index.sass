@@ -4,9 +4,14 @@
 //////////////////////////////////////
 
 .canhcam-shop-1
+	padding-top: 35px
+	+media-breakpoint-up(lg)
+		padding-top: 0
 	.product-lists
 		.boxprice
 			// +pad(1rem)
+			position: sticky
+			top: 59px
 			+bor-rad(5px)
 			.title
 				h3
@@ -30,55 +35,60 @@
 				h4
 					color: color-get($mau,trang)
 					background: color-get($mau, main)
-					+fz(1.5rem)
+					+fz(1.15rem)
 					+fw(600)
 					margin-bottom: 0rem
 					text-transform: uppercase
-					+pad(0 1.75rem)
+					+pad(0 .75rem)
 					line-height: 3rem
 					vertical-align: middle
-					border-top-left-radius: 1rem
-					border-top-right-radius: 1rem
-				hr
-					border-top: 1px dashed darken(color-get($mau,trang) ,20%)
-
-				.list-group
-					+pad(0)
+				.product-list
+					+pad(.75rem)
 					border: none
+					background: color-get($mau, xam-7)
+					.dropdown-list
+						margin-top: 1rem
+						h3
+							+fw(600)
+							position: relative
+							cursor: pointer
+							&:after
+								content: '\f140'
+								font: normal normal normal 24px/1 "Material Design Icons"
+								+fz(24px)
+								+pos(abs, 50% .4rem null null)
+								transform: translateY(-50%)
+								+transition(all .3s ease-in-out)
+						&.active
+							h3
+								&:after
+									transform: translateY(-50%) rotate(180deg)
+
 					.list-group-item
-						border: 1px solid color-rgba(color-get($mau, xam-5), .4)
+						border: none
 						+pad(.75rem 0 0 0)
+						background: none
 						.nav-link
 							+transition(all .3s ease-in-out)
+							+fz(1rem)
+							+fw(300)
 							&.active, &:hover
 								color: color-get($mau, main)
 								+fw(600)
-
 		.boxproducts
 			padding: 2rem 0
 			.item
 				overflow: hidden
-				border-top: 1px solid darken(color-get($mau,trang),5%)
 				padding-top: 1rem
 				&:first-child
-					border-top: 0
 					padding-top: 0
 				+media-breakpoint-up(sm)
 					padding-top: 0
-					border-right: 1px solid darken(color-get($mau,trang),5%)
 					&:nth-child(2)
-						border-top: 0
 						padding-top: 0
-					&:nth-child(2n)
-						border-right: 0
 				+media-breakpoint-up(lg)
 					&:nth-child(3)
-						border-top: 0
 						padding-top: 0
-					&:nth-child(2n)
-						border-right: 1px solid darken(color-get($mau,trang),5%)
-					&:nth-child(3n)
-						border-right: 0
 				.item-detail
 					position: relative
 					display: block
@@ -100,15 +110,23 @@
 					h2
 						+fz(1.1rem)
 						+fw(600)
-						color: darken(color-get($mau,trang) ,50%)
+						color: color-get($mau, den)
 						+transition(all .3s ease-in-out)
+						margin-bottom: 1.5rem
+						position: relative
+						&:after
+							content: ''
+							+pos(abs, calc(.8rem + 100%) 0 0 50%)
+							width: 50px
+							height: 1px
+							background: color-get($mau, xam-3)
+							transform: translateX(-50%)
 					.price
-						color: color-get($mau,do-1)
+						color: color-get($mau, den)
 						+fz(1.4rem)
-					.price-out
-						color: darken(color-get($mau,trang) ,50%)
-						+fz(.85rem)
-						text-decoration: line-through
+						margin-bottom: .8rem
+					.btn-primary
+						+pad(.375rem 1.5rem)
 					figure
 						overflow: hidden
 						text-align: center

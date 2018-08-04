@@ -4,10 +4,7 @@
 //////////////////////////////////////
 
 .canhcam-boxes-1
-	+pad(2rem 0)
-	+media-breakpoint-up(lg)
-		+pad(4rem 0)
-		+fw(600)
+	+pad(3rem 0 2rem 0)
 	.job
 		border-bottom: 1px solid color-get($mau, xam-5)
 		.job-title
@@ -20,21 +17,39 @@
 			.col-1
 				padding-left: 1.75rem
 				p
-					+fz(1.5rem)
+					+fz(1.3rem)
 					text-align: left
+					color: color-get($mau, main)
+					+fw(600)
 			.col-9
 				align-items: center
+				p
+					+fz(1.4rem)
 				span
 					margin-left: auto
+			.col-2
+				p
+					color: color-get($mau,xam-3)
+			.badge
+				background: color-get($mau, main)
+				color: color-get($mau, trang)
+				transition: all .3s ease-in-out
 			&.active
-				background: color-rgba(color-get($mau, main),.5)
+				background: color-get($mau, main)
+				.badge
+					background: color-get($mau, trang)
+					color: color-get($mau, main)
 				p
 					color: color-get($mau, trang)
 		.job-content
 			display: none
 			.content
-				+pad( 1.75rem)
-			.btn
-				+bor-rad(0)
-				+fw(700)
-				+pad(.75rem 2rem)
+				+pad(1.75rem 2.5rem)
+				p
+					strong
+						+fz(1.2rem)
+			.btn-primary
+				+pad(.375rem 1.75rem)
+			// 	+bor-rad(0)
+			// 	+fw(700)
+			// 	+pad(.75rem 2rem)

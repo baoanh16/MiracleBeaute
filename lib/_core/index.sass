@@ -57,12 +57,13 @@ header
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle
-	&:focus
-		+box-sha(0 0 0 0.2rem rgba(red(color-get($mau,main)),green(color-get($mau,main)),blue(color-get($mau,main)),.25))
-		background: color-get($mau,main)
+	&:active, &:focus, &:focus-within
+		background: color-get($mau, main)
 		border-color: color-get($mau,main)
+		+box-sha(0 0 0 0.2rem rgba(red(color-get($mau,main)),green(color-get($mau,main)),blue(color-get($mau,main)),.25))
 .btn, .form-control
-	&:focus
+	&:active, &:focus
+		background: color-get($mau, main)
 		+box-sha(0 0 0 0.2rem rgba(red(color-get($mau,main)),green(color-get($mau,main)),blue(color-get($mau,main)),.25))
 		border-color: color-get($mau,main)
 
@@ -73,6 +74,8 @@ header
 		background: color-get($mau,main)
 		border-color: color-get($mau,main)
 		color: color-get($mau,trang)
+		&:active, &:focus, &:hover, &:focus-within
+			background: color-get($mau, main)
 	&.btn-outline-primary
 		border-color: color-get($mau,main)
 		color: color-get($mau,main)
@@ -87,13 +90,25 @@ header
 .pagination
 	.page-item
 		.page-link
-			&:focus
-				+box-sha(0 0 0 0.2rem rgba(red(color-get($mau,main)),green(color-get($mau,main)),blue(color-get($mau,main)),.25))
+			border: none
+			background: none
+			color: color-get($mau, den-2)
+			height: 100%
+			display: flex
+			align-items: flex-end
+			line-height: 0
+			+fz(1rem)
+			+pad(0 .75rem)
+		&:focus
+			.page-link
+				outline: none
 		&.active
 			.page-link
-				background: color-get($mau,main)
-				border-color: color-get($mau,main)
-				color: color-get($mau,trang)
+				// background: color-get($mau,main)
+				// border-color: color-get($mau,main)
+				color: color-get($mau,main)
+				+fz(1.3rem)
+				+fw(600)
 .dropdown-item.active, .dropdown-item:active
 	background: color-get($mau,main)
 
@@ -217,17 +232,18 @@ header
 
 .miracle-title
 	h2
-		+fz(2rem)
-		margin-bottom: 3.5rem
+		+fz(30px)
+		margin-bottom: 2.25rem
 		text-transform: uppercase
 		+fw(300)
+		color: color-get($mau,xam-11)
 		+tagline('')
 	&.sub-title
 		h2
 			margin-bottom: .25rem
 			+tagline(none)
 		h3
-			margin-bottom: 3.5rem
+			margin-bottom: 2.25rem
 			+fz(1.4rem)
 			+fw(300)
 			text-transform: uppercase

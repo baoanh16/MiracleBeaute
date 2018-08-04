@@ -1,0 +1,41 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-form-2
+	padding-bottom: 40px
+	.info
+		h3
+			+fz(1.3rem)
+			+fw(300)
+		.inf
+			background: color-get($mau, xam-7)
+			+pad(2rem)
+			figure
+				margin-bottom: 1rem
+			h2
+				+fz(1.75rem)
+				color: color-get($mau, main)
+			.bold
+				+fw(700)
+	form
+		.text-main
+			color: color-get($mau, main)
+		.help-block
+			ul
+				margin-bottom: 0
+				+fz(.9rem)
+				color: color-get($mau, main)
+		input, textarea
+			background: color-get($mau, xam-7)
+			&:focus, &:focus-within
+				background: color-get($mau, xam-7)
+		input
+			+pad(.5rem 1rem)
+		button
+			+pad(.375rem 1.75rem)
+			+fw(600)
+			display: block
+			margin: auto
+

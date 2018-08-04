@@ -1,0 +1,35 @@
+section.canhcam-form-2
+	.container
+		.row.miracle-title.text-center
+			.col
+				h2 Hỏi đáp
+	.container
+		.row.info.justify-content-center
+			.col-md-8
+				form.validator
+					.row
+						.form-group.col-md-6
+							label(for='name') Họ tên
+								span.text-main (*)
+							input#name.form-control(type='text', data-error="Vui lòng nhập thông tin", required)
+							.help-block.with-errors
+						.form-group.col-md-6
+							label(for='Email') Email
+							input#Email.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", required)
+							.help-block.with-errors
+					.row
+						.form-group.col-md-6
+							label(for='Phone') Số điện thoại
+							input#Phone.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[_A-z0-9]{1,}$", required)
+							.help-block.with-errors
+						.form-group.col-md-6
+							label(for='Address') Địa chỉ
+							input#Address.form-control(type='text', )
+					.row
+						.form-group.col
+							label(for='sms') Câu hỏi
+							textarea#sms.form-control(name="sms", cols="30", rows="5")
+
+					.row
+						.col
+							button.btn.btn-primary.text-uppercase(type="submit") GỬI

@@ -1,0 +1,68 @@
+@import ../../_includes
+
+.canhcam-boxes-5
+	+pad(35px 0 0 0)
+	+media-breakpoint-up(lg)
+		+pad(0)
+		margin-bottom: -30px
+	.item
+		display: flex
+		text-decoration: none
+		height: 100%
+		+bor-rad(5px)
+		overflow: hidden
+		margin: auto
+		figure
+			position: relative
+			overflow: hidden
+			+bor-rad(5px)
+			margin: 0 auto 30px
+			img
+				+bor-rad(5px 5px 0 0)
+				filter: grayscale(100%)
+				+transition(all .3s ease-in-out)
+			figcaption
+				+pos(abs, 0 0 null null)
+				width: 100%
+				height: 100%
+				display: flex
+				flex-direction: column
+				justify-content: center
+				+pad(.8rem .8rem .8rem 45%)
+				h3
+					+fw(500)
+					color: color-get($mau, trang)
+					margin-bottom: .5rem
+					+fz(1.25rem)
+				p
+					color: color-get($mau, trang)
+					margin-bottom: 0
+					+fz(0.95rem)
+				+media-breakpoint-up(sm)
+					+pad(1.25rem 1.25rem 1.25rem 45%)
+					h3
+						+fz(1.25rem)
+					p
+						+fz(.95rem)
+				+media-breakpoint-up(md)
+					+pad(1.75rem 1.75rem 1.75rem 45%)
+					justify-content: start
+					h3
+						+fz(1.3rem)
+					p
+						+fz(1rem)
+				+media-breakpoint-up(lg)
+					h3
+						+fz(1.1rem)
+					p
+						+fz(0.9rem)
+				+media-breakpoint-up(xl)
+					+pad(30px 25px 0 45%)
+					h3
+						+fz(1.4rem)
+					p
+						+fz(1.07rem)
+		&:hover
+			figure
+				img
+					filter: grayscale(0%)
