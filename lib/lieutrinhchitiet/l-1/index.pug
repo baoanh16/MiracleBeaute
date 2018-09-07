@@ -4,11 +4,11 @@ section.lieutrinhchitiet-1
 			.col-md-6.slider-img
 				article.slider-for
 					.item
-						img(src="./img/lieutrinh/coban/cb-1.jpg", alt="")
+						img(src="./img/lieutrinh/coban/cb-6.jpg", alt="")
 					.item
-						img(src="./img/lieutrinh/coban/cb-4.jpg", alt="")
+						img(src="./img/lieutrinh/coban/cb-7.jpg", alt="")
 					.item
-						img(src="./img/lieutrinh/coban/cb-5.jpg", alt="")
+						img(src="./img/lieutrinh/coban/cb-8.jpg", alt="")
 					.item
 						img(src="./img/lieutrinh/coban/cb-6.jpg", alt="")
 					.item
@@ -19,20 +19,20 @@ section.lieutrinhchitiet-1
 				article.slider-control
 					.slider-nav
 						.item
-							img(src="./img/lieutrinh/coban/cb-1.jpg", alt="")
+							img(src="./img/lieutrinh/coban/cb-6.jpg", alt="")
 						.item
-							img(src="./img/lieutrinh/coban/cb-4.jpg", alt="")
+							img(src="./img/lieutrinh/coban/cb-7.jpg", alt="")
 						.item
-							img(src="./img/lieutrinh/coban/cb-5.jpg", alt="")
+							img(src="./img/lieutrinh/coban/cb-8.jpg", alt="")
 						.item
 							img(src="./img/lieutrinh/coban/cb-6.jpg", alt="")
 						.item
 							img(src="./img/lieutrinh/coban/cb-7.jpg", alt="")
 						.item
 							img(src="./img/lieutrinh/coban/cb-8.jpg", alt="")
-					button.btn.top-arrow
+					button.btn.left-arrow
 						i.fa.fa-chevron-left
-					button.btn.bottom-arrow
+					button.btn.right-arrow
 						i.fa.fa-chevron-right
 			.col-md-6
 				.text
@@ -47,21 +47,79 @@ section.lieutrinhchitiet-1
 							tr
 								td Time: 
 								td 45 phút
-					a.btn.btn-primary(data-fancybox='book-meeting', data-src='#book-meeting', href='javascript:;') ĐẶT LỊCH NGAY
-					#book-meeting.home-popup.modal-form(style='display: none')
-						h4 ĐẶT LỊCH NGAY
-						form
-							.form-group
-								label.label(for='name') Tên
-								input.form-control(name='name' type='text' placeholder='Tên')
-							.form-group
-								label.label(for='phone') Số điện thoại
-								input.form-control(name='phone' type='text' placeholder='Số điện thoại')
-							.form-group
-								label.label(for='email') Email
-								input.form-control(name='email' type='email' placeholder='Email')
-							.form-group
-								label.label(for='date') Ngày hẹn
-								input.form-control.datepicker(name='date' type='date' value='2018-07-26')
-							.form-group
-								button.btn.btn-primary(type="submit") Đăng ký
+							tr
+								td Công dụng chính
+								td Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio corporis sapiente tenetur soluta atque ipsum ullam autem aliquid vitae ipsam est repellat consequuntur culp.
+							tr
+								td Đối tượng
+								td Da nhạy cảm, tổn thương, lão hóa
+					.button-list.container
+						.row
+							.col-lg-6
+								a.btn.btn-primary(data-fancybox='popup-1', data-src='#popup-1', href='javascript:;')
+									span.fab.fa-youtube
+									| VIDEO
+							.col-lg-6
+								a.btn.btn-primary(data-fancybox='popup-2', data-src='#popup-2', href='javascript:;') ĐẶT LỊCH NGAY
+					.d-none
+						#popup-1.home-popup.modal-form
+							iframe(src='https://www.youtube.com/embed/UV6iqYqGMUw', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+						#popup-2.home-popup.modal-form
+							h4 ĐẶT LỊCH NGAY
+							form
+								.form-group
+									label.label(for='name') Tên
+									input.form-control(name='name' type='text' placeholder='Tên')
+								.form-group
+									label.label(for='phone') Số điện thoại
+									input.form-control(name='phone' type='text' placeholder='Số điện thoại')
+								.form-group
+									label.label(for='email') Email
+									input.form-control(name='email' type='email' placeholder='Email')
+								.form-group
+									label.label(for='date') Ngày hẹn
+									input.form-control.datepicker(name='date' type='date' value='2018-07-26')
+								.form-group
+									button.btn.btn-primary(type="submit") Đăng ký
+section.canhcam-step-1
+	.container
+		.row
+			.col-12.miracle-title
+				h2 Các bước quy trình
+		.row
+			.col-lg-3.col-sm-6
+				.item
+					figure
+						.box-img
+							img.img-fluid(src="./img/lieutrinh/lt-1.jpg", alt="")
+						figcaption
+							h3.title Bước 1:
+							p.desscription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum omnis sunt alias optio ipsum earum.
+
+			.col-lg-3.col-sm-6
+				.item
+					figure
+						.box-img
+							img.img-fluid(src="./img/lieutrinh/lt-2.jpg", alt="")
+						figcaption
+							h3.title Bước 2:
+							p.desscription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum omnis sunt alias optio ipsum earum.
+
+			.col-lg-3.col-sm-6
+				.item
+					figure
+						.box-img
+							img.img-fluid(src="./img/lieutrinh/lt-3.jpg", alt="")
+						figcaption
+							h3.title Bước 3:
+							p.desscription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum omnis sunt alias optio ipsum earum.
+
+			.col-lg-3.col-sm-6
+				.item
+					figure
+						.box-img
+							img.img-fluid(src="./img/lieutrinh/lt-4.jpg", alt="")
+						figcaption
+							h3.title Bước 4:
+							p.desscription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum omnis sunt alias optio ipsum earum.
+		

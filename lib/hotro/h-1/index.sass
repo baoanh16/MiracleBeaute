@@ -40,6 +40,23 @@
 				.answer
 					+pad(1rem)
 					display: none
+					overflow: hidden
+					transition: all .3s ease-in-out
+					&.show-more
+						max-height: 115px
+				.toggle-text
+					margin: 0 0 1rem 1rem
+					+fz(.9rem)
+					+bor-rad(5px)
+					width: 80px
+					height: 20px
+					background: color-get($mau, main)
+					color: white
+					text-align: center
+					cursor: pointer
+					display: none
+					&.show
+						display: block
 				&.active, &:hover
 					.question
 						background: color-get($mau, main)

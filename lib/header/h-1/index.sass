@@ -4,6 +4,13 @@
 	background: color-get($mau, den-2)
 	+pad(.3rem 0)
 	max-width: 1600px
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: 100%
+	z-index: 100
+	+transition(all .3s ease-in-out)
 	p
 		margin-bottom: 0
 	.search, .lang, .phone
@@ -51,5 +58,5 @@
 			color: white
 			+fz(24px)
 	&.fixedheader
-		left: 50%
-		transform: translateX(-50%)
+		+media-breakpoint-up(lg)
+			top: -70px

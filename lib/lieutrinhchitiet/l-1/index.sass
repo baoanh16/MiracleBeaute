@@ -29,7 +29,7 @@
 						vertical-align: bottom
 						+fz(1.02rem)
 						&:first-child
-							+fw(600)
+							+fw(700)
 							width: 50%
 							display: flex
 							+media-breakpoint-up(md)
@@ -38,82 +38,115 @@
 							color: color-get($mau,main)
 							margin-bottom: 0
 							+fz(1.3rem)
-			.btn-primary
-				margin-top: 1rem
-				width: 180px
-				height: 40px
-				display: flex
-				justify-content: center
-				align-items: center
-				+pad(0)
-				+bor-rad(20px)
-	.slider-img
-		+clearfix
-		.slider-control
-			margin-top: 2rem
-			text-align: center
-			position: relative
-			+media-breakpoint-up(md)
-				margin-top: 0
-				padding-top: 3rem
-				float: left
-				width: 80px
-			.slick-track
-				margin-bottom: 1rem
+			.button-list
+				.btn-primary
+					margin-top: 1rem
+					width: 180px
+					height: 40px
+					display: flex
+					justify-content: center
+					align-items: center
+					+pad(0)
+					+bor-rad(20px)
+					span
+						margin-right: 10px
+						+fz(20px)
+		.slider-img
+			// +clearfix
+			.slider-control
+				margin-top: 2rem
+				text-align: center
+				position: relative
 				+media-breakpoint-up(md)
-					flex-direction: column
-					margin-bottom: 1rem
-					width: initial !important
-					cursor: pointer
-					float: none
-				.slick-slide
-					text-align: center !important
-					cursor: pointer
+					margin-top: 2rem
+					// padding-top: 3rem
+				.slider-nav
+					max-width: calc(100% - 100px)
+					margin: auto
+				.slick-track
+					margin-bottom: 0
 					+media-breakpoint-up(md)
-						margin-bottom: .5rem
+						// margin-bottom: 1rem
+						cursor: pointer
+					.slick-slide
+						text-align: center !important
+						cursor: pointer
+						+pad(0 10px)
+						+media-breakpoint-up(md)
+							margin-bottom: .5rem
+						&:focus
+							outline: none
+						img
+							border: 2px solid transparent
+							display: inline-block
+							+bor-rad(5px)
+							max-width: 100%
+						&.slick-current, &:hover
+							img
+								border: 2px solid color-get($mau,main)
+				.left-arrow, .right-arrow
+					display: none
+					margin: .5rem
+					height: 40px
+					width: 40px
+					+bor-rad(50%)
+					border: 1px solid color-get($mau, main)
+					color: color-get($mau, main)
+					background: none
+					+media-breakpoint-up(md)
+						+pos(abs, 50% null null null)
+						margin: 0
+						transform: translateY(-50%)
+					&.active, &:hover
+						background: lighten(color-get($mau, main), 25%)
+						color: color-get($mau, trang)
+					&:focus, &:active, &:focus-within
+						outline: none
+						box-shadow: none
+				+media-breakpoint-up(md)
+					.left-arrow
+						left: 0
+					.right-arrow
+						right: 0
+			.slider-for
+				.item
+					text-align: center
+					border: 2px solid color-get($mau, main)
+					img
+						text-align: center
+						max-width: 100%
+						display: inline-block
 					&:focus
 						outline: none
-					img
-						border: 2px solid transparent
-						display: inline-block
-						+bor-rad(5px)
-						width: 70px
-						height: 70px
-						max-width: 100%
-					&.slick-current, &:hover
-						img
-							border: 2px solid color-get($mau,main)
-			.top-arrow, .bottom-arrow
-				margin: .5rem
-				height: 40px
-				width: 40px
-				+bor-rad(50%)
-				border: 1px solid color-get($mau, main)
-				color: color-get($mau, main)
-				background: none
-				+media-breakpoint-up(md)
-					margin: 0
-					i
-						+transform(rotate(90deg))
-				&.active, &:hover
-					background: lighten(color-get($mau, main), 25%)
-					color: color-get($mau, trang)
-				&:focus, &:active, &:focus-within
-					outline: none
-					box-shadow: none
-			.top-arrow
-				+media-breakpoint-up(md)
-					+pos(abs, 0 null null 50%)
-					transform: translateX(-50%)
-		.slider-for
-			.item
-				text-align: center
-				img
-					text-align: center
-					max-width: 100%
-					display: inline-block
-				&:focus
-					outline: none
-			+media-breakpoint-up(md)
-				float: right
-				width: calc(100% - 80px)
+
+.fancybox-container
+	#popup-1
+		&.fancybox-content
+			max-width: 768px
+			padding-top: 70px
+			&:before
+				content: ''
+				+pos(abs, 45px 0 0 0)
+				width: 100%
+				height: 1px
+				background: color-rgba(color-get($mau,den),.2)
+			iframe
+				width: 100%
+				height: 400px
+.canhcam-step-1
+	+pad(2rem 0)
+	h2
+		text-align: center
+		+fz(25px)
+	.item
+		figure
+			img
+				width: 100%
+			figcaption
+				+pad(.5rem 0)
+				h3
+					+fw(600)
+				p
+					+fz(1rem)
+					color: lighten(color-get($mau, den),15%)
+

@@ -5,51 +5,66 @@ section.canhcam-form-1
 				h2 Liên hệ
 	.container
 		.row.info
-			.col-md-5.col-lg-4
-				article.inf.h-100
-					figure.text-center(bg-img='./img/bg/bg.png')
-						img.w-50(src="./img/logo.png", alt="alt")
-						figcaption
-					p.text-center.text-md-left 
-						span.bold Công ty: 
-						span 122/19 Đặng Văn Ngữ, P.14, Q. Phú Nhuận, Tp.HCM. 
-					p.text-center.text-md-left 
-						span.bold Chi nhánh: 
-						span 3 Nguyễn Như Đổ, Q. Đống Đa, Hà Nội.
-					p.text-center.text-md-left 
-						span.bold Điện thoại: 
-						span 0932 14 2224 - 02866 828 844
+			.col-lg-6
+				.text(bg-img="./img/lieutrinh/coban/cb-3.jpg")
+				img.img-fluid.d-lg-none(src="./img/lieutrinh/coban/cb-3.jpg")
 
-					p.text-center.text-md-left 
-						span.bold Email: 
-						span contact@miraclebeaute.com
-
-			.col-md-7.col-lg-8
+			.col-lg-6
 				h3.h3.mt-5.mt-md-0.mb-4 Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho Miracle Beaute, chúng tôi sẽ phản hồi email của Quý khách trong thời gian sớm nhất.
 				form.validator
 					.row
-						.form-group.col-md-6
-							label(for='name') Họ tên
-								span.text-main (*)
-							input#name.form-control(type='text', data-error="Vui lòng nhập thông tin", required)
+						.form-group.col-12
+							//- label(for='name') Họ tên
+							//- 	span.text-main (*)
+							input#name.form-control(type='text', data-error="Vui lòng nhập thông tin", placeholder="Họ tên", required)
 							.help-block.with-errors
-						.form-group.col-md-6
-							label(for='Email') Email
-							input#Email.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$", required)
+						.form-group.col-12
+							//- label(for='Email') Email
+							input#Email.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+/.[a-z]{2,3}$", placeholder="Email", required)
 							.help-block.with-errors
 					.row
-						.form-group.col-md-6
-							label(for='Phone') Số điện thoại
-							input#Phone.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[_A-z0-9]{1,}$", required)
+						.form-group.col-12
+							//- label(for='Phone') Số điện thoại
+							input#Phone.form-control(type='text',  data-error="Vui lòng nhập thông tin", pattern="^[_A-z0-9]{1,}$", placeholder="Số điện thoại", required)
 							.help-block.with-errors
-						.form-group.col-md-6
-							label(for='Address') Địa chỉ
-							input#Address.form-control(type='text', )
+						.form-group.col-12
+							//- label(for='Address') Địa chỉ
+							input#Address.form-control(type='text', placeholder="Địa chỉ", )
 					.row
-						.form-group.col
-							label(for='sms') Tin nhắn
-							textarea#sms.form-control(name="sms", cols="30", rows="5")
+						.form-group.col-12
+							//- label(for='sms') Tin nhắn
+							textarea#sms.form-control(name="sms", cols="30", rows="5", placeholder="Nội dung",)
 
 					.row
-						.col
+						.col-12
 							button.btn.btn-primary.text-uppercase(type="submit") GỬI
+				.row
+					.col-12
+						article.inf.h-100
+							p.text-center.text-md-left 
+								span.bold Công ty: 
+								span 122/19 Đặng Văn Ngữ, P.14, Q. Phú Nhuận, Tp.HCM. 
+							p.text-center.text-md-left 
+								span.bold Chi nhánh: 
+								span 3 Nguyễn Như Đổ, Q. Đống Đa, Hà Nội.
+							p.text-center.text-md-left 
+								span.bold Điện thoại: 
+								span 0932 14 2224 - 02866 828 844
+
+							p.text-center.text-md-left 
+								span.bold Email: 
+								span contact@miraclebeaute.com
+							.social-icon
+								ul.list-group
+									li.list-group-item
+										a(href="https://facebook.com/miraclebeautefr")
+											span.fab.fa-facebook-f
+									li.list-group-item
+										a(href="https://www.youtube.com/channel/UCADl45vW0wwR40P3sTnfiWA")
+											span.fab.fa-youtube
+									li.list-group-item
+										a(href="https://www.instagram.com/miracle_beaute_vn/")
+											span.fab.fa-instagram
+									li.list-group-item
+										a(href="zalo.me/3451074225293243163")
+											span Zalo

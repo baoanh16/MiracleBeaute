@@ -69,8 +69,19 @@
 					border: 1px solid #2d2c2c
 					margin: 0 5px
 				span
-					+fz(18px)
-					color: color-get($mau, xam-12)
+					+fz(1.75rem)
+					+media-breakpoint-up(lg)
+						+fz(1.3rem)
+					&.fa-facebook-f
+						color: color-get($mau, facebook)
+					&.fa-google-plus-g
+						color: color-get($mau, google)
+					&.fa-instagram
+						color: color-get($mau, instagram)
+				img
+					width: 1.75rem
+					+media-breakpoint-up(lg)
+						width: 1.3rem
 		+media-breakpoint-up(md)
 			+pad(0)
 			.list-group

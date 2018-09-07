@@ -10,19 +10,19 @@ html(dir='ltr', lang=config.SEO.seo_lang, itemscope, itemtype="http://schema.org
 		meta(name='format-detection', content='telephone=no')
 		meta(name='msapplication-tap-highlight', content='no')
 		<!-- ////////////// Mobile title color ////////////// -->
-		meta(name='theme-color', content=config.SEO.mobile_color)
-		meta(name='msapplication-navbutton-color', content=config.SEO.mobile_color)
-		meta(name='apple-mobile-web-app-status-bar-style', content=config.SEO.mobile_color)
-		title #{title} - #{config.SEO.cfg_name}
-		if process.argv.slice(3).indexOf('--production') > -1
-			include ../_include/_seo
-		block socialmedia
+		//- meta(name='theme-color', content=config.SEO.mobile_color)
+		//- meta(name='msapplication-navbutton-color', content=config.SEO.mobile_color)
+		//- meta(name='apple-mobile-web-app-status-bar-style', content=config.SEO.mobile_color)
+		//- title #{title} - #{config.SEO.cfg_name}
+		//- if process.argv.slice(3).indexOf('--production') > -1
+		//- 	include ../_include/_seo
+		//- block socialmedia
 		<!-- ////////////// CSS Include ////////////// -->
 		link(href='https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=vietnamese', rel='stylesheet')
 		include ../_include/_css
 		<!-- ////////////// FAVICON ////////////// -->
-		if process.argv.slice(3).indexOf('--production') > -1
-			include ../_include/_favicon
+		//- if process.argv.slice(3).indexOf('--production') > -1
+		//- 	include ../_include/_favicon
 	body#top-page(class=process.argv.slice(3).indexOf('--production') < 0 ? 'canhcam-develop '+prefix+bodyclass+'-page' : prefix+bodyclass+'-page' || 'default')
 		#fb-root
 		<!-- ////////////// Header ////////////// -->

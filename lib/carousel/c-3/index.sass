@@ -63,7 +63,7 @@
 					+fw(600)
 					+transition(all .3s ease-in-out)
 				.price
-					color: color-get($mau,main)
+					color: color-get($mau, den)
 					+fz(1.4rem)
 					margin-bottom: .75rem
 				.btn-primary
@@ -81,7 +81,15 @@
 					figcaption
 						padding-top: 20px
 					h2
-						margin-bottom: 0
+						margin-bottom: 1.5rem
+						position: relative
+						&:after
+							content: ''
+							+pos(abs, calc(.8rem + 100%) 0 0 50%)
+							width: 50px
+							height: 1px
+							background: color-get($mau, xam-3)
+							transform: translateX(-50%)
 					p
 						margin-bottom: 0
 				&:hover

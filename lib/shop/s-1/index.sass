@@ -9,9 +9,6 @@
 		padding-top: 0
 	.product-lists
 		.boxprice
-			// +pad(1rem)
-			position: sticky
-			top: 59px
 			+bor-rad(5px)
 			.title
 				h3
@@ -75,8 +72,54 @@
 							&.active, &:hover
 								color: color-get($mau, main)
 								+fw(600)
+		.product-step
+			display: none
+			+media-breakpoint-up(md)
+				display: block
+			+pad(2rem)
+			.navbar
+				position: relative
+				&:before
+					width: 100%
+					content: ''
+					height: 3px
+					background: color-get($mau, main)
+					left: 0
+					position: absolute
+					top: -2px
+				.nav-item
+					flex: 0 0 calc(100% / 6)
+					max-width: calc(100% / 6)
+					.nav-link
+						text-align: center
+						+fz(.9rem)
+						position: relative
+						+fw(500)
+						min-height: 50px
+						+pad(null 0)
+						&:after
+							content: ''
+							+pos(abs,-1rem null null 50%)
+							transform: translateX(-50%)
+							width: 14px
+							height: 14px
+							+bor-rad(50%)
+							border: 2px solid color-get($mau, main)
+							box-sizing: border-box
+							background: white
+						&:before
+							content: ''
+							+pos(abs,-9px null null 50%)
+							z-index: 10
+							width: 4px
+							height: 4px
+							+bor-rad(50%)
+							background: color-get($mau, main)
+							transform: translateX(-50%)
+						&:hover
+							color: color-get($mau,main)
 		.boxproducts
-			padding: 2rem 0
+			padding: 0rem 0
 			.item
 				overflow: hidden
 				padding-top: 1rem
@@ -124,6 +167,7 @@
 					.price
 						color: color-get($mau, den)
 						+fz(1.4rem)
+						+fw(600)
 						margin-bottom: .8rem
 					.btn-primary
 						+pad(.375rem 1.5rem)

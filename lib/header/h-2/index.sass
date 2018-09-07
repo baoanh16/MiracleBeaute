@@ -56,56 +56,58 @@
 			a
 				margin-right: 1rem
 +media-breakpoint-up(lg)
-	.navbar-mobile
-		transform: unset
+	.canhcam-header-2
 		position: relative
-		height: unset
-		// transform: translateY(-50%)
-		margin-top: -30px
-		transition: all .3s ease-in-out
-		z-index: 1100
-		.navbar-nav
-			flex-direction: row
-			justify-content: space-between
-			background: color-get($mau, xam-1)
-		.nav-item
-			.nav-link
-				+pad(1.25rem 0.92rem)
-				+media-breakpoint-up(xl)
-					+pad(1.25rem 1.73rem)
-				text-transform: uppercase
-				color: color-get($mau, trang)
-				+fz(1.15rem)
-			&.active, &:hover
-				.nav-link
-					background: color-get($mau, main)
-		&.fixed
-			position: fixed
-			width: 100%
-			top: 0
-			left: 0
-			margin-top: 0
-			background: color-get($mau, xam-1)
-	.owl-nav
-		position: absolute
-		top: 50%
+		// transform: translateY(-30px)
 		width: 100%
-		display: none
-		+media-breakpoint-up(md)
-			display: block
-		button
+		top: -30px
+		left: 0
+		z-index: 1200
+		+transition(all .3s ease-in-out)
+		.navbar-mobile
+			transform: unset
+			position: relative
+			height: unset
+			.navbar-nav
+				flex-direction: row
+				justify-content: space-between
+				background: color-get($mau, xam-1)
+			.nav-item
+				.nav-link
+					+pad(1.25rem 0.92rem)
+					+media-breakpoint-up(xl)
+						+pad(1.25rem 1.73rem)
+					text-transform: uppercase
+					color: color-get($mau, trang)
+					+fz(1.15rem)
+				&.active, &:hover
+					.nav-link
+						background: color-get($mau, main)
+		.owl-nav
 			position: absolute
-			cursor: pointer
-			z-index: 9999
-			&.owl-prev
-				left: 50px
-			&.owl-next
-				right: 50px
-			span
-				+fz(4rem)
-				color: color-get($mau, trang)
-			&:focus
-				outline: none
+			top: 50%
+			width: 100%
+			display: none
+			+media-breakpoint-up(md)
+				display: block
+			button
+				position: absolute
+				cursor: pointer
+				z-index: 9999
+				&.owl-prev
+					left: 50px
+				&.owl-next
+					right: 50px
+				span
+					+fz(4rem)
+					color: color-get($mau, trang)
+				&:focus
+					outline: none
+		&.active
+			position: fixed
+			// transform: translateY(0)
+			top: 0
+			background: color-get($mau, xam-1)
 
 .lieutrinh
 	.lieutrinh-menu
@@ -170,7 +172,7 @@
 	position: relative
 	.giaiphap-menu
 		position: absolute
-		width: 150px
+		width: 210px
 		left: 0
 		top: 100%
 		display: none

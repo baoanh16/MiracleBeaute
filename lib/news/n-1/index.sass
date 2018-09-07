@@ -8,37 +8,51 @@
 	+media-breakpoint-up(lg)
 		+pad(0)
 	.news-hot
-		.item
-			// height: 100%
-			display: block
-			// margin-bottom: 30px
-			figure
-				// height: calc(100% - 30px)
-				margin-bottom: 30px
-				.boxzoom
-					overflow: hidden
-			img
-				width: 100%
-				
-				+transition(all .5s ease-in-out)
-			figcaption
-				padding-top: 1.5rem
-			time
-				+fz(1rem)
-				color: color-get($mau, xam-3)
-			h3
-				+fw(700)
-				+fz(1.1rem)
-				color: color-get($mau, xam-11)
-				+mar(.3rem 0 .5rem 0)
-				+transition(all .3s ease-in-out)
-			p
-				+fz(1rem)
-				+fw(300)
-				color: color-get($mau, xam-8)
-			&:hover
-				img
-					transform: scale(1.1)
-				h3
+		.items
+			.text
+				background: #424242
+				+pad(1.25rem)
+				+media-breakpoint-up(lg)
+					+pad(1.25rem 2rem)
+				.title
+					text-transform: uppercase
+					+fz(1.25rem)
+					+fw(600)
 					color: color-get($mau, main)
-		
+				.flag
+					display: initial
+					+lh(30px)
+					height: 30px
+					+pad(6px 1.5rem 6px .5rem)
+					background: color-get($mau, main)
+					position: relative
+					&:after
+						content: ''
+						+pos(abs,0 0 null null)
+						width: 0
+						height: 0
+						border-right: 10px solid #424242
+						border-top: 15px solid transparent
+						border-bottom: 15px solid transparent
+					
+				.description
+					margin-top: 1rem
+					color: white
+				.view-more
+					a
+						+pad(0 null)
+						color: color-get($mau, main)
+						border: 1px solid color-get($mau, main)
+						height: 30px
+						+bor-rad(0)
+						+lh(30px)
+						&:hover
+							border-color: white
+							color: white
+			+ .items
+				margin-top: 2rem
+.canhcam-news-page
+	.pagination
+		+mar(20px 0 50px 0)
+		+media-breakpoint-up(lg)
+			+mar(50px 0 0 0)

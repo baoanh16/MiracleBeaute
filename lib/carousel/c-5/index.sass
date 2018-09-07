@@ -4,7 +4,6 @@
 //////////////////////////////////////
 
 .canhcam-carousel-5
-	padding-top: 35px
 	padding-bottom: 35px
 	.owl-carousel
 		position: relative
@@ -30,6 +29,33 @@
 						box-shadow: 0 0 1.5px 5px color-rgba(color-get($mau, main), .35)
 						background: color-get($mau,main)
 	.news-list
+		.box	
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100%
+			flex-direction: column
+			box-shadow: 0 0 10px color-rgba(color-get($mau, main),.75)
+			+pad(null 30px)
+			.title
+				h2
+					text-transform: none
+					color: color-get($mau, main)
+					margin-bottom: 0
+					&:before
+						content: none
+			.num
+				width: 64px
+				background: color-rgba(color-get($mau, main),.75)
+				line-height: 50px
+				border-radius: 50%
+				margin-bottom: 15px
+				p
+					+fz(44px)
+					+fw(700)
+					margin-bottom: 0
+					+lh(64px)
+					color: white
 		.item
 			display: flex
 			text-decoration: none

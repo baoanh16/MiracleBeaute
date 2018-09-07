@@ -1,0 +1,40 @@
+@import ../../_includes
+//////////////////////////////////////
+// CODE
+//////////////////////////////////////
+
+.canhcam-news-2
+	+pad(2rem 0)
+	+media-breakpoint-up(lg)
+		+pad(0)
+	.news-hot
+		.item
+			display: block
+			figure
+				margin-bottom: 30px
+				.boxzoom
+					overflow: hidden
+			img
+				width: 100%
+				+transition(all .5s ease-in-out)
+			figcaption
+				padding-top: 1.5rem
+			time
+				+fz(1rem)
+				color: color-get($mau, xam-3)
+			h3
+				+fw(700)
+				+fz(1.1rem)
+				color: color-get($mau, xam-11)
+				+mar(.3rem 0 .5rem 0)
+				+transition(all .3s ease-in-out)
+			p
+				+fz(1rem)
+				+fw(300)
+				color: color-get($mau, xam-8)
+			&:hover
+				img
+					transform: scale(1.1)
+				h3
+					color: color-get($mau, main)
+		

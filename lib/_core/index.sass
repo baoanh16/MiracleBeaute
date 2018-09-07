@@ -12,6 +12,10 @@ html, body
 		background-color: color-get($mau,main)
 		color: #fff
 
+
+main
+	padding: 30px 0 60px!important
+
 h1, h2, h3, h4, h5, h6
 	font-size: initial
 	line-height: 1.4
@@ -251,6 +255,11 @@ header
 	&.bold
 		h2
 			+fw(700)
+	.description
+		margin-bottom: 1.25rem
+		+media-breakpoint-up(lg)
+			max-width: 60%
+			+mar(null auto)
 
 
 .canhcam-nav-1
