@@ -12,14 +12,27 @@
 		.cam-ket
 			margin-bottom: 30px
 			.text
-				+pad(2rem 2.5rem 2rem 1.75rem)
+				width: 100%
+				+pad(2rem 2.5rem)
 				color: color-get($mau, trang)
-				height: 100%
+				min-height: r(180px)
+				display: flex
+				justify-content: center
+				flex-direction: column
+				+media-breakpoint-up(lg)
+					min-height: r(330px)
 				h3
-					+fz(1.5rem)
+					+fz(2.5rem)
 					+fw(700)
 					color: color-get($mau, trang)
 					margin-bottom: 1rem
+					text-align: center
+					&:before
+						content: '\f274'
+						font-family: 'FontAwesome'
+						color: color-get($mau, trang)
+						+fz(4rem)
+						display: block
 				p
 					display: flex
 					span
@@ -35,35 +48,48 @@
 						vertical-align: top
 						line-height: 0.9
 		.procedure-step
-			margin-bottom: 30px
+			margin-bottom: r(20px)
 			.text
 				background: color-get($mau, trang)
 				height: 100%
-				+pad(2rem)
+				+pad(r(40px) 2rem)
 				h3
 					line-height: 1
-					+fz(6rem)
-					color: color-get($mau, xam-4)
+					+fw(700)
+					+fz(r(80px))
+					color: color-get($mau, den)
 				h4
-					+fz(1.25rem)
+					+fz(r(18px))
 					text-transform: uppercase
-					color: color-get($mau, main)
-					border-bottom: 1px solid color-get($mau, main)
+					color: color-get($mau, den)
 					padding-bottom: .85rem
 					margin-bottom: .85rem
 					+fw(700)
 				p
 					+fz(1.07rem)
+					position: relative
+					&:last-child
+						&:after
+							content: ''
+							+pos(abs, calc(100% + .5rem) null null 0)
+							width: r(200px)
+							height: 1px
+							background: color-get($mau, main)
 				.lead, a
 					+fz(inherit)
 					+fw(700)
+			&:first-child
+				.text
+					box-shadow: 0 0 1.5rem color-rgba(color-get($mau, den),.2)
+					+media-breakpoint-up(lg)
+						padding-right: 40%
 .fancybox-inner
 	.fancybox-slide
 		padding: 0
 		&:before
 			margin-right: 0
 	.home-popup
-		max-width: 400px
+		max-width: 800px
 		width: calc(100% - 30px)
 		box-shadow: 0 0 10px color-rgba(color-get($mau, den), .4)
 		h4
@@ -82,6 +108,9 @@
 				margin: auto
 				+pad(null 2rem)
 				+bor-rad(16px)
+			.form-control
+				&:active,&:focus
+					background: white
 	.fancybox-content
 		background: lighten(color-get($mau, main), 35%)
 		+media-breakpoint-up(md)

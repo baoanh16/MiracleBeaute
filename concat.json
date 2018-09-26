@@ -28,7 +28,8 @@
             "node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css",
             "bower_components/mdi/css/materialdesignicons.min.css",
             "bower_components/linearicons/dist/web-font/style.css",
-            "bower_components/fancybox/dist/jquery.fancybox.min.css"
+			"bower_components/fancybox/dist/jquery.fancybox.min.css",
+			"node_modules/font-awesome/css/font-awesome.min.css"
         ],
         "js": [
             "bower_components/owl.carousel/dist/owl.carousel.min.js",

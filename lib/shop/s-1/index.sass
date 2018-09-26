@@ -60,7 +60,13 @@
 							h3
 								&:after
 									transform: translateY(-50%) rotate(180deg)
-
+						&.none-child
+							h3
+								&:after
+									content: none
+								&:hover, &:active
+									a
+										color: color-get($mau, main)
 					.list-group-item
 						border: none
 						+pad(.75rem 0 0 0)

@@ -1,0 +1,14 @@
+extends _layout/layout.pug
+block variables
+	- var title = "Chi tiết sản phẩm"
+	- var description = "Description for product-detail page"
+	- var bodyclass = "product-detail"
+	- var href = "/product-detail.html"
+block header
+	include ../lib/header/h-1/index.pug
+	include ../lib/banner/b-4/index.pug
+block body
+	include ../lib/shop-details/s-2/index.pug
+	include ../lib/carousel/c-8/index.pug
+block footer
+	include ../lib/footer/f-1/index.pug

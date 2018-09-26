@@ -36,7 +36,9 @@ section.lieutrinhchitiet-1
 						i.fa.fa-chevron-right
 			.col-md-6
 				.text
-					h1 Liệu trình cơ bản (Basic treatment)
+					h1 Basic treatment
+						br
+						| Liệu trình cơ bản 
 					.html Liệu trình lý tưởng để trải nghiệm các sản phẩm đặc trị và kỹ thuật massage phức tạp và điêu luyện của Miracle Beaute phù hợp với từng loại da, đem đến cho bạn sự thư giãn cả cơ thể và tâm trí.
 					hr
 					.table-responsive
@@ -66,20 +68,26 @@ section.lieutrinhchitiet-1
 							iframe(src='https://www.youtube.com/embed/UV6iqYqGMUw', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
 						#popup-2.home-popup.modal-form
 							h4 ĐẶT LỊCH NGAY
-							form
-								.form-group
+							form.row
+								.form-group.col-md-12
 									label.label(for='name') Tên
-									input.form-control(name='name' type='text' placeholder='Tên')
-								.form-group
+									input.form-control(name='name' type='text')
+								.form-group.col-md-12
 									label.label(for='phone') Số điện thoại
-									input.form-control(name='phone' type='text' placeholder='Số điện thoại')
-								.form-group
+									input.form-control(name='phone' type='text')
+								.form-group.col-md-12
 									label.label(for='email') Email
-									input.form-control(name='email' type='email' placeholder='Email')
-								.form-group
+									input.form-control(name='email' type='email')
+								.form-group.col-md-12
 									label.label(for='date') Ngày hẹn
-									input.form-control.datepicker(name='date' type='date' value='2018-07-26')
-								.form-group
+									input.form-control(name='date' type='text')
+								.form-group.col-md-12
+									label.label(for='date') Địa điểm
+									select.form-control
+										option(value="default") Chọn địa điểm
+										option(value="01") Hà Nội
+										option(value="02") TP. Hồ Chí Minh
+								.form-group.col-auto.mx-auto
 									button.btn.btn-primary(type="submit") Đăng ký
 section.canhcam-step-1
 	.container
