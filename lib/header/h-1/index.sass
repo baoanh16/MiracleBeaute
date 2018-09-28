@@ -26,6 +26,9 @@
 		p
 			color: color-get($mau, xam-3)
 			+fz(0.92rem)
+		.Module-210
+			.ModuleContent
+				display: flex
 	.search
 		margin-left: 2.5rem
 		position: relative
@@ -44,6 +47,22 @@
 			color: color-get($mau, trang)
 			+fz(20px)
 			transform: translateY(-50%)
+	
+		.Module-211
+			#ctl00_mdl211_ctl00_Search_pnlSearch
+				button
+					top: -3rem
+					position: absolute
+					&:before
+						content: '\f349'
+						font: normal normal normal 24px/1 "Material Design Icons"
+						+pos(abs, 70px -105px null null)
+						
+						color: #ffffff
+						font-size: 20px
+						-webkit-transform: translateY(-50%)
+						transform: translateY(-50%)
+						cursor: pointer
 
 	.lang
 		margin-left: 1.5rem
@@ -60,3 +79,5 @@
 	&.fixedheader
 		+media-breakpoint-up(lg)
 			top: -70px
+	.Module-212
+		display: flex

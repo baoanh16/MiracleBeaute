@@ -13,68 +13,111 @@
 		color: color-get($mau, xam-8)
 	.nav-about
 		.list-group
+			background: color-get($mau, xam-7)
+			+pad(2rem 0)
 			+media-breakpoint-down(md)
 				position: initial!important
 				margin-bottom: 1.5rem
 		.list-group-item
-			+pad(23px)
+			+pad(0rem 1.9rem 1rem 2.5rem)
+			text-transform: uppercase
 			border: none
-			background: color-get($mau, xam-7)
+			background: none
 			+bor-rad(0)
-			border-bottom: 1px solid color-get($mau, trang)
 			margin-bottom: 0
 			.nav-link
 				+pad(0)
-				+fz(1rem)
+				color: color-get($mau,xam-13)
+				border-bottom: 1px solid color-get($mau, xam-13)
+				+fz(1.09rem)
 				+fw(700)
+				padding-bottom: .8rem
+				text-align: right
 			&.active, &:hover
 				.nav-link
 					color: color-get($mau, main)
+					border-bottom: 1px solid color-get($mau, main)
 			&:last-child
 				border-bottom: none
 	.sec-1
+		+mar(2rem 0)
+		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
+			+pad(0 15px)
 		p
+			+pad(0 15px)
 			margin-bottom: 0
+			
 			+fz(15px)
 			+fw(300)
 			line-height: 24px
+			color: color-get($mau,xam-13)
 			&.semi-bold
 				+fw(400)
+				&:last-child
+					margin-bottom: 2rem
 			&.bold
+				font-style: italic
 				+fw(700)
+			&.text-img
+				padding-top: 1rem
 		img
 			+mar(30px 0)
+			&.img-one
+				+mar(0)
 	.sec-2
+		+pad(3rem 0)
+		background: color-get($mau, trang)
+		
 		h2
 			margin-bottom: 2.75rem
+			+pad(0 15px)
 		p
 			margin-bottom: 0
+			+pad(0 15px)
 			+fz(15px)
 			+fw(300)
 			line-height: 24px
 			&.bold
 				+fw(400)
+				font-style: italic
+			&.sebmi-bold
+				+fw(600)
+		img
+			+pad(0)
 	.sec-3
+		padding-top: 40px
+		padding-bottom: 40px
+		margin-bottom: 1rem
+		padding-left: 0
+		padding-right: 0
+		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
+			padding-left: 15px
+			padding-right: 15px
 		p
 			margin-bottom: 0
 			+fz(15px)
 			+fw(300)
 			line-height: 24px
+			padding-left: 15px
+			padding-right: 15px
 			&.bold
 				+fw(400)
 			&.s-bold
 				+fw(600)
 		.value
 			display: flex
+			padding-left: 15px
+			padding-right: 15px
 			flex-direction: column
 			margin-top: 45px
 			+media-breakpoint-up(md)
 				flex-direction: row
 			.img
+				
 				img
 					display: block
 					margin: auto
@@ -89,8 +132,12 @@
 					text-align: left
 					margin-top: 0
 	.sec-4
+		+pad(0)
+		+mar(2rem 0)
+		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
+			+pad(1rem 15px)
 		.content
 			.value
 				display: flex
@@ -100,7 +147,9 @@
 					width: 100px
 					height: 100px
 					+bor-rad(50%)
-					background: color-get($mau, main)
+					background: -moz-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
+					background: -webkit-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
+					background: -ms-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
 					display: flex
 					justify-content: center
 					align-items: center
@@ -113,10 +162,14 @@
 				.text
 					text-align: center
 					p
+						+pad(0rem 15px)
 						margin-bottom: 0
 						+fz(16px)
 						+fw(400)
 	.sec-5
+		+mar(1rem 0)
+		+pad(1rem)
+		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
 		iframe
