@@ -1,9 +1,8 @@
 @import ../../_includes
 .canhcam-boxes-7
 	padding-top: 35px
-    padding-bottom: 70px
-    margin-bottom: -70px
-
+	padding-bottom: 70px
+	margin-bottom: -70px
 	+media-breakpoint-up(lg)
 		// padding-top: 100px
 		// margin-top: -100px
@@ -33,6 +32,8 @@
 				+fw(700)
 				padding-bottom: .8rem
 				text-align: right
+				// &:last-child
+				// 	border-bottom: none
 			&.active, &:hover
 				.nav-link
 					color: color-get($mau, main)
@@ -44,6 +45,7 @@
 		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
+			margin-top: 1rem
 			+pad(0 15px)
 		p
 			+pad(0 15px)
