@@ -2,11 +2,18 @@
 
 .canhcam-banner-1
 	padding-top: 70px
-	// +media-breakpoint-up(lg)
-	// 	padding-top: 0
 	display: flex
 	flex-direction: column
-	.owl-nav
-		display: none!important
-		// +media-breakpoint-up(lg)
-		// 	display: block!important
+	.owl-carousel
+		.owl-nav
+			display: none
+			+media-breakpoint-up(lg)
+				display: block
+			button
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				&.owl-prev
+					left: 8%
+				&.owl-next
+					right: 8%
