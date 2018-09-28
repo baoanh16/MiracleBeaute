@@ -40,6 +40,52 @@
 				top: 1rem
 				left: 0
 				background: color-get($mau, main)
+		// fix css
+		.Module-229
+			#ctl00_mainContent_ctl03_pnlFormWizard
+				#ctl00_mainContent_ctl03_pnlForm
+					.form-group
+						label
+							display: none
+						#ctl00_mainContent_ctl03_ctl728cba7e40444972bfc4bd5b2a6aa3d0_txt728cba7e40444972bfc4bd5b2a6aa3d0,
+						#ctl00_mainContent_ctl03_ctl3a88c43789ee49be8d8efc50725ef076_txt3a88c43789ee49be8d8efc50725ef076,
+						#ctl00_mainContent_ctl03_ctl1eb0dfc1a2ea416a9cc1a5aeb9911d40_txt1eb0dfc1a2ea416a9cc1a5aeb9911d40,
+						#ctl00_mainContent_ctl03_ctlff80250f25c64a9c977cdb036ff8b4a9_txtff80250f25c64a9c977cdb036ff8b4a9,
+						#ctl00_mainContent_ctl03_ctl9eabf951cd864d9c9632f0ff789950bc_txt9eabf951cd864d9c9632f0ff789950bc
+							+pad(.5rem 1rem)
+							display: block
+							width: 100%
+							font-size: 1rem
+							line-height: 1.5
+							color: #495057
+							background-clip: padding-box
+							border: 1px solid #ced4da
+							border-radius: 0.25rem
+							background: color-get($mau, xam-7)
+							-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+							transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+							transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+							transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+						#ctl00_mainContent_ctl03_ctl9eabf951cd864d9c9632f0ff789950bc_txt9eabf951cd864d9c9632f0ff789950bc
+							+pad(2rem 1rem)
+						&.frm-btnwrap
+							.frm-btn
+								#ctl00_mainContent_ctl03_btnReset
+									display: none
+								#ctl00_mainContent_ctl03_btnSubmit
+									background: color-get($mau,main)
+									border-color: color-get($mau,main)
+									color: color-get($mau,trang)
+									+pad(0.5rem 1.75rem)
+									+fw(600)
+									border-radius: 17px
+									position: relative
+									height: 34px
+									opacity: 0.65
+						// input, textarea
+						// 	background: color-get($mau, xam-7)
+						// 	&:focus, &:focus-within
+						// 		background: color-get($mau, xam-7)
 	.social-icon
 		.list-group
 			flex-direction: row
