@@ -32,8 +32,9 @@
 				+fw(700)
 				padding-bottom: .8rem
 				text-align: right
-				// &:last-child
-				// 	border-bottom: none
+			&:last-child
+				.nav-link
+					border-bottom: none
 			&.active, &:hover
 				.nav-link
 					color: color-get($mau, main)
@@ -41,7 +42,8 @@
 			&:last-child
 				border-bottom: none
 	.sec-1
-		+mar(2rem 0)
+		+mar(0 0 2rem 0)
+		+pad(0)
 		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
@@ -69,7 +71,9 @@
 			&.img-one
 				+mar(0)
 	.sec-2
-		+pad(3rem 0)
+		+pad(0 0 1rem 0)
+		margin-bottom: 3rem
+		margin-top: 1rem
 		background: color-get($mau, trang)
 		
 		h2
@@ -89,7 +93,6 @@
 		img
 			+pad(0)
 	.sec-3
-		padding-top: 40px
 		padding-bottom: 40px
 		margin-bottom: 1rem
 		padding-left: 0
@@ -139,7 +142,7 @@
 		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
-			+pad(1rem 15px)
+			+pad(1.1rem 15px 0 15px)
 		.content
 			.value
 				display: flex
@@ -149,9 +152,9 @@
 					width: 100px
 					height: 100px
 					+bor-rad(50%)
-					background: -moz-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
-					background: -webkit-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
-					background: -ms-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%);
+					background: -moz-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%)
+					background: -webkit-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%)
+					background: -ms-linear-gradient( 45deg, rgb(213,182,79) 20%, rgb(247,238,173) 100%)
 					display: flex
 					justify-content: center
 					align-items: center
@@ -170,7 +173,7 @@
 						+fw(400)
 	.sec-5
 		+mar(1rem 0)
-		+pad(1rem)
+		+pad(1rem 0)
 		background: color-get($mau,trang)
 		h2
 			margin-bottom: 2.75rem
