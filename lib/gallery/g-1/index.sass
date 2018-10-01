@@ -34,7 +34,7 @@
 					img
 						+transition(all .5s ease-in-out)
 						width: 100%
-					.d-none.d-lg-block
+					.d-lg-block
 						+transition(all .5s ease-in-out)
 						height: 100%
 				figcaption
@@ -58,12 +58,17 @@
 						&:after
 							opacity: .75
 							z-index: 10
-						.d-none.d-lg-block, >img
+						.d-lg-block, >img
 							+transform(scale(1.1))
 					figcaption
 						h3
 							opacity: 1
-
+		.top-list
+			.item
+				.boxzoom
+					img
+						+media-breakpoint-up(lg)
+							opacity: 0
 
 
 	&.canhcam-video-fixed-size.lg-outer

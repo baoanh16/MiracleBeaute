@@ -110,13 +110,37 @@
 						<p class="quote">
 							<xsl:value-of select="BriefContent"></xsl:value-of>
 						</p>
-						<a class="btn"> 
+						<a class="btn fancybox" data-fancybox="">
 							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
+								<xsl:text>#fancytext</xsl:text>
+								<xsl:value-of select="position()"></xsl:value-of>
 							</xsl:attribute>
 							<span class="mdi mdi-arrow-right"></span>
 							<span>XEM CHI TIẾT</span>
 						</a>
+					</div>
+					<div class="fancy" style="display: none">
+						<xsl:attribute name="id">
+							<xsl:text>fancytext</xsl:text>
+							<xsl:value-of select="position()"></xsl:value-of>
+						</xsl:attribute>
+						<div class="fancy-img" style="width: 100%; text-align: center">
+							<img style="max-width: 250px">
+								<xsl:attribute name="src">
+									<xsl:value-of select="ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+							</img>
+						</div>
+						<div class="fctext" style="text-align: center">
+							<h4>
+							<xsl:value-of select="Title"></xsl:value-of>
+							</h4>
+							<p>
+							<xsl:value-of select="SubTitle"></xsl:value-of>
+							</p>
+							<p style="text-align: justify;">
+							<xsl:value-of select="BriefContent"></xsl:value-of></p>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-6 order-1 order-md-2">

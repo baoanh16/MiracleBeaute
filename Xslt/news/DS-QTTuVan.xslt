@@ -57,7 +57,7 @@
 							<xsl:text>01</xsl:text>
 						</h3>
 						<h4>
-							<xsl:value-of select="Title"></xsl:value-of>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h4>
 					</div>
 				</div>
@@ -163,7 +163,7 @@
 							<xsl:text>02</xsl:text>
 						</h3>
 						<h4>
-							<xsl:value-of select="Title"></xsl:value-of>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h4>
 					</div>
 				</div>
@@ -186,7 +186,7 @@
 							<xsl:text>03</xsl:text>
 						</h3>
 						<h4>
-							<xsl:value-of select="Title"></xsl:value-of>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h4>
 					</div>
 				</div>

@@ -4,9 +4,9 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<section class="canhcam-lieutrinh-1">
-			<div class="container miracle-title text-center">
-				<div class="row">
+		<!-- <section class="canhcam-lieutrinh-1">
+			<div class="container miracle-title text-center"> -->
+				<!-- <div class="row">
 					<div class="col">
 						<h2>
 							<xsl:value-of select="/ZoneList/ModuleTitle"></xsl:value-of>
@@ -15,15 +15,15 @@
 							<xsl:value-of select="ZoneDescription"></xsl:value-of>
 						</p>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="container">
 					<div class="row ajaxresponsewrap">
 						<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 					</div>
 				</div>
-			</div>
-		</section>
+			<!-- </div>
+		</section> -->
 	</xsl:template>
 
 	<xsl:template match="Zone">

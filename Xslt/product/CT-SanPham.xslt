@@ -30,7 +30,7 @@
 								<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 							</h1>
 							<em class="desc">
-								<xsl:value-of select="SubTitle"></xsl:value-of>
+								<xsl:value-of select="/ProductDetail/SubTitle"></xsl:value-of>
 							</em>
 							<hr>
 							</hr>

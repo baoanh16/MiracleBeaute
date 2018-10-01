@@ -23,7 +23,7 @@
 				</xsl:attribute>
 				<figure>
 					<div class="img">
-						<img>
+						<img class="img-fluid">
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
@@ -33,11 +33,11 @@
 						</img>
 					</div>
 					<figcaption>
-						<h2>
+						<h3>
 							<xsl:value-of select="Code"></xsl:value-of>
 							<br></br>
 							<xsl:value-of select="Title"></xsl:value-of>
-						</h2>
+						</h3>
 						<p class="price">
 							<xsl:if test="OldPrice != ''">
 								<xsl:value-of select="OldPrice"></xsl:value-of>
