@@ -191,6 +191,7 @@
 .giaiphap
 	position: relative
 	.giaiphap-menu
+		background: color-get($mau, trang)
 		position: absolute
 		width: 210px
 		left: 0
@@ -204,14 +205,14 @@
 			+bor-rad(0)
 			box-shadow: 0 0 5px color-get($mau, xam-3)
 			.list-group-item
-				background: color-get($mau, xam-7)
+				// background: color-get($mau, xam-7)
 				background: none
 				cursor: pointer
 				border: none
 				a
 					+fw(600)
 				&:hover
-					// background: color-get($mau, main)
+					background: color-get($mau, xam-7)
 					a
 						color: color-get($mau, main)
 	+media-breakpoint-up(lg)

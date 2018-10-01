@@ -33,7 +33,7 @@
 						<xsl:value-of select="Title"></xsl:value-of>
 					</h3>
 					<div class="flag">
-						<xsl:value-of select="SubTitle"></xsl:value-of>
+						<xsl:value-of select="CreatedDate"></xsl:value-of>
 					</div>
 					<p class="description">
 						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>

@@ -237,4 +237,7 @@
 	<data name="ProcedureOtherText" xml:space="preserve">
 		<value>Các liệu trình khác</value>
 	</data>
+	<data name="PromotionOthersText" xml:space="preserve">
+		<value>Tin khuyến mãi khác</value>
+	</data>
 </root>

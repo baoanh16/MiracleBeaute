@@ -25,24 +25,29 @@
 	</xsl:template>
 
 	<xsl:template match="Zone">
-		<li class="dropdown-list">
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name="class">
-					<xsl:text>dropdown-list active</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<!-- <a>
-				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute> -->
-				<h3>
-					<xsl:value-of select="Title"></xsl:value-of>
-				</h3>
-			<!-- </a> -->
-			<ul class="list-group list-unstyled type-product">
-				<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
-			</ul>
-		</li>
+		<xsl:choose>
+			<xsl:when test="position() = 1">
+				<li class="dropdown-list active">
+					<h3>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</h3>
+					<ul class="list-group list-unstyled type-product">
+						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+					</ul>
+				</li>
+			</xsl:when>
+			
+			<xsl:when test="position() != 1">
+				<li class="dropdown-list">
+					<h3>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</h3>
+					<ul class="list-group list-unstyled type-product" style="display: none">
+						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+					</ul>
+				</li>
+			</xsl:when>
+		</xsl:choose>
 	</xsl:template>
 
 
