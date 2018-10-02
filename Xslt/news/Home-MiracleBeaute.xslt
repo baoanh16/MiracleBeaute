@@ -83,13 +83,7 @@
 	</xsl:template> -->
 
 	<xsl:template match="News">
-		<a class="item">
-			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="target">
-				<xsl:value-of select="Target"></xsl:value-of>
-			</xsl:attribute>
+		<div class="item">
 			<figure>
 				<img class="img-fluid">
 				<xsl:attribute name="src">
@@ -102,7 +96,7 @@
 					</h3>
 				</figcaption>
 			</figure>
-		</a>
+		</div>
 	</xsl:template>
 
 </xsl:stylesheet>

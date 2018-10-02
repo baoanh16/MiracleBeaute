@@ -126,6 +126,10 @@
 			<div class="item">
 				<figure>
 					<a data-fancybox="" data-width="992" data-height="480">
+						<div class="play-btn">
+							<img src="/Data/Sites/1/skins/default/img/play-btn.png">
+							</img>
+						</div>
 						<xsl:attribute name="href">
 							<xsl:value-of select="FullContent"></xsl:value-of>
 						</xsl:attribute>
