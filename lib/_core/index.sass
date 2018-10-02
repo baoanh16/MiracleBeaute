@@ -422,3 +422,23 @@ header
 									z-index: 10
 									font-size: 4rem
 									transition: all 0.2s ease-in-out
+// form 
+.Module-302, .Module-303
+	.ModuleContent
+		#ctl00_mainContent_ctl05_pnlFormWizard, #ctl00_mainContent_ctl06_pnlFormWizard
+			.form-group
+				span
+					color: red
+					&:before
+						display: none
+			.frm-btn
+				display: flex
+				justify-content: center
+				text-align: center
+				align-items: center
+				#ctl00_mainContent_ctl05_btnSubmit, #ctl00_mainContent_ctl06_btnSubmit
+					padding-left: 0
+					+pad(.375rem 1.75rem)
+					text-transform: uppercase
+				#ctl00_mainContent_ctl05_btnReset ,#ctl00_mainContent_ctl06_btnReset
+					display: none
