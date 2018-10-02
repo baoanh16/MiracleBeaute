@@ -26,7 +26,7 @@
 								<img class="img-fluid" src="/Data/Sites/1/skins/default/img/play-btn.png">
 								</img>
 							</div>
-							<img class="img-fluid">
+							<img class="img-fluid h-100">
 								<xsl:attribute name="src">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>

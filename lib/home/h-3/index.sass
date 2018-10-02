@@ -137,9 +137,23 @@
 					background: color-get($mau,trang)
 					.fctext
 						h4
-							font-size: 1.5rem
+							font-size: 1.9rem
 							+pad(.5rem 2rem)
 							margin-bottom: 0
+							position: relative
+							&:before
+								content: ""
+								position: absolute
+								bottom: 0
+								left: 50%
+								transform: translateX(-50%)
+								width: 100px
+								height: 2px
+								border-radius: 50%
+								background: radial-gradient(#d6b64f 1%, #ffffff 98%)
 						p
-							font-size: 1.1rem
-							font-weight: 400
+							+fw(400)
+							+fz(1.1rem)
+						p:first-child
+							font-size: 1.3rem
+							padding-top: 1rem
