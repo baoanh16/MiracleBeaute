@@ -94,4 +94,72 @@
 
 
 
+	.Module-299
+		.ModuleContent
+			#ctl00_mainContent_ctl03_pnlFormWizard
+				flex-direction: row
+				+pad(1rem .5rem)
+				flex-wrap: wrap
+				display: flex
+				justify-content: center
+				+media-breakpoint-up(md)
+					+pad(1rem 2rem)
+				.wrap-form
+					#ctl00_mainContent_ctl02_pnlQuestions
+						display: flex
+						flex-wrap: wrap
+						margin-bottom: 2rem
+						.form-group
+							width: 100%
+							+pad(0 15px)
+							+media-breakpoint-up(md)
+								width: 50%
+							&.qparagraph
+								width: 100%
+								
+							label
+								display: block
+								text-align: center
+								font-size: 15px
+								font-weight: 300
+								&#ctl00_mainContent_ctl02_ctl0ba5ff32769e4e21970324e8f6688302_lbl0ba5ff32769e4e21970324e8f6688302:after
+									content: '(*)'
+									display: inline-block
+									padding-left: .375rem
+									color: color-get($mau,main)
+							input, textarea
+								width: 100%
+								+pad(0.5rem 1rem)
+								background: #f2f2f2
+								border: 1px solid #ced4da
+								border-radius: 0.25rem
+								&:focus
+									box-shadow: 0 0 0 0.2rem rgba(214, 182, 79, 0.25)
+									border-color: #d6b64f
+							textarea
+								height: 120%
+							span
+								color: red
+								+pad(0.5rem 1rem)
+								&:before
+									display: none
+
+					.frm-btn
+						+pad(0 1rem)
+						display: flex
+						justify-content: center
+						text-align: center
+						align-items: center
+						#ctl00_mainContent_ctl02_btnSubmit
+							background: color-get($mau,main)
+							border-color: color-get($mau,main)
+							color: #ffffff
+							+pad(0.375rem 1.75rem)
+							font-weight: 600
+							display: block
+							border-radius: 17px
+						#ctl00_mainContent_ctl02_btnReset
+							display: none
+
+
 
