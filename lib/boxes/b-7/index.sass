@@ -32,13 +32,12 @@
 				+fw(700)
 				padding-bottom: .8rem
 				text-align: right
+				&.active, &:hover
+					color: color-get($mau, main)
+					border-bottom: 1px solid color-get($mau, main)
 			&:last-child
 				.nav-link
 					border-bottom: none
-			&.active, &:hover
-				.nav-link
-					color: color-get($mau, main)
-					border-bottom: 1px solid color-get($mau, main)
 			&:last-child
 				border-bottom: none
 	.sec-1

@@ -95,13 +95,25 @@
 	
 	
 	<xsl:template match="News" mode="ZoneNews1">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews2">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews3">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews4">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews5">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
+
+	<!-- <xsl:template match="NewsList" mode="ZoneNews1News">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+	</xsl:template> -->
+
+
+
 </xsl:stylesheet>

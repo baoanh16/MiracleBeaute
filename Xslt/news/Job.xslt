@@ -73,6 +73,7 @@
 					<p>
 						<xsl:value-of select="FullContent"></xsl:value-of>
 					</p>
+
 				</div>
 			</div>
 		</xsl:if>
@@ -113,6 +114,14 @@
 					<p>
 					<a class="btn btn-primary" href="javascript:void(0);">ỨNG TUYỂN NGAY</a></p>
 				</div>
+			</div>
+			
+			<div class="career-frame" style="display:none;">
+				<iframe class="frame" frameborder="0" width="100%" height="400px">
+					<xsl:attribute name="src">
+						<xsl:value-of select="ApplyUrl" disable-output-escaping="yes"/>
+					</xsl:attribute>
+				</iframe>
 			</div>
 		</div>
 	</xsl:template>
