@@ -315,3 +315,24 @@ header
 		+fz(20px)
 	&:focus
 		box-shadow: none
+.newspager, .productpager
+	display: flex
+	justify-content: center
+	text-align: center
+	align-items: center
+	padding-top: 2rem
+	.modulepager
+		.pagination
+			.PagerCurrentPageCell, .PagerOtherPageCells
+				height: 100%
+				display: flex
+				align-items: flex-end
+				line-height: 0
+				font-size: 1rem
+				+pad(0 0.75rem)
+				&.active, &:hover
+					font-size: 1.3rem
+					color: #d6b64f
+					font-weight: 600
+					a
+						color: #d6b64f
