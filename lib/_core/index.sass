@@ -423,22 +423,87 @@ header
 									font-size: 4rem
 									transition: all 0.2s ease-in-out
 // form 
-.Module-302, .Module-303
+.Module-302, .Module-303, .Module-306, .Module-304
 	.ModuleContent
-		#ctl00_mainContent_ctl05_pnlFormWizard, #ctl00_mainContent_ctl06_pnlFormWizard
+		#ctl00_mainContent_ctl05_pnlFormWizard, #ctl00_mainContent_ctl06_pnlFormWizard, #ctl00_mainContent_ctl02_pnlFormWizard, #ctl00_mainContent_ctl01_pnlFormWizard
 			.form-group
 				span
+					top: 0
+					right: 6%
+					line-height: calc(1.5rem + .7rem)
 					color: red
-					&:before
-						display: none
 			.frm-btn
 				display: flex
 				justify-content: center
 				text-align: center
 				align-items: center
-				#ctl00_mainContent_ctl05_btnSubmit, #ctl00_mainContent_ctl06_btnSubmit
+				#ctl00_mainContent_ctl05_btnSubmit, #ctl00_mainContent_ctl06_btnSubmit, #ctl00_mainContent_ctl02_btnSubmit, #ctl00_mainContent_ctl01_btnSubmit
 					padding-left: 0
 					+pad(.375rem 1.75rem)
 					text-transform: uppercase
-				#ctl00_mainContent_ctl05_btnReset ,#ctl00_mainContent_ctl06_btnReset
+				#ctl00_mainContent_ctl05_btnReset ,#ctl00_mainContent_ctl06_btnReset, #ctl00_mainContent_ctl02_btnReset, #ctl00_mainContent_ctl01_btnReset
 					display: none
+.middle-fullwidth
+	#ctl00_mainContent_pnlLogin
+		.login-panel
+			background: color-get($mau,trang)
+			padding: 0 15px
+			margin-bottom: 40px
+			box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.1)
+			border-radius: 0
+			border: 1px solid #e6e6e6
+			margin-top: 6.5rem
+			.login-form
+				.headtitle
+					margin-bottom: 10px
+					color: color-get($mau,main)
+					font-size: 0.9375rem
+					line-height: 30px
+					+fw(700)
+					+fz(1.3rem)
+					padding-top: .5rem
+					border-bottom: 1px solid #e6e6e6
+				#ctl00_mainContent_pnlStandardLogin
+					.panel-primary
+						.panel-heading
+							margin-bottom: 5px
+							color: #666666
+							+fz(1.1rem)
+				.panel-primary
+					#ctl00_mainContent_login1_LoginCtrl_pnlLContainer
+						.form-horizontal
+							.form-group
+								width: 100%
+								position: relative
+								i
+									width: 40px
+									line-height: 40px
+									text-align: center
+									font-size: 1.2rem
+									color: #55595c
+									position: absolute
+									top: 19px
+									left: -7px
+								input
+									width: 100%
+									border-radius: 0
+									font-size: 0.9rem
+									border: 1px solid #d9d9d9
+									padding: 0px 20px
+									line-height: 36px
+									font-size: 1.1rem
+								&.forget
+									input
+										width: 4%
+								&.btn-login
+									input
+										width: 40%
+										border-radius: 17px
+										+lh(0)
+.securepage
+	&.loginpage
+		.canhcam-header-1
+			display: block !important
+		.canhcam-header-2
+			top: 69px !important
+
