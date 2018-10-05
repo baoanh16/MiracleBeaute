@@ -75,59 +75,22 @@
 							<div class="button-list container">
 								<div class="row">
 									<div class="col-lg-6">
-										<a class="btn btn-primary" data-fancybox="popup-1" data-src="#popup-1" href="javascript:;">
+										<a class="btn btn-primary" data-fancybox="">
+											<xsl:attribute name="href">
+												<xsl:apply-templates select="/ProductDetail/ProductAttributes"> </xsl:apply-templates>
+											</xsl:attribute>
 											<span class="fab fa-youtube"></span>
 											VIDEO
 										</a>
 									</div>
 									<div class="col-lg-6">
-										<a class="btn btn-primary" data-fancybox="popup-2" data-src="#popup-2" href="javascript:;">
+										<a class="btn btn-primary" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
 											<xsl:value-of select="/ProductDetail/BookNowText" disable-output-escaping="yes"></xsl:value-of>
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="d-none">
-								<div class="home-popup modal-form" id="popup-1">
-									<iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">
-										<xsl:attribute name="src">
-											<xsl:value-of select="/ProductDetail/ProductAttributes/Content"></xsl:value-of>
-										</xsl:attribute>
-									</iframe>
-								</div>
-								<div class="home-popup modal-form" id="popup-2">
-									<h4>ĐẶT LỊCH NGAY</h4>
-									<div class="row">
-										<div class="form-group col-md-12">
-											<label class="label" for="name">Tên</label>
-											<input class="form-control" name="name"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="phone">Số điện thoại</label>
-											<input class="form-control" name="phone"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="email">Email</label>
-											<input class="form-control" name="email" type="email"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="date">Ngày hẹn</label>
-											<input class="form-control" name="date"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="date">Địa điểm</label>
-											<select class="form-control">
-												<option value="default">Chọn địa điểm</option>
-												<option value="01">Hà Nội</option>
-												<option value="02">TP. Hồ Chí Minh</option>
-											</select>
-										</div>
-										<div class="form-group col-auto mx-auto">
-											<button class="btn btn-primary" type="submit">Đăng ký</button>
-										</div>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -148,7 +111,7 @@
 				</div>
 			</div>
 		</section>
-
+<xsl:if test="count(/ProductDetail/ProductRelated)>0">
 		<section class="canhcam-carousel-7">
 			<div class="container miracle-title">
 				<div class="row">
@@ -159,19 +122,23 @@
 					</div>
 				</div>
 			</div>
-			<article class="news-list">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="owl-carousel owl-theme">
-								<xsl:apply-templates select="/ProductDetail/ProductRelated"> </xsl:apply-templates>
+			
+				<article class="news-list">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="owl-carousel owl-theme">
+									<xsl:apply-templates select="/ProductDetail/ProductRelated"> </xsl:apply-templates>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</article>
+				</article>
+			
 		</section>
+</xsl:if>
 
+<xsl:if test="count(/ProductDetail/ProductOther)>0">
 		<section class="canhcam-carousel-3">
 			<div class="container miracle-title">
 				<div class="row">
@@ -194,6 +161,8 @@
 				</div>
 			</article>
 		</section>
+		
+</xsl:if>
 	</xsl:template>
 
 

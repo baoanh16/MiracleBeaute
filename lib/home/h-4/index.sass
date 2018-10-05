@@ -27,9 +27,17 @@
 						text-transform: uppercase
 						+mar(.5rem null)
 						+transition(all .3s ease-in-out)
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+						display: -webkit-box
 					p
 						+fz(1.07rem)
 						color: color-get($mau, xam-8)
+						display: -webkit-box
+						-webkit-line-clamp: 4
+						-webkit-box-orient: vertical
+						overflow: hidden
 					&:hover
 						img
 							filter: grayscale(0%)
@@ -38,11 +46,3 @@
 					iframe
 						width: 100%
 						min-height: 170px
-					
-	
-	
-	
-	
-	
-	
-	

@@ -506,4 +506,26 @@ header
 			display: block !important
 		.canhcam-header-2
 			top: 69px !important
+.frm-btn
+	display: flex
+	justify-content: center
+	.btn.btn-primary
+		+pad(null 2rem)
+	.frm-btn-reset
+		display: none
 
+.panel-body
+	.form-horizontal
+		.forget
+			display: flex
+			align-items: center
+			label
+				margin-bottom: 0
+		.form-group
+			&:nth-child(4),
+			&:nth-child(5)
+				display: flex
+				justify-content: center
+			&:last-child
+				a
+					+mar(0 .5rem)

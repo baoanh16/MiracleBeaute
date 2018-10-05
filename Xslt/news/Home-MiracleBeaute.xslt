@@ -17,7 +17,7 @@
 							<xsl:value-of select="/ZoneList/ModuleTitle"></xsl:value-of>
 						</h2>
 						<h3>
-							<xsl:value-of select="/ZoneList/ZoneDescription"></xsl:value-of>
+							<xsl:value-of select="Description"></xsl:value-of>
 						</h3>
 					</div>
 					<div class="recover">

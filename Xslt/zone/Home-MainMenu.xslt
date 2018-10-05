@@ -141,9 +141,9 @@
 					<xsl:value-of select="Title"></xsl:value-of>
 				</span>
 				<br></br>
-				<xsl:text>(</xsl:text>
+				<!-- <xsl:text>(</xsl:text>
 				<xsl:value-of select="/Product/Code"></xsl:value-of>
-				<xsl:text>)</xsl:text>
+				<xsl:text>)</xsl:text> -->
 			</a>
 		</li>
 	</xsl:template>

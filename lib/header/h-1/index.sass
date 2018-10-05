@@ -1,6 +1,9 @@
 @import ../../_includes
 
 .canhcam-header-1
+	+media-breakpoint-down(md)
+		&.d-none
+			display: !important
 	background: color-get($mau, den-2)
 	+pad(.3rem 0)
 	max-width: 1600px
