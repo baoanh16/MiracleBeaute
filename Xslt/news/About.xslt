@@ -8,7 +8,7 @@
 			<article>
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-4 nav-about">
+						<div class="col-lg-4 nav-about d-none d-lg-block">
 							<div class="list-group" data-fix="65" data-fix-type="initial" data-fix-change="sticky">
 								<xsl:apply-templates select="/ZoneList/Zone" mode="Tab"></xsl:apply-templates>
 							</div>

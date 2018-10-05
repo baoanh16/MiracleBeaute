@@ -20,7 +20,24 @@
 			<article class="product-details">
 				<div class="container">
 					<div class="row d-flex">
-						<div class="col-md-6 order-md-2 mb-4 infomation">
+						<div class="col-md-6 mb-4 slider-img">
+							<article class="slider-for">
+								<xsl:apply-templates select="/ProductDetail/ProductImages" mode="BigImages"></xsl:apply-templates>
+
+							</article>
+							<article class="slider-control">
+								<div class="slider-nav">
+									<xsl:apply-templates select="/ProductDetail/ProductImages" mode="SmallImages"></xsl:apply-templates>
+								</div>
+								<button class="btn left-arrow">
+									<i class="fa fa-chevron-left"></i>
+								</button>
+								<button class="btn right-arrow">
+									<i class="fa fa-chevron-right"></i>
+								</button>
+							</article>
+						</div>
+						<div class="col-md-6 infomation">
 							<h1>
 								<xsl:value-of select="/ProductDetail/Code"></xsl:value-of>
 								<br></br>
@@ -55,23 +72,6 @@
 								</table>
 							</div>
 							<xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
-						</div>
-						<div class="col-md-6 order-md-1 slider-img">
-							<article class="slider-for">
-								<xsl:apply-templates select="/ProductDetail/ProductImages" mode="BigImages"></xsl:apply-templates>
-
-							</article>
-							<article class="slider-control">
-								<div class="slider-nav">
-									<xsl:apply-templates select="/ProductDetail/ProductImages" mode="SmallImages"></xsl:apply-templates>
-								</div>
-								<button class="btn left-arrow">
-									<i class="fa fa-chevron-left"></i>
-								</button>
-								<button class="btn right-arrow">
-									<i class="fa fa-chevron-right"></i>
-								</button>
-							</article>
 						</div>
 					</div>
 
@@ -117,7 +117,7 @@
 
 
 	<xsl:template match="ProductImages" mode="BigImages">
-		<xsl:if test="position()>1">
+		<!-- <xsl:if test="position()>1"> -->
 		<div class="item">
 			<img>
 			<xsl:attribute name="src">
@@ -128,11 +128,11 @@
 			</xsl:attribute>
 			</img>
 		</div>
-		</xsl:if>
+		<!-- </xsl:if> -->
 	</xsl:template>
 
 	<xsl:template match="ProductImages" mode="SmallImages">
-		<xsl:if test="position()>1">
+		<!-- <xsl:if test="position()>1"> -->
 
 		<div class="item">
 			<img>
@@ -144,7 +144,7 @@
 			</xsl:attribute>
 			</img>
 		</div>
-		</xsl:if>
+		<!-- </xsl:if> -->
 	</xsl:template>
 
 	<xsl:template match="ProductAttributes" mode="Nav">

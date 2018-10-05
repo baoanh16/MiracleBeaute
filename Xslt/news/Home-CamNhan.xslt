@@ -20,7 +20,7 @@
 						</div>
 					</div>
 					<div class="feeling">
-						<ul class="nav nav-pills canhcam-nav-2" id="tab" role="tablist" data-select="">
+						<ul class="nav nav-pills canhcam-nav-2" id="tab" role="tablist">
 							<xsl:apply-templates select="Zone" mode="ZoneTab"></xsl:apply-templates>
 						</ul>
 						<div class="tab-content" id="tabContent">
@@ -73,7 +73,7 @@
 			</xsl:attribute>
 			<xsl:if test="position() = 1">
 				<div class="row justify-content-center">
-					<div class="col-10">
+					<div class="col-md-10">
 						<div class="owl-carousel owl-theme review">
 							<!-- <xsl:if test="position()=1"> -->
 								<xsl:apply-templates select="News" mode="News1"></xsl:apply-templates>
@@ -84,7 +84,7 @@
 			</xsl:if>
 			<xsl:if test="position() = 2">
 				<div class="row justify-content-center">
-					<div class="col-10">
+					<div class="col-md-10">
 						<div class="owl-carousel owl-theme video">
 							<!-- <xsl:if test="position()=1"> -->
 								<xsl:apply-templates select="News" mode="News2"></xsl:apply-templates>

@@ -6,7 +6,7 @@
 
 	<xsl:template match="/">
 		<div class="boxprice">
-			<div class="title d-flex d-md-none justify-content-between align-items-center">
+			<!-- <div class="title d-flex d-md-none justify-content-between align-items-center">
 				<h3>
 					<xsl:value-of select="/ZoneList/ProductListText"></xsl:value-of>
 				</h3>
@@ -14,7 +14,7 @@
 				 aria-controls="filterSearch">
 					<i class="fa fa-search"></i>
 				</button>
-			</div>
+			</div> -->
 			<div id="filterSearch">
 				<h4><xsl:value-of select="/ZoneList/ProductListText"></xsl:value-of></h4>
 				<ul class="list-group list-unstyled product-list">

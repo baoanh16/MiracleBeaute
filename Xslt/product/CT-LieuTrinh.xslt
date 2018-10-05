@@ -106,9 +106,9 @@
 						</h2>
 					</div>
 				</div>
-				<div class="row">
-					<xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
-				</div>
+				<xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
+				<!-- <div class="row">
+				</div> -->
 			</div>
 		</section>
 <xsl:if test="count(/ProductDetail/ProductRelated)>0">

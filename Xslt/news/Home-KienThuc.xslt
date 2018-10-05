@@ -19,7 +19,7 @@
 						</div>
 					</div>
 					<div class="knowledge">
-						<ul class="nav nav-pills canhcam-nav-2" id="tab" role="tablist" data-select="">
+						<ul class="nav nav-pills canhcam-nav-2" id="tab" role="tablist">
 							<xsl:apply-templates select="Zone" mode="ZoneTab"></xsl:apply-templates>
 						</ul>
 						<div class="tab-content" id="tabContent">

@@ -14,14 +14,6 @@
 						<xsl:value-of select="/ZoneList/ZonDescription"></xsl:value-of>
 					</h3>
 				</div>
-				<!-- <div class="recover">
-					<ul class="nav nav-pills mb-3 canhcam-nav-1" id="tab" role="tablist" data-select="">
-						<xsl:apply-templates select="/ZoneList/Zone" mode="ZoneTab1"></xsl:apply-templates>
-					</ul>
-					<div class="tab-content" id="tabContent">
-						<xsl:apply-templates select="/ZoneList/Zone" mode="ZoneContent1"></xsl:apply-templates>
-					</div>
-				</div> -->
 				<div class="recover">
 					<xsl:apply-templates select="/ZoneList/Zone" mode="ZoneChild"></xsl:apply-templates>
 				</div>
@@ -32,7 +24,7 @@
 
 	<xsl:template match="Zone" mode="ZoneChild">
 		<xsl:if test="position()=1">
-			<ul class="nav nav-pills mb-3 canhcam-nav-1" id="tab" role="tablist" data-select="">
+			<ul class="nav nav-pills mb-3 canhcam-nav-1" id="tab" role="tablist">
 				<xsl:apply-templates select="Zone" mode="ZoneTab"></xsl:apply-templates>
 			</ul>
 			<div class="tab-content" id="tabContent">

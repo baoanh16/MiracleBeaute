@@ -21,7 +21,7 @@
 						</h3>
 					</div>
 					<div class="recover">
-						<ul class="nav nav-pills mb-3 canhcam-nav-1" id="tab" role="tablist" data-select="">
+						<ul class="nav nav-pills mb-3 canhcam-nav-1" id="tab" role="tablist">
 							<xsl:apply-templates select="Zone" mode="ZoneTab"></xsl:apply-templates>
 						</ul>
 						<div class="tab-content" id="tabContent">

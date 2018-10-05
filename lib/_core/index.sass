@@ -291,6 +291,14 @@ header
 			color: color-get($mau, trang)
 			&:before
 				opacity: 1
+	+media-breakpoint-down(md)
+		.nav-item
+			margin-bottom: 1rem
+			.nav-link
+				height: 30px
+				+pad(null 1.3rem)
+				&:before
+					content: none
 
 
 
