@@ -537,3 +537,30 @@ header
 			&:last-child
 				a
 					+mar(0 .5rem)
+
+.dialogpage
+	#aspnetForm
+		.apply-frm
+			+pad(0 3rem)
+			#ctl00_phMain_jobApply_upContact
+				h4
+					font-size: 1.8rem
+				.label
+					font-size: 1.25rem
+				.col-left
+					.form-group
+						.form-control:focus
+							background: none
+				.btn.btn-default
+					cursor: pointer
+					padding-right: 1.75rem
+					padding-left: 1.75rem
+					border: 1px solid #d6b64f
+					transition: all 0.3s ease-in-out
+					text-transform: uppercase
+					border-radius: 20px
+					background: #d6b64f
+					color: white
+					+fw(600)
+				h4
+					color: #d6b64f

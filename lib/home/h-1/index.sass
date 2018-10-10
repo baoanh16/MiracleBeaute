@@ -50,6 +50,20 @@
 				.lead, a
 					+fz(inherit)
 					+fw(700)
+				.btn-primary
+					position: relative
+					+media-breakpoint-up(lg)
+						&:after
+							content: ''
+							+pos(abs,0 null null 0)
+							height: 100%
+							width: 0
+							transition: all .3s ease-in-out
+							+bor-rad(17px)
+						&:hover
+							&:after
+								width: 100%
+								background: color-rgba(color-get($mau, trang),.25)
 .fancybox-inner
 	.fancybox-slide
 		padding: 0

@@ -94,7 +94,7 @@
 						<xsl:value-of select="position()"></xsl:value-of>
 					</p>
 				</div>
-				<div class="col-9 d-flex">
+				<div class="col-md-9 d-flex">
 					<p>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</p>
@@ -112,14 +112,17 @@
 				<div class="content">
 					<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 					<p>
-					<a class="btn btn-primary" href="javascript:void(0);">ỨNG TUYỂN NGAY</a></p>
+					<a class="btn btn-primary toggle-apply-form" href="javascript:void(0);">ỨNG TUYỂN NGAY</a></p>
 				</div>
 			</div>
 			
 			<div class="career-frame" style="display:none;">
 				<iframe class="frame" frameborder="0" width="100%" height="400px">
 					<xsl:attribute name="src">
-						<xsl:value-of select="ApplyUrl" disable-output-escaping="yes"/>
+						<xsl:text>/News/JobApplyDialog.aspx?zoneid=</xsl:text>
+						<xsl:value-of select="ZoneId" disable-output-escaping="yes"/>
+						<xsl:text>&amp;NewsID=</xsl:text>
+						<xsl:value-of select="NewsId" disable-output-escaping="yes"/>
 					</xsl:attribute>
 				</iframe>
 			</div>

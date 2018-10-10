@@ -12,6 +12,9 @@
 			cursor: pointer
 			background: color-rgba(color-get($mau, main),0)
 			transition: all .3s ease-in-out
+			.col-1
+				+media-breakpoint-down(sm)
+					display: none
 			p
 				margin-bottom: 0
 			.col-1
@@ -21,7 +24,7 @@
 					text-align: left
 					color: color-get($mau, main)
 					+fw(600)
-			.col-9
+			.col-md-9
 				align-items: center
 				p
 					+fz(1.4rem)
