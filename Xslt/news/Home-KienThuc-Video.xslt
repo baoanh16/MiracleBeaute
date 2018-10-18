@@ -4,13 +4,13 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="row justify-content-center">
+		<div class="row">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 
 	<xsl:template match="News">
-		<div class="col-md-4 item">
+		<div class="col-6 col-md-4 item">
 			<div class="item">
 				<figure>
 					<a data-fancybox="" data-width="992" data-height="480">

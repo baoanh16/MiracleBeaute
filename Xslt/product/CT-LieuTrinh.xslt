@@ -74,23 +74,19 @@
 							<xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 							<div class="button-list container">
 								<div class="row">
-									<div class="col-lg-6">
-										<a class="btn btn-primary" data-fancybox="">
-											<xsl:attribute name="href">
-												<xsl:apply-templates select="/ProductDetail/ProductAttributes"> </xsl:apply-templates>
-											</xsl:attribute>
-											<span class="fab fa-youtube"></span>
-											VIDEO
-										</a>
-									</div>
-									<div class="col-lg-6">
-										<a class="btn btn-primary" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
-											<xsl:value-of select="/ProductDetail/BookNowText" disable-output-escaping="yes"></xsl:value-of>
-										</a>
-									</div>
+									<a class="btn btn-primary btn-video" data-fancybox="">
+										<xsl:attribute name="href">
+											<xsl:apply-templates select="/ProductDetail/ProductAttributes"> </xsl:apply-templates>
+										</xsl:attribute>
+										<span class="fab fa-youtube"></span>
+										XEM VIDEO LIỆU TRÌNH
+									</a>
+									<a class="btn btn-primary" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
+										<xsl:value-of select="/ProductDetail/BookNowText" disable-output-escaping="yes"></xsl:value-of>
+									</a>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>
@@ -111,18 +107,17 @@
 				</div> -->
 			</div>
 		</section>
-<xsl:if test="count(/ProductDetail/ProductRelated)>0">
-		<section class="canhcam-carousel-7">
-			<div class="container miracle-title">
-				<div class="row">
-					<div class="col text-center">
-						<h2>
-							<xsl:value-of select="/ProductDetail/ProductUseText"></xsl:value-of>
-						</h2>
+		<xsl:if test="count(/ProductDetail/ProductRelated)>0">
+			<section class="canhcam-carousel-7">
+				<div class="container miracle-title">
+					<div class="row">
+						<div class="col text-center">
+							<h2>
+								<xsl:value-of select="/ProductDetail/ProductUseText"></xsl:value-of>
+							</h2>
+						</div>
 					</div>
 				</div>
-			</div>
-			
 				<article class="news-list">
 					<div class="container">
 						<div class="row">
@@ -134,35 +129,34 @@
 						</div>
 					</div>
 				</article>
-			
-		</section>
-</xsl:if>
+			</section>
+		</xsl:if>
 
-<xsl:if test="count(/ProductDetail/ProductOther)>0">
-		<section class="canhcam-carousel-3">
-			<div class="container miracle-title">
-				<div class="row">
-					<div class="col text-center">
-						<h2>
-							<xsl:value-of select="/ProductDetail/ProcedureOtherText"></xsl:value-of>
-						</h2>
-					</div>
-				</div>
-			</div>
-			<article class="news-list">
-				<div class="container">
+		<xsl:if test="count(/ProductDetail/ProductRelated2)>0">
+			<section class="canhcam-carousel-3">
+				<div class="container miracle-title">
 					<div class="row">
-						<div class="col">
-							<div class="owl-carousel owl-theme">
-								<xsl:apply-templates select="/ProductDetail/ProductOther"> </xsl:apply-templates>
-							</div>
+						<div class="col text-center">
+							<h2>
+								<xsl:value-of select="/ProductDetail/ProcedureOtherText"></xsl:value-of>
+							</h2>
 						</div>
 					</div>
 				</div>
-			</article>
-		</section>
-		
-</xsl:if>
+				<article class="news-list">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="owl-carousel owl-theme">
+									<xsl:apply-templates select="/ProductDetail/ProductRelated2"> </xsl:apply-templates>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+
+		</xsl:if>
 	</xsl:template>
 
 
@@ -183,24 +177,24 @@
 
 	<xsl:template match="ProductImages" mode="SmallImages">
 		<xsl:if test="position()>1">
-		<div class="item">
-			<img>
-			<xsl:attribute name="src">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="alt">
-				<xsl:value-of select="Title"></xsl:value-of>
-			</xsl:attribute>
-			</img>
-		</div>
-	</xsl:if>
+			<div class="item">
+				<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+			</div>
+		</xsl:if>
 	</xsl:template>
 
 	<xsl:template match="ProductAttributes">
 		<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 
-	<xsl:template match="ProductOther">
+	<xsl:template match="ProductRelated2">
 		<div class="item">
 			<a class="item-detail">
 				<xsl:attribute name="href">

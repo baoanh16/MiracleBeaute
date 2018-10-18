@@ -1,6 +1,6 @@
 @import ../../includes
 .canhcam-home-4
-	padding-top: 35px
+	padding-top: 80px
 	padding-bottom: 35px
 	+media-breakpoint-up(lg)
 		padding-bottom: 0
@@ -11,6 +11,10 @@
 			.row
 				.item
 					margin-bottom: 30px
+					figure
+						margin-bottom: 2.5rem
+						+media-breakpoint-up(lg)
+							margin-bottom: 0
 					img
 						filter: grayscale(100%)
 						+transition(all .3s ease-in-out)
@@ -31,6 +35,8 @@
 						-webkit-box-orient: vertical
 						overflow: hidden
 						display: -webkit-box
+						+media-breakpoint-down(sm)
+							-webkit-line-clamp: 4
 					p
 						+fz(1.07rem)
 						color: color-get($mau, xam-8)
@@ -38,6 +44,8 @@
 						-webkit-line-clamp: 4
 						-webkit-box-orient: vertical
 						overflow: hidden
+						+media-breakpoint-down(sm)
+							display: none
 					&:hover
 						img
 							filter: grayscale(0%)

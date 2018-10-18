@@ -68,83 +68,17 @@
 								<p>
 									<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								</p>
-								<a class="btn btn-primary" data-fancybox="send-info" data-src="#send-info" href="javascript:;">
+								<a class="btn btn-primary facybox" data-fancybox="send-info" data-src="#send-info" href="javascript:;">
 									<span class="mdi mdi-file-document"></span>Gửi thông tin về làn da</a>
-								<div class="home-popup modal-form" id="send-info" style="display: none">
-									<h4>Đặt lịch tư vấn trực tiếp</h4>
-									<div class="row">
-										<div class="form-group col-md-6">
-											<label class="label" for="name">Tên(*)</label>
-											<input class="form-control" name="name"></input>
-										</div>
-										<div class="form-group col-md-6">
-											<label class="label" for="phone">Số điện thoại(*)</label>
-											<input class="form-control" name="phone"></input>
-										</div>
-										<div class="form-group col-md-6">
-											<label class="label" for="email">Email</label>
-											<input class="form-control" name="email" type="email"></input>
-										</div>
-										<div class="form-group col-md-6">
-											<label class="label" for="phone">Ngày hẹn(*)</label>
-											<input class="form-control" name="phone"></input>
-										</div>
-										<div class="form-group col-12">
-											<label class="label" for="content">Bạn cảm nhận như thế nào về làn da hiện tại?</label>
-											<textarea class="form-control" name="content" rows="2"></textarea>
-										</div>
-										<div class="form-group col-12">
-											<label class="label" for="content">Kể tên các sản phẩm bạn đang sử dụng (nếu có)</label>
-											<textarea class="form-control" name="content" rows="2"></textarea>
-										</div>
-										<div class="form-group col-12">
-											<label class="label" for="content">Bạn mong muốn chúng tôi cải thiện điều gì trên làn da hiện tại</label>
-											<textarea class="form-control" name="content" rows="2"></textarea>
-										</div>
-										<div class="form-group col-auto mx-auto">
-											<button class="btn btn-primary" type="submit">Đăng ký</button>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 							<div class="col-12 col-sm-6">
 								<p>
 									<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 								</p>
-								<a class="btn btn-primary" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span
+								<a class="btn btn-primary facybox" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span
 									 class="mdi mdi-tooltip-edit"></span>Đặt lịch hẹn ngay</a>
-								<div class="home-popup modal-form" id="book-meeting" style="display: none; max-width: 500px">
-									<h4>Đặt lịch tư vấn trực tiếp</h4>
-									<div class="row">
-										<div class="form-group col-md-12">
-											<label class="label" for="name">Tên</label>
-											<input class="form-control" name="name"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="phone">Số điện thoại</label>
-											<input class="form-control" name="phone"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="email">Email</label>
-											<input class="form-control" name="email" type="email"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="date">Ngày hẹn</label>
-											<input class="form-control" name="date"></input>
-										</div>
-										<div class="form-group col-md-12">
-											<label class="label" for="date">Địa điểm</label>
-											<select class="form-control">
-												<option value="default">Chọn địa điểm</option>
-												<option value="01">Hà Nội</option>
-												<option value="02">TP. Hồ Chí Minh</option>
-											</select>
-										</div>
-										<div class="form-group col-auto mx-auto">
-											<button class="btn btn-primary" type="submit">Đăng ký</button>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>

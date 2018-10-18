@@ -20,6 +20,9 @@
 		display: flex
 		align-items: center
 	.logo
+		margin: 0 auto
+		+media-breakpoint-up(lg)
+			margin: 0
 		img
 			max-height: 50px
 	.phone
@@ -38,45 +41,63 @@
 	.search
 		margin-left: 2.5rem
 		position: relative
-		input
-			+pad(.2rem .75rem)
-			+bor-rad(16px)
-			background: color-get($mau, xam-11)
-			border: none
-			color: color-get($mau, xam-3)
-			&:focus
-				outline: none
-		&:before
-			content: '\f349'
-			font: normal normal normal 24px/1 "Material Design Icons"
-			+pos(abs, 50% 3px null null)
-			color: color-get($mau, trang)
-			+fz(20px)
-			transform: translateY(-50%)
-	
+		.search-toggle
+			+media-breakpoint-up(lg)
+				display: none
+			span
+				color: white
+				font-size: 20px
 		.Module-211
-			#ctl00_mdl211_ctl00_Search_pnlSearch
+			display: none
+			+pos(abs,calc(100% + 4px) 0 null null)
+			background: #333333
+			+pad(.5rem)
+			.searchbox
+				position: relative
 				button
-					top: -3rem
 					position: absolute
-					opacity: 0
+					font-size: 0
+					padding: 0
+					margin: 0
+					border: 0
+					right: 10px
+					top: 50%
+					transform: translateY(-50%)
 					&:before
+						font-size: 16px
 						content: '\f349'
 						font: normal normal normal 24px/1 "Material Design Icons"
-						+pos(abs, 70px -105px null null)
-						
-						color: #ffffff
+						+pos(abs, 0 0 null null)
+						color: #333333
 						font-size: 20px
 						-webkit-transform: translateY(-50%)
 						transform: translateY(-50%)
 						cursor: pointer
+				input
+					+pad(.2rem .75rem)
+					+bor-rad(16px)
+					background: white
+					border: none
+					color: color-get($mau, xam-3)
+					&:focus
+						outline: none
+			+media-breakpoint-up(lg)
+				display: block
+				position: initial
+				background: none
+				.searchbox
+					button
+						&:before
+							color: white
+					input
+						background: #333333
 
 	.lang
 		margin-left: 1.5rem
 		a
 			margin-left: .3rem
 	.toggle-menu
-		margin-left: auto
+		// margin-left: auto
 		margin-right: 1rem
 		display: flex
 		align-items: center

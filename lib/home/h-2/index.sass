@@ -1,34 +1,42 @@
 @import ../../_includes
 .canhcam-home-2
 	.container
-		+pad(2rem null 0)
+		+pad(2rem null)
 		+media-breakpoint-up(lg)
-			+pad(3.5rem null 0)
+			+pad(3.5rem null)
+		position: relative
+		&:after
+			content: ''
+			background: rgba(0,0,0,.1)
+			width: calc(100% - 30px)
+			height: 1px
+			position: absolute
+			bottom: 0
+			left: 15px
 		.w-100
 			height: 2.5rem
 			border-bottom: 2px solid lighten(color-get($mau,xam-3),30%)
 	.tab-content
 		margin-top: 3rem
-		.owl-carousel
-			.item
-				figure
-					filter: grayscale(100%)
-					+transition(all .3s ease-in-out)
+		.tab-pane
+			+media-breakpoint-up(lg)
+				height: 392px
+		.text
+			display: none
+			+media-breakpoint-up(lg)
+				height: 170px
+				display: flex
+				align-items: center
+				padding: 0 100px
+				text-align: center
+				p
 					margin-bottom: 0
-				figcaption
-					+pad(1rem 0)
-				h3
-					text-align: center
-					color: color-get($mau, xam-1)
-					+fw(300)
-					+fz(1.1rem)
-				&:hover
-					figure
-						filter: grayscale(0)
-					h3
-						+fw(700)
+		.owl-carousel
 			.owl-nav
 				text-align: center
+				margin-top: 15px
+				+media-breakpoint-up(lg)
+					margin-top: 0
 				button
 					width: 40px
 					+mar(null 5px)
@@ -51,3 +59,149 @@
 						color: color-get($mau, trang)
 					&.disabled
 						+opacity(.5)
+			&.home-phantich
+				.item
+					figure
+						filter: grayscale(100%)
+						+transition(all .3s ease-in-out)
+						margin-bottom: 0
+					figcaption
+						+pad(1rem 0)
+					h3
+						text-align: center
+						color: color-get($mau, xam-1)
+						+fw(300)
+						+fz(1.1rem)
+					&:hover
+						figure
+							filter: grayscale(0)
+						h3
+							+fw(700)
+				
+			&.home-sanpham
+				.item
+					display: flex
+					text-decoration: none
+					height: 100%
+					+bor-rad(5px)
+					overflow: hidden
+					margin: auto
+					
+					.item-detail
+						position: relative
+						// display: block
+						text-decoration: none
+						height: 100%
+						.bagde
+							+pos(abs, 0 0 null null)
+							span
+								background: color-get($mau,main)
+								color: color-get($mau,trang)
+								text-align: center
+								+pad(.25rem .5rem)
+								display: inline-block
+								&.bagde-hot
+									background: color-get($mau,do-1)
+								&.bagde-success
+									background: color-get($mau,la-1)
+						h3
+							+fz(1.1rem)
+							+fw(600)
+							+transition(all .3s ease-in-out)
+							margin-bottom: 1.5rem
+							position: relative
+							min-height: 63px
+							&:after
+								content: ''
+								+pos(abs, calc(.8rem + 100%) 0 0 50%)
+								width: 50px
+								height: 1px
+								background: color-get($mau, xam-3)
+								transform: translateX(-50%)
+						.price
+							+fz(1.4rem)
+							color: color-get($mau, den)
+						.btn-primary
+							+pad(.375rem 1.75rem)
+							text-transform: uppercase
+						figure
+							overflow: hidden
+							text-align: center
+							.img
+								overflow: hidden
+							img
+								max-width: 100%
+								transform: scale(1)
+								transition: all .3s ease-in-out
+							figcaption
+								padding-top: .5rem
+						&:hover
+							.price
+								color: color-get($mau, den)
+							figure
+								img
+									transform: scale(1.2)
+							figcaption
+								h3
+									color: color-get($mau, main)
+			&.home-lieutrinh
+				.item
+					display: flex
+					text-decoration: none
+					height: 100%
+					+bor-rad(5px)
+					overflow: hidden
+					margin: auto
+					.item-detail
+						position: relative
+						text-decoration: none
+						height: 100%
+						.bagde
+							+pos(abs, 0 0 null null)
+							span
+								background: color-get($mau,main)
+								color: color-get($mau,trang)
+								text-align: center
+								+pad(.25rem .5rem)
+								display: inline-block
+								&.bagde-hot
+									background: color-get($mau,do-1)
+								&.bagde-success
+									background: color-get($mau,la-1)
+						h3
+							+fz(1.1rem)
+							+fw(600)
+							+transition(all .3s ease-in-out)
+							margin-bottom: 1.5rem
+							position: relative
+							&:after
+								content: ''
+								+pos(abs, calc(.8rem + 100%) 0 0 50%)
+								width: 50px
+								height: 1px
+								background: color-get($mau, xam-3)
+								transform: translateX(-50%)
+						.price
+							color: color-get($mau, den)
+							+fz(1.4rem)
+						.btn-primary
+							+pad(null 1.75rem)
+						figure
+							overflow: hidden
+							text-align: center
+							margin-bottom: 0
+							.img
+								overflow: hidden
+							img
+								max-width: 100%
+								transform: scale(1)
+								transition: all .3s ease-in-out
+							figcaption
+								padding-top: .5rem
+						&:hover
+							figure
+								img
+									transform: scale(1.2)
+							figcaption
+								h3
+									color: color-get($mau, main)

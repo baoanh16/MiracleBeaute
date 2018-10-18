@@ -4,26 +4,26 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="row no-gutters ajaxresponsewrap">
+		<div class="owl-carousel home-sanpham">
 			<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 
+	<!-- <xsl:template match="Zone">
+		<xsl:if test="position() = 1">
+			<xsl:apply-templates select="News"></xsl:apply-templates>
+		</xsl:if>
+	</xsl:template> -->
+
 	<xsl:template match="Product">
-		<div class="col-6 col-lg-4 item">
+		<div class="item">
 			<a class="item-detail">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:attribute name="target">
-					<xsl:value-of select="Target"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="title">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
 				<figure>
 					<div class="img">
-						<img class="img-fluid">
+						<img>
 						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
@@ -39,17 +39,9 @@
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h3>
 						<p class="price">
-							<xsl:if test="OldPrice != ''">
-								<xsl:value-of select="OldPrice"></xsl:value-of>
-							</xsl:if>
-							<xsl:if test="Price != ''">
-								<xsl:value-of select="Price"></xsl:value-of>
-							</xsl:if>
+							<xsl:value-of select="Price"></xsl:value-of>
 						</p>
 						<div class="btn btn-primary">
-							<xsl:attribute name="data-productid">
-								<xsl:value-of select="ProductId"></xsl:value-of>
-							</xsl:attribute>
 							<xsl:value-of select="/ProductList/ReadNowText"></xsl:value-of>
 						</div>
 					</figcaption>

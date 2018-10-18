@@ -51,17 +51,24 @@
 					margin: 1rem auto 0 auto
 					+media-breakpoint-up(md)
 						margin: 1rem 0 0 0
-					width: 180px
+					min-width: 150px
+					+pad(null 10px)
 					height: 40px
 					display: flex
 					justify-content: center
 					align-items: center
 					text-transform: uppercase
-					+pad(0)
 					+bor-rad(20px)
+					+media-breakpoint-up(sm)
+						+mar(null auto)
 					span
 						margin-right: 10px
 						+fz(20px)
+					+ .btn-primary
+						+media-breakpoint-up(sm)
+							+mar(null auto)
+						+media-breakpoint-up(md)
+							margin-left: 20px
 		.slider-img
 			// +clearfix
 			.slider-control

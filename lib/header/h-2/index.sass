@@ -2,14 +2,14 @@
 
 +media-breakpoint-down(md)
 	.navbar-mobile
-		+pad(0 15px)
-		// padding-top: 70px
+		overflow-y: auto
 		transition: all .3s ease-in-out
 		top: 0
 		left: 0
 		position: fixed
 		width: 100%
-		background: darken(color-get($mau, xam-3),15%)
+		max-width: 320px
+		background: darken(white, 8%)
 		z-index: 1100
 		height: 100vh
 		transform: translateX(-100%)
@@ -26,7 +26,7 @@
 				align-items: center
 				margin-right: 1rem
 			span
-				color: white
+				color: rgba(0,0,0,.75)
 				+fz(24px)
 		.search
 			display: flex
@@ -49,8 +49,100 @@
 					transform: translateY(-50%)
 		.nav-link
 			+pad(.75rem null)
-			color: color-get($mau, trang)
+			color: darken(color-get($mau, trang), 60%)
 			+fw(500)
+			text-transform: uppercase
+			+fz(16px)
+			width: fit-content
+		.nav-item
+			position: relative
+			.container
+				&.lieutrinh-menu
+					overflow-y: auto
+					padding-top: 70px
+					position: fixed
+					left: 0
+					width: 100%
+					max-width: 320px
+					background: white
+					top: 0
+					height: 100%
+					z-index: 3000
+					transform: translateX(-100%)
+					transition: all .2s ease-in-out
+					background: #ebebeb
+					img
+						width: 100%
+					.close-mega
+						position: absolute
+						top: 12px
+						left: 15px
+						font-size: 24px
+					&.toggle-lieutrinh
+						transform: translateX(0)
+						&:before
+							content: ''
+							width: 100%
+							height: 1px
+							background: rgba(0,0,0,.25)
+							position: absolute
+							left: 0
+							top: 58px
+					.lieutrinh-content
+						border-bottom: 1px solid rgba(0,0,0,.1)
+						margin-top: 40px
+						.col-lg-4
+							order: 2
+							.text
+								h4
+									margin: 1rem 0
+									text-align: center
+									font-size: 18px
+									font-weight: 600
+								p
+									text-align: center
+									.btn-detail
+										font-size: 16px
+										border: 1px solid color-rgba(color-get($mau, main),.35)
+										+bor-rad(5px)
+								p:nth-child(2)
+									display: none
+						.col-lg-8
+							order: 1
+							.img
+								padding: 0 30px
+					.lieutrinh-list
+						display: none
+
+			&.giaiphap
+				.container
+					display: none
+			.list-group-item
+				background: none
+				border: 0
+				text-transform: uppercase
+			&.active
+				.nav-link
+					color: color-get($mau, main)
+			&.giaiphap, &.lieutrinh
+				&:after
+					content: '\f140'
+					height: 35px
+					width: 35px
+					position: absolute
+					right: 0
+					top: 6px
+					font: normal normal normal 24px/1 "Material Design Icons"
+					display: flex
+					justify-content: center
+					align-items: center
+					// box-shadow: inset 0 0 0 1px rgba(0,0,0,.2)
+					transition: all .3s ease-in-out
+
+			&.rotate
+				&.giaiphap, &.lieutrinh
+					&:after
+						transform: rotate(180deg)
 		.lang
 			margin-top: 1rem
 			a
@@ -104,78 +196,77 @@
 			top: 0
 			background: color-get($mau, xam-1)
 
-.lieutrinh
-	.lieutrinh-menu
-		display: none
-		+media-breakpoint-up(lg)
-			display: block
-		visibility: hidden
-		opacity: 0
-		position: absolute
-		width: 100%
-		left: 50%
-		transform: translateX(-50%)
-		top: 130%
-		transition: all .2s ease-in-out
-		>.row
-			// +pad(2rem 0)
-			box-shadow: 0 0 5px color-get($mau, xam-3)
-			background: color-get($mau, xam-7)
-			box-sizing: border-box
-		figure
-			margin-bottom: 0
-		.img
-			overflow: hidden
-			height: 100%
-			display: flex
-			align-items: center
-			+pad(0 25px)
-		img
-			width: 100%
-			transition: all .3s ease-in-out
-		figcaption
-			+pad(.75rem)
-			transition: all .3s ease-in-out
-			h3 
-				margin-bottom: 0
-		.lieutrinh-list
-			background: color-get($mau, trang)
-			+pad(3rem 25px 3rem 30px)
-			.list-group-item
-				background: none
-				cursor: pointer
-				border: none
-				+pad(.5rem 0)
-				+fz(16px)
-				border-bottom: 1px solid color-rgba(color-get($mau, main),.0)
-				&.active, &:hover
-					border-bottom: 1px solid color-get($mau, main)
-					a
-						color: color-get($mau, main)
-		.lieutrinh-content
+	.lieutrinh
+		.lieutrinh-menu
 			display: none
-			height: 100%
-			.text
-				display: flex
-				justify-content: center
-				flex-direction: column
+			+media-breakpoint-up(lg)
+				display: block
+			visibility: hidden
+			opacity: 0
+			position: absolute
+			width: 100%
+			left: 50%
+			transform: translateX(-50%)
+			top: 130%
+			transition: all .2s ease-in-out
+			>.row
+				// +pad(2rem 0)
+				box-shadow: 0 0 5px color-get($mau, xam-3)
+				background: color-get($mau, xam-7)
+				box-sizing: border-box
+			figure
+				margin-bottom: 0
+			.img
+				overflow: hidden
 				height: 100%
-				+pad(0 0 0 30px)
-				h4
-					+fw(700)
-					+fz(17px)
-					margin-bottom: .85rem
-				.btn-detail
-					+pad(null 0)
-					text-transform: uppercase
-					span
-						margin-left: .7rem
-					&:hover
-						background: none
-						color: color-get($mau, main)
-			&.active
 				display: flex
-	+media-breakpoint-up(lg)
+				align-items: center
+				+pad(0 25px)
+			img
+				width: 100%
+				transition: all .3s ease-in-out
+			figcaption
+				+pad(.75rem)
+				transition: all .3s ease-in-out
+				h3 
+					margin-bottom: 0
+			.lieutrinh-list
+				background: color-get($mau, trang)
+				+pad(3rem 25px 3rem 30px)
+				.list-group-item
+					background: none
+					cursor: pointer
+					border: none
+					+pad(.5rem 0)
+					+fz(16px)
+					border-bottom: 1px solid color-rgba(color-get($mau, main),.0)
+					&.active, &:hover
+						border-bottom: 1px solid color-get($mau, main)
+						a
+							color: color-get($mau, main)
+			.lieutrinh-content
+				display: none
+				height: 100%
+				.text
+					display: flex
+					justify-content: center
+					flex-direction: column
+					height: 100%
+					+pad(0 0 0 30px)
+					h4
+						+fw(700)
+						+fz(17px)
+						margin-bottom: .85rem
+					.btn-detail
+						+pad(null 0)
+						text-transform: uppercase
+						span
+							margin-left: .7rem
+						&:hover
+							background: none
+							color: color-get($mau, main)
+				&.active
+					display: flex
 		&:hover
 			.lieutrinh-menu
 				visibility: visible
@@ -188,34 +279,33 @@
 							filter: grayscale(0)
 						figcaption
 							color: color-get($mau, main)
-.giaiphap
-	position: relative
-	.giaiphap-menu
-		background: color-get($mau, trang)
-		position: absolute
-		width: 210px
-		left: 0
-		top: 100%
-		display: none
-		+media-breakpoint-up(lg)
-			display: block
-		visibility: hidden
-		opacity: 0
-		.list-group
-			+bor-rad(0)
-			box-shadow: 0 0 5px color-get($mau, xam-3)
-			.list-group-item
-				// background: color-get($mau, xam-7)
-				background: none
-				cursor: pointer
-				border: none
-				a
-					+fw(600)
-				&:hover
-					background: color-get($mau, xam-7)
+	.giaiphap
+		position: relative
+		.giaiphap-menu
+			background: color-get($mau, trang)
+			position: absolute
+			width: 210px
+			left: 0
+			top: 100%
+			display: none
+			+media-breakpoint-up(lg)
+				display: block
+			visibility: hidden
+			opacity: 0
+			.list-group
+				+bor-rad(0)
+				box-shadow: 0 0 5px color-get($mau, xam-3)
+				.list-group-item
+					// background: color-get($mau, xam-7)
+					background: none
+					cursor: pointer
+					border: none
 					a
-						color: color-get($mau, main)
-	+media-breakpoint-up(lg)
+						+fw(600)
+					&:hover
+						background: color-get($mau, xam-7)
+						a
+							color: color-get($mau, main)
 		&:hover
 			.giaiphap-menu
 				visibility: visible

@@ -8,7 +8,8 @@
 			<div class="container miracle-title">
 				<div class="row">
 					<div class="col text-center">
-						<h2>Qui trình tư vấn da</h2>
+						<h2>
+						<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of></h2>
 					</div>
 				</div>
 			</div>
@@ -50,7 +51,7 @@
 							</p>
 							<a class="btn btn-primary" data-fancybox="send-info" data-src="#send-info" href="javascript:;"> <span class="mdi mdi-file-document"></span>Gửi
 								thông tin về làn da</a>
-							<div class="home-popup modal-form" id="send-info" style="display: none">
+							<!-- <div class="home-popup modal-form" id="send-info" style="display: none">
 								<h4>Gửi thông tin về làn da</h4>
 								<div>
 									<div class="form-group">
@@ -73,14 +74,14 @@
 										<button class="btn btn-primary" type="submit">Đăng ký</button>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<div class="col-12 col-sm-6">
 							<p>
 								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 							</p><a class="btn btn-primary" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span
 								 class="mdi mdi-tooltip-edit"></span>Đặt lịch hẹn ngay</a>
-							<div class="home-popup modal-form" id="book-meeting" style="display: none">
+							<!-- <div class="home-popup modal-form" id="book-meeting" style="display: none">
 								<h4>Đặt lịch hẹn ngay</h4>
 								<div>
 									<div class="form-group">
@@ -103,7 +104,7 @@
 										<button class="btn btn-primary" type="submit">Đăng ký</button>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -121,7 +122,7 @@
 						<xsl:value-of select="Title"></xsl:value-of>
 					</h4>
 					<p>
-						<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 					</p>
 				</div>
 			</div>

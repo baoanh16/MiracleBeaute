@@ -3,8 +3,8 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-        <div class="miracle-title text-center">
-            <h2>
+        <div class="miracle-title">
+            <h2 class="text-center">
                 Câu hỏi thường gặp
             </h2>
             <div class="list-group-item p-0">

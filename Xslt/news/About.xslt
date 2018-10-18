@@ -56,7 +56,7 @@
 						<h2 class="text-center">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h2>
-						<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode="ZoneNews2"></xsl:apply-templates>
 					</div>
 				</div>
 			</xsl:when>
@@ -66,7 +66,7 @@
 						<h2 class="text-center">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h2>
-						<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode="ZoneNews3"></xsl:apply-templates>
 					</div>
 				</div>
 			</xsl:when>
@@ -76,7 +76,7 @@
 						<h2 class="text-center">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h2>
-						<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode="ZoneNews4"></xsl:apply-templates>
 					</div>
 				</div>
 			</xsl:when>
@@ -86,7 +86,18 @@
 						<h2 class="text-center">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</h2>
-						<xsl:apply-templates select="News" mode="ZoneNews1"></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode="ZoneNews5"></xsl:apply-templates>
+					</div>
+				</div>
+			</xsl:when>
+			
+			<xsl:when test="position()=6">
+				<div class="col-12 sec-5" id="sec-6">
+					<div class="content miracle-title">
+						<h2 class="text-center">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</h2>
+						<xsl:apply-templates select="News" mode="ZoneNews6"></xsl:apply-templates>
 					</div>
 				</div>
 			</xsl:when>
@@ -107,6 +118,9 @@
 		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 	<xsl:template match="News" mode="ZoneNews5">
+		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
+	</xsl:template>
+	<xsl:template match="News" mode="ZoneNews6">
 		<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 	</xsl:template>
 

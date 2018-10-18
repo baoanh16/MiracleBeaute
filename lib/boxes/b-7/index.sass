@@ -26,8 +26,8 @@
 				+fz(1.09rem)
 				+fw(700)
 				padding-bottom: .8rem
-				// text-align: right
-				text-transform: capitalize
+				text-align: right
+				text-transform: uppercase
 				color: color-get($mau, den)
 				&.active, &:hover
 					color: color-get($mau, main)
@@ -62,7 +62,7 @@
 			width: 100%
 			&.img-one
 				+mar(0)
-	.sec-2
+	.sec-2, .sec-3
 		padding-bottom: 1rem
 		margin-bottom: 3rem
 		margin-top: 1rem
@@ -76,12 +76,12 @@
 			&.bold
 				+fw(400)
 				font-style: italic
-			&.sebmi-bold
+			&.semi-bold
 				+fw(600)
 		img
 			+pad(0)
 			width: 100%
-	.sec-3
+	.sec-4
 		padding-bottom: 40px
 		margin-bottom: 1rem
 		h2
@@ -118,7 +118,7 @@
 					padding-left: 58px
 					text-align: left
 					margin-top: 0
-	.sec-4
+	.sec-5
 		+mar(2rem 0)
 		h2
 			margin-bottom: 2.75rem
@@ -162,10 +162,6 @@
 			margin-top: 20px
 			+fz(16px)
 			text-align: center
-+media-breakpoint-down(md)
-	.canhcam-header-1
-		position: fixed
-		top: 0
-		left: 0
-		left: 50%
-		transform: translateX(-50%)
+	+media-breakpoint-down(md)
+		.content
+			text-align: justify

@@ -24,6 +24,7 @@
 				</div>
 			<!-- </div>
 		</section> -->
+		<a id="openfrm" class="fancybox" style="display:none;" data-fancybox="2book-meeting" data-src="#book-meeting" href="javascript:;">Hidden</a>
 	</xsl:template>
 
 	<xsl:template match="Zone">
@@ -69,51 +70,13 @@
 									<xsl:value-of select="Price"></xsl:value-of>
 								</xsl:if>
 						</p>
-						<a class="btn btn-primary" data-fancybox="book-meeting-1" data-src="#book-meeting-1"
-						href="javascript:;">
-						<xsl:attribute name="data-fancybox">
-							<xsl:text>book-meeting-</xsl:text>
-							<xsl:value-of select="position()"></xsl:value-of>
-						</xsl:attribute>
-
-						<xsl:attribute name="data-src">
-							<xsl:text>#book-meeting-</xsl:text>
-							<xsl:value-of select="position()"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="/ZoneList/BookNowText"></xsl:value-of>
-					</a>
+						<a class="btn btn-primary btn-book-meeting" href="#">
+							<xsl:value-of select="/ZoneList/BookNowText"></xsl:value-of>
+						</a>
 					</figcaption>
 				</figure>
 
 
-				<div class="home-popup modal-form" id="book-meeting-1" style="display: none">
-					<xsl:attribute name="id">
-						<xsl:text>book-meeting-</xsl:text>
-						<xsl:value-of select="position()"></xsl:value-of>
-					</xsl:attribute>
-					<h4>Đặt lịch hẹn ngay</h4>
-					<div>
-						<div class="form-group">
-							<label class="label" for="name">Tên</label>
-							<input class="form-control" name="name" placeholder="Tên"></input>
-						</div>
-						<div class="form-group">
-							<label class="label" for="phone">Số điện thoại</label>
-							<input class="form-control" name="phone" placeholder="Số điện thoại"></input>
-						</div>
-						<div class="form-group">
-							<label class="label" for="email">Email</label>
-							<input class="form-control" name="email" type="email" placeholder="Email"></input>
-						</div>
-						<div class="form-group">
-							<label class="label" for="date">Ngày hẹn</label>
-							<input class="form-control datepicker" name="date" type="date" value="2018-07-26"></input>
-						</div>
-						<div class="form-group">
-							<button class="btn btn-primary" type="submit">Đăng ký</button>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</xsl:template>

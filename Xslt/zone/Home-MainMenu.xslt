@@ -28,10 +28,10 @@
 					</a>
 					<div class="container lieutrinh-menu">
 						<div class="row no-gutters">
-							<div class="col-9">
+							<div class="col-lg-9">
 								<xsl:apply-templates select="Zone" mode="ChildContent"></xsl:apply-templates>
 							</div>
-							<div class="col-3 lieutrinh-list">
+							<div class="col-lg-3 lieutrinh-list">
 								<ul class="list-group list-unstyled">
 									<xsl:apply-templates select="Zone" mode="ChildList"></xsl:apply-templates>
 								</ul>
@@ -62,8 +62,29 @@
 					</div>
 				</li>
 			</xsl:when>
+			
+			<xsl:when test="position() = 7">
+				<li class="nav-item giaiphap">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>nav-item giaiphap active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a class="nav-link">
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</a>
+					<div class="container giaiphap-menu px-0">
+						<ul class="list-group list-unstyled">
+							<xsl:apply-templates select="Zone" mode="ChildGiaiPhap"></xsl:apply-templates>
+						</ul>
+					</div>
+				</li>
+			</xsl:when>
 
-			<xsl:when test="position() != 5 and position() != 6">
+			<xsl:when test="position() != 5 and position() != 6 and position() != 7">
 				<li class="nav-item">
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">
@@ -92,7 +113,7 @@
 					<xsl:text>row no-gutters lieutrinh-content active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<div class="col-4">
+			<div class="col-lg-4">
 				<div class="text">
 					<h4>
 						<xsl:value-of select="Title"></xsl:value-of>
@@ -112,7 +133,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="col-8">
+			<div class="col-lg-8">
 				<div class="img">
 					<img>
 					<xsl:attribute name="src">
@@ -137,13 +158,13 @@
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<span>
-					<xsl:value-of select="Title"></xsl:value-of>
-				</span>
+				<xsl:value-of select="SecondImageUrl"></xsl:value-of>
 				<br></br>
-				<!-- <xsl:text>(</xsl:text>
-				<xsl:value-of select="/Product/Code"></xsl:value-of>
-				<xsl:text>)</xsl:text> -->
+				<xsl:text>(</xsl:text>
+					<span>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</span>
+				<xsl:text>)</xsl:text>
 			</a>
 		</li>
 	</xsl:template>
@@ -155,7 +176,7 @@
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
 				<span>
-						<xsl:value-of select="Title"></xsl:value-of></span>
+				<xsl:value-of select="Title"></xsl:value-of></span>
 			</a>
 		</li>
 	</xsl:template>
