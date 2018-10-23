@@ -47,7 +47,9 @@
 		.job-content
 			display: none
 			.content
-				+pad(1.75rem 2.5rem)
+				+pad(1.2rem)
+				+media-breakpoint-up(lg)
+					+pad(1.75rem 2.5rem)
 				p
 					strong
 						+fz(1.2rem)
@@ -56,3 +58,9 @@
 			// 	+bor-rad(0)
 			// 	+fw(700)
 			// 	+pad(.75rem 2rem)
+		.career-frame
+			border: 1px solid rgba(0,0,0,.25)
+			max-width: 720px
+			width: 720px
+			padding: 30px
+			border-radius: 10px

@@ -4,13 +4,13 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="row">
+		<div class="kienthuc-danhgia owl-carousel">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 
 	<xsl:template match="News">
-		<div class="col-6 col-md-4">
+		<div class="item-wrap">
 			<a class="item">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>

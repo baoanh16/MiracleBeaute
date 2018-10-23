@@ -19,5 +19,6 @@
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
 		</div>
+			<xsl:apply-templates select="Zone"/>
 	</xsl:template>
 </xsl:stylesheet>

@@ -27,8 +27,8 @@
 			</div>
 		</div>
 		<div class="col-lg-7">
-			<div class="text text-center">
-				<h1>
+			<div class="text">
+				<h1 class="text-center">
 					<xsl:value-of select="Title"   disable-output-escaping="yes"/></h1>
 				<div class="html">
 					<xsl:value-of select="FullContent"   disable-output-escaping="yes"/>

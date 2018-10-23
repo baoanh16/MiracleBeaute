@@ -41,7 +41,26 @@
 					</div>
 				</li>
 			</xsl:when>
-
+			<xsl:when test="position() = 4">
+				<li class="nav-item giaiphap">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>nav-item giaiphap active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a class="nav-link">
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</a>
+					<div class="container giaiphap-menu px-0">
+						<ul class="list-group list-unstyled">
+							<xsl:apply-templates select="Zone" mode="ChildGiaiPhap"></xsl:apply-templates>
+						</ul>
+					</div>
+				</li>
+			</xsl:when>
 			<xsl:when test="position() = 6">
 				<li class="nav-item giaiphap">
 					<xsl:if test="IsActive='true'">
@@ -84,7 +103,7 @@
 				</li>
 			</xsl:when>
 
-			<xsl:when test="position() != 5 and position() != 6 and position() != 7">
+			<xsl:when test="position() != 5 and position() != 6 and position() != 7 and position() != 4">
 				<li class="nav-item">
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">

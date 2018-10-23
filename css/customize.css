@@ -100,3 +100,73 @@
 	font-size: inherit;
 	font-weight: 700;
 }
+
+
+
+.apply-form {
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	margin-top: 10px
+}
+
+.dialogpage {
+	padding: 20px
+}
+
+.apply-frm h4 {
+	margin-bottom: 10px
+}
+
+.apply-frm .col-left {
+	float: left;
+	width: 50%
+}
+
+@media (max-width:767.98px) {
+	.apply-frm .col-left {
+		width: 100%
+	}
+}
+
+.apply-frm .col-right {
+	float: right;
+	width: 50%
+}
+
+@media (max-width:767.98px) {
+	.apply-frm .col-right {
+		width: 100%
+	}
+}
+
+.apply-frm .form-group {
+	width: 100%;
+	clear: both
+}
+
+.apply-frm .form-group label {
+	font-size: .875rem;
+	font-weight: 500;
+	color: #999
+}
+
+.apply-frm .frm-btn input[type="submit"] {
+	line-height: 36px;
+	width: auto;
+	padding: 0 30px;
+	background: #be1f2d;
+	color: #fff
+}
+
+.apply-frm .ruFileWrap {
+	height: auto !important
+}
+
+.apply-frm .ruFileWrap input {
+	height: auto !important;
+	width: auto !important;
+	line-height: 16px !important;
+	font-size: 14px !important;
+	padding: 10px 20px !important;
+	margin: 0px !important
+}

@@ -52,12 +52,12 @@
 	<xsl:template match="News" mode="TuyenDung">
 		<xsl:if test="position()=1">
 			<div class="col-lg-6">
-				<div class="img d-none d-md-block">
+				<div class="img d-none d-lg-block">
 					<xsl:attribute name="bg-img">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 				</div>
-				<div class="img d-block d-md-none">
+				<div class="img d-block d-lg-none">
 					<img>
 					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -113,19 +113,20 @@
 					<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 					<p>
 					<a class="btn btn-primary toggle-apply-form" href="javascript:void(0);">ỨNG TUYỂN NGAY</a></p>
+					<div class="career-frame" style="display:none;">
+						<iframe class="frame" frameborder="0" width="100%" height="400px">
+							<xsl:attribute name="src">
+								<xsl:text>/News/JobApplyDialog.aspx?zoneid=</xsl:text>
+								<xsl:value-of select="ZoneId" disable-output-escaping="yes"/>
+								<xsl:text>&amp;NewsID=</xsl:text>
+								<xsl:value-of select="NewsId" disable-output-escaping="yes"/>
+							</xsl:attribute>
+						</iframe>
+					</div>
 				</div>
 			</div>
 			
-			<div class="career-frame" style="display:none;">
-				<iframe class="frame" frameborder="0" width="100%" height="400px">
-					<xsl:attribute name="src">
-						<xsl:text>/News/JobApplyDialog.aspx?zoneid=</xsl:text>
-						<xsl:value-of select="ZoneId" disable-output-escaping="yes"/>
-						<xsl:text>&amp;NewsID=</xsl:text>
-						<xsl:value-of select="NewsId" disable-output-escaping="yes"/>
-					</xsl:attribute>
-				</iframe>
-			</div>
+			
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

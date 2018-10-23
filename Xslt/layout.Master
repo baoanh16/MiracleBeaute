@@ -201,7 +201,7 @@ Facebook: https://fb.com/canhcam.vn
 									</div>
 									<div class="col-md">
 										<portal:ModuleWrapper ID="mdl263" runat="server" ConfigureModuleId="263" />
-										<portal:ModuleWrapper ID="mdl260" runat="server" ConfigureModuleId="260" />
+										<portal:ModuleWrapper ID="mdl314" runat="server" ConfigureModuleId="314" />
 									</div>
 								</div>
 							</div>

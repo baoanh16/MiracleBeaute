@@ -4,37 +4,35 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="row">
+		<div class="kienthuc-video owl-carousel">
 			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 		</div>
 	</xsl:template>
 
 	<xsl:template match="News">
-		<div class="col-6 col-md-4 item">
-			<div class="item">
-				<figure>
-					<a data-fancybox="" data-width="992" data-height="480">
-						<xsl:attribute name="href">
-							<xsl:value-of select="BriefContent"></xsl:value-of>
-						</xsl:attribute>
-						<div class="play-btn">
-							<img src="/Data/Sites/1/skins/default/img/play-btn.png">
-							</img>
-						</div>
-						<img>
-							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
+		<div class="item">
+			<figure>
+				<a data-fancybox="" data-width="992" data-height="480">
+					<xsl:attribute name="href">
+						<xsl:value-of select="BriefContent"></xsl:value-of>
+					</xsl:attribute>
+					<div class="play-btn">
+						<img src="/Data/Sites/1/skins/default/img/play-btn.png">
 						</img>
-					</a>
-					<figcaption>
-						<time>
-						<xsl:value-of select="CreatedDate"></xsl:value-of></time>
-						<h3>
-						<xsl:value-of select="Title"></xsl:value-of></h3>
-					</figcaption>
-				</figure>
-			</div>
+					</div>
+					<img class="img-fluid">
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
+				<figcaption>
+					<time>
+					<xsl:value-of select="CreatedDate"></xsl:value-of></time>
+					<h3>
+					<xsl:value-of select="Title"></xsl:value-of></h3>
+				</figcaption>
+			</figure>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
