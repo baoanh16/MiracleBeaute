@@ -101,7 +101,7 @@
 	font-weight: 700;
 }
 
-
+/* 
 
 .apply-form {
 	border-radius: 5px;
@@ -142,7 +142,7 @@
 .apply-frm .form-group {
 	width: 100%;
 	clear: both
-}
+}*/
 
 .apply-frm .form-group label {
 	font-size: .875rem;
@@ -154,7 +154,7 @@
 	line-height: 36px;
 	width: auto;
 	padding: 0 30px;
-	background: #be1f2d;
+	background: #d6b64f;
 	color: #fff
 }
 

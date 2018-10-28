@@ -242,4 +242,10 @@
 	<data name="PromotionOthersText" xml:space="preserve">
 		<value>Tin khuyến mãi khác</value>
 	</data>
+	<data name="BlogOthersText" xml:space="preserve">
+		<value>Bài viết khác</value>
+	</data>
+	<data name="ZoneTuyenDungUrlText" xml:space="preserve">
+		<value>/TUYEN-dung</value>
+	</data>
 </root>

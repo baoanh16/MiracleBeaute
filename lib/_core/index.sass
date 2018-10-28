@@ -371,6 +371,59 @@ header
 					font-weight: 600
 					a
 						color: #d6b64f
+.search-page
+	.page-header
+		h1
+			font-size: 24px
+			font-weight: 700
+	.searchcontrols
+		input
+			&:focus
+				background: color-rgba(color-get($mau, main),.15)
+			&.seachpage-btn
+				background: #d6b64f
+				border-color: #d6b64f
+				color: #ffffff
+				margin-left: 2rem
+	.btn-reindex
+		margin-top: 1rem
+		input
+			background: #d6b64f
+			border-color: #d6b64f
+			color: #ffffff
+	.searchresults
+		margin-top: 1rem
+		.searchresultlist
+			margin: 0
+			.searchresult
+				margin: 1.5rem 0 0 0
+				h3
+					a
+						font-size: 18px
+						font-weight: 500
+						&:hover
+							color: color-get($mau, main)
+	.modulepager
+		&:first-child
+			display: none
+		.pagination
+			justify-content: center
+			li
+				height: 30px
+				width: 30px
+				display: flex
+				align-items: center
+				justify-content: center
+				line-height: 1
+				font-size: 1rem
+				a
+					display: block
+				&.active, &:hover
+					font-size: 1.3rem
+					color: #d6b64f
+					font-weight: 600
+					a
+						color: #d6b64f
 .Module-299
 	.ModuleContent
 		#ctl00_mainContent_ctl03_pnlFormWizard
@@ -396,7 +449,6 @@ header
 							
 						label
 							display: block
-							text-align: center
 							font-size: 15px
 							font-weight: 300
 							&#ctl00_mainContent_ctl03_ctl0ba5ff32769e4e21970324e8f6688302_lbl0ba5ff32769e4e21970324e8f6688302:after
@@ -596,35 +648,23 @@ header
 				a
 					+mar(0 .5rem)
 
-// .dialogpage
-// 	#aspnetForm
-// 		.apply-frm
-// 			background: darken(color-get($mau,white),15%)
-// 			+pad(15px)
-// 			overflow-x: hidden
-// 			#ctl00_phMain_jobApply_upContact, #ctl00_phMain_jobApply_pnlNewComment
-// 				width: 100%
-// 				h4
-// 					font-size: 1.8rem
-// 				.label
-// 					font-size: 1.25rem
-// 				.col-left
-// 					.form-group
-// 						.form-control:focus
-// 							background: none
-// 				.btn.btn-default
-// 					cursor: pointer
-// 					padding-right: 1.75rem
-// 					padding-left: 1.75rem
-// 					border: 1px solid #d6b64f
-// 					transition: all 0.3s ease-in-out
-// 					text-transform: uppercase
-// 					border-radius: 20px
-// 					background: #d6b64f
-// 					color: white
-// 					+fw(600)
-// 				h4
-// 					color: #d6b64f
+.dialogpage
+	.apply-frm
+		#ctl00_phMain_jobApply_upContact
+			width: 100%
+			overflow: hidden
+		h4
+			font-size: 1.5rem
+			color: color-get($mau, main)
+			text-transform: uppercase
+		#ctl00_phMain_jobApply_pnlNewComment
+			label.label
+				font-weight: 500
+				font-size: 16px
+			.form-group
+				input
+					&:focus
+						background: color-rgba(color-get($mau, main),.15)
 
 
 .home-popup

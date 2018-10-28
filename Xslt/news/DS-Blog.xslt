@@ -25,7 +25,8 @@
 					<div class="boxzoom">
 						<img class="img-fluid">
 						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
+							<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+							<!-- <xsl:value-of select="ImageUrl"></xsl:value-of> -->
 						</xsl:attribute>
 						</img>
 					</div>
@@ -57,7 +58,8 @@
 					<div class="boxzoom">
 						<img class="img-fluid">
 						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
+							<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+							<!-- <xsl:value-of select="ImageUrl"></xsl:value-of> -->
 						</xsl:attribute>
 						</img>
 					</div>
@@ -84,7 +86,8 @@
 					<div class="boxzoom">
 						<img class="img-fluid">
 						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
+							<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+							<!-- <xsl:value-of select="ImageUrl"></xsl:value-of> -->
 						</xsl:attribute>
 						</img>
 					</div>
@@ -116,7 +119,8 @@
 						<div class="boxzoom">
 							<img class="img-fluid">
 							<xsl:attribute name="src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
+							<!-- <xsl:value-of select="ImageUrl"></xsl:value-of> -->
 							</xsl:attribute>
 							</img>
 						</div>
@@ -132,6 +136,11 @@
 					</figure>
 				</a>
 			</div>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="NewsImages">
+		<xsl:if test="position()=2">
+			<xsl:value-of select="ImageUrl"></xsl:value-of>
 		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
