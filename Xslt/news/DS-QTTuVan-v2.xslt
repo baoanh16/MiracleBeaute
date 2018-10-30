@@ -33,7 +33,7 @@
 	<xsl:template match="News">
 		<xsl:if test="position() = 1">
 			<div class="col-lg-4 cam-ket">
-				<div class="text" bg-img="/Data/Sites/1/skins/default/img/qt-tuvan/q_2.png">
+				<div class="text" bg-img="/Data/Sites/1/skins/default/img/home/home-bg-1.png">
 					<h3>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</h3>
