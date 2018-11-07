@@ -1,129 +1,61 @@
 {
-    "SETUP": {
-        "index": {
-            "header": [
-                "header/h-1",
-                "header/h-2"
-            ],
-            "body": [
-                "banner/b-1",
-                "banner/b-2",
-                "banner/b-3",
-                "banner/b-4",
-                "banner/b-5",
-                "banner/b-6",
-                "banner/b-7",
-                "carousel/c-1",
-                "home/h-1",
-                "home/h-2",
-                "home/h-3",
-                "home/h-4"
-            ],
-            "footer": [
-                "footer/f-1"
-            ]
-        },
-        "contact": {
-            "body": [
-                "form/f-1",
-                "map/m-1"
-            ]
-        },
-        "job": {
-            "body": [
-                "boxes/b-2",
-                "boxes/b-1"
-            ]
-        },
-        "product": {
-            "body": [
-                "shop/s-1"
-            ]
-        },
-        "product-detail": {
-            "body": [
-                "carousel/c-2",
-                "shop-details/s-1"
-            ]
-        },
-        "lieutrinh": {
-            "body": [
-                "lieutrinh/l-1"
-            ]
-        },
-        "giaphap": {
-            "body": [
-                "giaiphap/g-1"
-            ]
-        },
-        "giaphapchitiet": {
-            "body": [
-                "giaiphapchitiet/g-1",
-                "giaiphapchitiet/g-2",
-                "giaiphapchitiet/g-3"
-            ]
-        },
-        "lieutrinhchitiet": {
-            "body": [
-                "lieutrinhchitiet/l-1",
-                "carousel/c-3",
-                "carousel/c-7"
-            ]
-        },
-        "gioithieu": {
-            "body": [
-                "boxes/b-3",
-                "carousel/c-4",
-                "boxes/b-7"
-            ]
-        },
-        "giaiphap": {
-            "body": [
-                "boxes/b-5"
-            ]
-        },
-        "giaiphap-chitiet": {
-            "body": [
-                "giaiphapchitiet/g-1",
-                "carousel/c-5",
-                "carousel/c-6"
-            ]
-        },
-        "tintuc": {
-            "body": [
-                "news/n-1",
-                "news/n-2",
-                "nav/n-1"
-            ]
-        },
-        "tintuc-chitiet": {
-            "body": [
-                "news-details/n-1"
-            ]
-        },
-        "gallery": {
-            "body": [
-                "gallery/g-1"
-            ]
-        },
-        "video": {
-            "body": [
-                "gallery/g-2"
-            ]
-        },
-        "hotro": {
-            "body": [
-                "hotro/h-1",
-                "hotro/h-2",
-                "hotro/h-3",
-                "hotro/h-4",
-                "form/f-2"
-            ]
-        },
-        "qt-tuvan": {
-            "body": [
-                "boxes/b-6"
-            ]
-        }
-    }
+	"SETUP": {
+		"index": {
+			"header": [
+				"header/h-1",
+				"header/h-2"
+			],
+			"body": [
+				"banner/b-1",
+				"banner/b-2",
+				"banner/b-3",
+				"banner/b-4",
+				"banner/b-5",
+				"banner/b-6",
+				"banner/b-7",
+				"carousel/c-1",
+				"home/h-1",
+				"home/h-2",
+				"home/h-3",
+				"form/f-1",
+				"map/m-1",
+				"home/h-4",
+				"boxes/b-2",
+				"boxes/b-1",
+				"shop/s-1",
+				"carousel/c-2",
+				"shop-details/s-1",
+				"lieutrinh/l-1",
+				"giaiphap/g-1",
+				"giaiphapchitiet/g-1",
+				"giaiphapchitiet/g-2",
+				"giaiphapchitiet/g-3",
+				"lieutrinhchitiet/l-1",
+				"carousel/c-3",
+				"carousel/c-7",
+				"boxes/b-3",
+				"carousel/c-4",
+				"boxes/b-7",
+				"boxes/b-5",
+				"giaiphapchitiet/g-1",
+				"carousel/c-5",
+				"carousel/c-6",
+				"news/n-1",
+				"news/n-2",
+				"nav/n-1",
+				"news-details/n-1",
+				"gallery/g-1",
+				"gallery/g-2",
+				"hotro/h-1",
+				"hotro/h-2",
+				"hotro/h-3",
+				"hotro/h-4",
+				"form/f-2",
+				"boxes/b-6"
+			],
+			"footer": [
+				"footer/f-1"
+			]
+		}
+	}
 }

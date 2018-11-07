@@ -49,7 +49,7 @@
 	.search
 		margin-left: 2.5rem
 		position: relative
-		.search-toggle
+		.toggle-search
 			+media-breakpoint-up(lg)
 				display: none
 			span
@@ -63,8 +63,8 @@
 			background: rgba(0,0,0,.85)
 			+media-breakpoint-down(md)
 				width: 100%
-				height: 100vh
-				+pos(fixed,0 null null 0)
+				height: calc(100vh - 58px)
+				+pos(fixed,58.4px null null 0)
 			.searchbox
 				position: relative
 				+media-breakpoint-down(md)

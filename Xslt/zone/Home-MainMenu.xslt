@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<ul class="navbar-nav mt-0">
+		<ul class="list-unstyled main-nav mb-0">
 			<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 		</ul>
 	</xsl:template>
@@ -12,12 +12,13 @@
 
 
 	<xsl:template match="Zone">
+
 		<xsl:choose>
 			<xsl:when test="position() = 5">
-				<li class="nav-item lieutrinh">
+				<li class="nav-item dropdown-list mega-list">
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">
-							<xsl:text>nav-item lieutrinh active</xsl:text>
+							<xsl:text>nav-item dropdown-list mega-list active</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
 					<a class="nav-link">
@@ -26,14 +27,17 @@
 						</xsl:attribute>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</a>
-					<div class="container lieutrinh-menu">
+					<div class="mega-menu">
+						<div class="close-mega-menu d-lg-none">
+							<span class="mdi mdi-chevron-left"></span>
+						</div>
 						<div class="row no-gutters">
 							<div class="col-lg-9">
-								<xsl:apply-templates select="Zone" mode="ChildContent"></xsl:apply-templates>
+								<xsl:apply-templates select="Zone" mode="MegaContent"></xsl:apply-templates>
 							</div>
-							<div class="col-lg-3 lieutrinh-list">
+							<div class="col-lg-3 d-none d-lg-block mega-list">
 								<ul class="list-group list-unstyled">
-									<xsl:apply-templates select="Zone" mode="ChildList"></xsl:apply-templates>
+									<xsl:apply-templates select="Zone" mode="MegaList"></xsl:apply-templates>
 								</ul>
 							</div>
 							<!-- <xsl:apply-templates select="Zone" mode="LieuTrinh"></xsl:apply-templates> -->
@@ -41,70 +45,19 @@
 					</div>
 				</li>
 			</xsl:when>
-			<xsl:when test="position() = 4">
-				<li class="nav-item giaiphap">
-					<xsl:if test="IsActive='true'">
-						<xsl:attribute name="class">
-							<xsl:text>nav-item giaiphap active</xsl:text>
-						</xsl:attribute>
-					</xsl:if>
-					<a class="nav-link">
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</a>
-					<div class="container giaiphap-menu px-0">
-						<ul class="list-group list-unstyled">
-							<xsl:apply-templates select="Zone" mode="ChildGiaiPhap"></xsl:apply-templates>
-						</ul>
-					</div>
-				</li>
-			</xsl:when>
-			<xsl:when test="position() = 6">
-				<li class="nav-item giaiphap">
-					<xsl:if test="IsActive='true'">
-						<xsl:attribute name="class">
-							<xsl:text>nav-item giaiphap active</xsl:text>
-						</xsl:attribute>
-					</xsl:if>
-					<a class="nav-link">
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</a>
-					<div class="container giaiphap-menu px-0">
-						<ul class="list-group list-unstyled">
-							<xsl:apply-templates select="Zone" mode="ChildGiaiPhap"></xsl:apply-templates>
-						</ul>
-					</div>
-				</li>
-			</xsl:when>
-			
-			<xsl:when test="position() = 7">
-				<li class="nav-item giaiphap">
-					<xsl:if test="IsActive='true'">
-						<xsl:attribute name="class">
-							<xsl:text>nav-item giaiphap active</xsl:text>
-						</xsl:attribute>
-					</xsl:if>
-					<a class="nav-link">
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</a>
-					<div class="container giaiphap-menu px-0">
-						<ul class="list-group list-unstyled">
-							<xsl:apply-templates select="Zone" mode="ChildGiaiPhap"></xsl:apply-templates>
-						</ul>
-					</div>
-				</li>
-			</xsl:when>
 
-			<xsl:when test="position() != 5 and position() != 6 and position() != 7 and position() != 4">
+			<xsl:when test="position() != 5">
 				<li class="nav-item">
+					<xsl:if test="count(Zone) > 0">
+						<xsl:if test="IsActive='true'">
+							<xsl:attribute name="class">
+								<xsl:text>nav-item dropdown-list active</xsl:text>
+							</xsl:attribute>
+						</xsl:if>
+						<xsl:attribute name="class">
+							<xsl:text>nav-item dropdown-list</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">
 							<xsl:text>nav-item active</xsl:text>
@@ -116,30 +69,46 @@
 						</xsl:attribute>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</a>
+					<xsl:if test="count(Zone) > 0">
+						<ul class="list-unstyled child-list level-1">
+							<xsl:apply-templates select="Zone" mode="ChildLevel1"></xsl:apply-templates>
+						</ul>
+					</xsl:if>
 				</li>
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 
-	<xsl:template match="Zone" mode="ChildContent">
-		<div class="row no-gutters lieutrinh-content">
+	<xsl:template match="Zone" mode="MegaContent">
+		<div class="row no-gutters mega-content">
 			<xsl:attribute name="id">
 				<xsl:text>mega-</xsl:text>
 				<xsl:value-of select="position()"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:if test="position()=1">
 				<xsl:attribute name="class">
-					<xsl:text>row no-gutters lieutrinh-content active</xsl:text>
+					<xsl:text>row no-gutters mega-content active</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<div class="col-lg-4">
+			<div class="col-lg-8 order-lg-2">
+				<div class="img">
+					<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</div>
+			</div>
+			<div class="col-lg-4 order-lg-1">
 				<div class="text">
 					<h4>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</h4>
 					<p>
 						<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
-					
 					</p>
 					<p>
 						<a class="btn btn-detail">
@@ -152,22 +121,10 @@
 					</p>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div class="img">
-					<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
-					</img>
-				</div>
-			</div>
 		</div>
 	</xsl:template>
 
-	<xsl:template match="Zone" mode="ChildList">
+	<xsl:template match="Zone" mode="MegaList">
 		<li class="list-group-item">
 			<xsl:attribute name="data-link">
 				<xsl:text>#mega-</xsl:text>
@@ -180,23 +137,44 @@
 				<xsl:value-of select="SecondImageUrl"></xsl:value-of>
 				<br></br>
 				<xsl:text>(</xsl:text>
-					<span>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</span>
+				<span>
+					<xsl:value-of select="Title"></xsl:value-of>
+				</span>
 				<xsl:text>)</xsl:text>
 			</a>
 		</li>
 	</xsl:template>
 
-	<xsl:template match="Zone" mode="ChildGiaiPhap">
-		<li class="list-group-item">
-			<a>
+	<xsl:template match="Zone" mode="ChildLevel1">
+		<li class="nav-item">
+			<xsl:if test="count(Zone) > 0">
+				<xsl:attribute name="class">
+					<xsl:text>nav-item dropdown-list</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
+			<a class="nav-link">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<span>
-				<xsl:value-of select="Title"></xsl:value-of></span>
+				<xsl:value-of select="Title"></xsl:value-of>
+			</a>
+			<xsl:if test="count(Zone)> 0">
+				<ul class="list-unstyled child-list level-2">
+					<xsl:apply-templates select="Zone" mode="ChildLevel2"></xsl:apply-templates>
+				</ul>
+			</xsl:if>
+		</li>
+	</xsl:template>
+
+	<xsl:template match="Zone" mode="ChildLevel2">
+		<li class="nav-item">
+			<a class="nav-link">
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
 		</li>
 	</xsl:template>
+
 </xsl:stylesheet>

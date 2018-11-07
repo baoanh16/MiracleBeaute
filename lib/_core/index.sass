@@ -718,3 +718,16 @@ header
 	.fancybox-is-open 
 		.fancybox-bg
 			opacity: 0.75!important
+
+.backdrop
+	position: fixed
+	width: calc(100% - 375px)
+	height: calc(100vh - 58px)
+	top: 58px
+	right: 0
+	background: rgba(0,0,0,.85)
+	transform: translateX(100%)
+	z-index: 1000
+	transition: all .2s ease-in-out
+	&.push-off
+		transform: translateX(0)

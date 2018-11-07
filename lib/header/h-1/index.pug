@@ -1,6 +1,8 @@
 header
 	.canhcam-header-1
 		.container.d-flex.flex-wrap
+			.toggle-menu.d-lg-none
+				span.mdi.mdi-menu
 			.logo
 				a(href="index.html")
 					img(src="./img/logo.png")
@@ -9,13 +11,16 @@ header
 				a(href="tel:0932142224") 
 					span.mdi.mdi-phone 
 					span 0932 14 22 24
-			.search.d-none.d-lg-flex
-				.form-group.mb-0
-					input(type="text", name="search")
+			.search
+				.toggle-search
+					span.mdi.mdi-magnify
+				.Module.Module-211
+					.searchbox
+						input.searchinput(type='text')
+						button.searchbutton
+							| Tìm kiếm
 			.lang.d-none.d-lg-flex
 				a(href="#")
 					img(src="./img/icon/flag-2.png")
 				a(href="#")
 					img(src="./img/icon/flag-1.png")
-			.toggle-menu.d-lg-none
-				span.mdi.mdi-menu
