@@ -60,7 +60,7 @@
 					</xsl:if>
 					<xsl:if test="IsActive='true'">
 						<xsl:attribute name="class">
-							<xsl:text>nav-item active</xsl:text>
+							<xsl:text>nav-item dropdown-list active</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
 					<a class="nav-link">
