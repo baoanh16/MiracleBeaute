@@ -59,6 +59,19 @@
 						color: color-get($mau, trang)
 					&.disabled
 						+opacity(.5)
+			.owl-dots
+				.owl-dot
+					&:focus
+						outline: none
+					span
+						background: none
+						border: 1px solid color-get($mau, main)
+						width: .65rem
+						height: .65rem
+					&.active
+						span
+							box-shadow: 0 0 1.5px 5px color-rgba(color-get($mau, main), .35)
+							background: color-get($mau,main)
 			&.home-phantich
 				.item
 					figure

@@ -18,9 +18,6 @@
 				<xsl:attribute name="target">
 					<xsl:value-of select="Target"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:attribute name="title">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
 				<figure>
 					<div class="img">
 						<img class="img-fluid">

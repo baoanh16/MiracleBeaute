@@ -148,13 +148,12 @@ Facebook: https://fb.com/canhcam.vn
 					<asp:ContentPlaceHolder ID="altContent1" runat="server">
 					</asp:ContentPlaceHolder>
 				</asp:Panel>
-				<nav class="canhcam-header-2">
+			</header>
+					<nav class="canhcam-header-2">
 						<div class="container">
 							<portal:ModuleWrapper ID="mdl217" runat="server" ConfigureModuleId="217" />
 						</div>
-					</div>
-				</nav>
-			</header>
+					</nav>
 			<!-- ////////////// End Header ////////////// -->
 			<!-- ////////////// Main ////////////// -->
 			<main>

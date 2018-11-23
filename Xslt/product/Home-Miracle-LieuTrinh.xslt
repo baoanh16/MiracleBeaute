@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="owl-carousel home-lieutrinh">
+		<div class="owl-carousel home-lieutrinh owl-theme">
 			<xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
 		</div>
 	</xsl:template>

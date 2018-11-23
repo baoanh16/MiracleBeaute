@@ -1,6 +1,7 @@
 @import ../../_includes
 
 .canhcam-header-2
+	z-index: 9999
 	@media (max-width: 991.98px)
 		+pos(fixed, 58px null null 0)
 		background: white
@@ -196,3 +197,6 @@
 					&:hover
 						.mega-menu
 							display: block
+		&.fixed-menu
+			position: sticky
+			top: 0
