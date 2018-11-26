@@ -136,7 +136,8 @@
 			padding: 0rem 0
 			.item
 				overflow: hidden
-				padding-top: 1rem
+				padding-top: 0rem
+				// padding-top: 1rem
 				&:first-child
 					padding-top: 0
 				+media-breakpoint-up(sm)
@@ -174,7 +175,8 @@
 						min-height: 63px
 						display: -webkit-box
 						text-overflow: ellipsis
-						-webkit-line-clamp: 2
+						-webkit-line-clamp: 3
+						overflow: hidden
 						-webkit-box-orient: vertical
 						&:after
 							content: ''
