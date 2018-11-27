@@ -134,13 +134,13 @@
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:value-of select="SecondImageUrl"></xsl:value-of>
+				<xsl:value-of select="Title"></xsl:value-of>
 				<br></br>
-				<xsl:text>(</xsl:text>
+				<!-- <xsl:text>(</xsl:text>
 				<span>
 					<xsl:value-of select="Title"></xsl:value-of>
 				</span>
-				<xsl:text>)</xsl:text>
+				<xsl:text>)</xsl:text> -->
 			</a>
 		</li>
 	</xsl:template>

@@ -110,7 +110,7 @@
 			display: flex
 			justify-content: space-between
 			position: relative
-			.nav-item
+			>.nav-item
 				.nav-link
 					font-size: 15px
 					text-transform: uppercase
@@ -197,6 +197,9 @@
 					&:hover
 						.mega-menu
 							display: block
+				&.active
+					>.nav-link
+						background: color-get($mau, main)
 		&.fixed-menu
 			position: sticky
 			top: 0
