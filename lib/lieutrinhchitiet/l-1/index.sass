@@ -67,8 +67,14 @@
 					+ .btn-primary
 						+media-breakpoint-up(sm)
 							+mar(null auto)
-						+media-breakpoint-up(md)
+					+media-breakpoint-up(md)
+						margin-left: 0
+						+ .btn-primary
+							margin-left: 0
+					+media-breakpoint-up(lg)
+						+ .btn-primary
 							margin-left: 20px
+						
 		.slider-img
 			// +clearfix
 			.slider-control

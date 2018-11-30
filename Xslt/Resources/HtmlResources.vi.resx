@@ -248,4 +248,11 @@
 	<data name="ZoneTuyenDungUrlText" xml:space="preserve">
 		<value>/TUYEN-dung</value>
 	</data>
+	
+	<data name="WatchVideoTreatmentText" xml:space="preserve">
+		<value>Xem Video Liệu Trình</value>
+	</data>
+	<data name="ViewDetailText" xml:space="preserve">
+		<value>Xem chi tiết</value>
+	</data>
 </root>

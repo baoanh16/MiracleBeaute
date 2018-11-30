@@ -226,16 +226,16 @@
 		<value>PHÁT HUY HIỆU QUẢ VỚI</value>
 	</data>
 	<data name="BookNowText" xml:space="preserve">
-		<value>Đặt lịch ngay</value>
+		<value>Booking</value>
 	</data>
 	<data name="ProcessStepText" xml:space="preserve">
-		<value>Các bước quy trình</value>
+		<value>Treatment Steps</value>
 	</data>
 	<data name="ProductUseText" xml:space="preserve">
-		<value>Sản phẩm sử dụng</value>
+		<value>Using Products In Treatment</value>
 	</data>
 	<data name="ProcedureOtherText" xml:space="preserve">
-		<value>Các liệu trình khác</value>
+		<value>Another Treatment</value>
 	</data>
 	<data name="PromotionOthersText" xml:space="preserve">
 		<value>Tin khuyến mãi khác</value>
@@ -245,5 +245,12 @@
 	</data>
 	<data name="ZoneTuyenDungUrlText" xml:space="preserve">
 		<value>/TUYEN-dung</value>
+	</data>
+
+	<data name="WatchVideoTreatmentText" xml:space="preserve">
+		<value>Watch Video Treatment</value>
+	</data>
+	<data name="ViewDetailText" xml:space="preserve">
+		<value>Detail</value>
 	</data>
 </root>

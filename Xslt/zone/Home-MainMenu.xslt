@@ -115,7 +115,7 @@
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
-							Xem chi tiết
+							<xsl:value-of select="/ZoneList/ViewDetailText" disable-output-escaping="yes"></xsl:value-of>
 							<span class="lnr lnr-arrow-right"></span>
 						</a>
 					</p>

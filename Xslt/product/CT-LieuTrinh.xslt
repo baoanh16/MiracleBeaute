@@ -79,7 +79,7 @@
 											<xsl:apply-templates select="/ProductDetail/ProductAttributes"> </xsl:apply-templates>
 										</xsl:attribute>
 										<span class="fab fa-youtube"></span>
-										XEM VIDEO LIỆU TRÌNH
+										<xsl:value-of select="/ProductDetail/WatchVideoTreatmentText" disable-output-escaping="yes"></xsl:value-of>
 									</a>
 									<a class="btn btn-primary" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
 										<xsl:value-of select="/ProductDetail/BookNowText" disable-output-escaping="yes"></xsl:value-of>
