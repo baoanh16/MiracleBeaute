@@ -155,8 +155,17 @@
 			margin-top: 50px
 			.tab-content
 				border-bottom: 1px solid #dee2e6
-			.nav-tabs
-				flex-wrap: nowrap
+			nav
+				overflow-x: auto
+				padding-bottom: 5px
+				&::-webkit-scrollbar
+					background: rgba(0,0,0,.3)
+					height: 3px
+				&::-webkit-scrollbar-thumb
+					background: color-get($mau, main)
+				.nav-tabs
+					display: -webkit-box!important
+					// flex-wrap: nowrap
 			.nav-link
 				+bor-rad(10px 10px null null)
 				margin-right: .75rem
