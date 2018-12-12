@@ -49,62 +49,19 @@
 							<p>
 								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 							</p>
-							<a class="btn btn-primary" data-fancybox="send-info" data-src="#send-info" href="javascript:;"> <span class="mdi mdi-file-document"></span>Gửi
-								thông tin về làn da</a>
-							<!-- <div class="home-popup modal-form" id="send-info" style="display: none">
-								<h4>Gửi thông tin về làn da</h4>
-								<div>
-									<div class="form-group">
-										<label class="label" for="name">Tên</label>
-										<input class="form-control" name="name" placeholder="Tên"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="phone">Số điện thoại</label>
-										<input class="form-control" name="phone" placeholder="Số điện thoại"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="email">Email</label>
-										<input class="form-control" name="email" type="email" placeholder="Email"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="content">Nội dung</label>
-										<textarea class="form-control datepicker" name="content" placeholder="Nội dung" rows="3"></textarea>
-									</div>
-									<div class="form-group">
-										<button class="btn btn-primary" type="submit">Đăng ký</button>
-									</div>
-								</div>
-							</div> -->
+							<a class="btn btn-primary facybox" data-fancybox="send-info" data-src="#send-info" href="javascript:;">
+							<span class="mdi mdi-file-document"></span>
+							<xsl:value-of select="/NewsList/SendInfoText"/>
+							</a>
+							
 						</div>
 						<div class="col-12 col-sm-6">
 							<p>
 								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
-							</p><a class="btn btn-primary" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span
-								 class="mdi mdi-tooltip-edit"></span>Đặt lịch hẹn ngay</a>
-							<!-- <div class="home-popup modal-form" id="book-meeting" style="display: none">
-								<h4>Đặt lịch hẹn ngay</h4>
-								<div>
-									<div class="form-group">
-										<label class="label" for="name">Tên</label>
-										<input class="form-control" name="name" placeholder="Tên"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="phone">Số điện thoại</label>
-										<input class="form-control" name="phone" placeholder="Số điện thoại"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="email">Email</label>
-										<input class="form-control" name="email" type="email" placeholder="Email"></input>
-									</div>
-									<div class="form-group">
-										<label class="label" for="date">Ngày hẹn</label>
-										<input class="form-control datepicker" name="date" type="date" value="2018-07-26"></input>
-									</div>
-									<div class="form-group">
-										<button class="btn btn-primary" type="submit">Đăng ký</button>
-									</div>
-								</div>
-							</div> -->
+							</p><a class="btn btn-primary facybox" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span
+								 class="mdi mdi-tooltip-edit"></span>
+							<xsl:value-of select="/NewsList/BookMeetText"/></a>
+							
 						</div>
 					</div>
 				</div>

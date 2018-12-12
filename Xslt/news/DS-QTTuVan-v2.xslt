@@ -56,7 +56,7 @@
 							<p>
 								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 							</p>
-							<a class="btn btn-primary" data-fancybox="send-info" data-src="#send-info" href="javascript:;">
+							<a class="btn btn-primary facybox" data-fancybox="send-info" data-src="#send-info" href="javascript:;">
 								<span class="mdi mdi-file-document"></span>
 								Gửi thông tin về làn da
 							</a>
@@ -65,7 +65,7 @@
 							<p>
 								<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 							</p>
-							<a class="btn btn-primary" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span class="mdi mdi-tooltip-edit"></span>
+							<a class="btn btn-primary facybox" data-fancybox="book-meeting" data-src="#book-meeting" href="javascript:;"> <span class="mdi mdi-tooltip-edit"></span>
 								Đặt lịch hẹn ngay
 							</a>
 						</div>

@@ -723,7 +723,7 @@ header
 
 .backdrop
 	position: fixed
-	width: calc(100% - 375px)
+	width: calc(100% - 250px)
 	height: calc(100vh - 58px)
 	top: 58px
 	right: 0
@@ -738,3 +738,42 @@ header
 .cmsadminpanel
 	left: 0
 	right: initial
++media-breakpoint-down(md)
+	.Module-212
+		position: absolute
+		top: 46%
+		transform: translateY(-50%)
+		right: 50px
+
+
+.productpage 
+	.canhcam-header-2 
+		.main-nav 
+			>.nav-item
+				&:nth-child(4)
+					background: #d6b64f
+
+.lieutrinh
+	.canhcam-header-2 
+		.main-nav 
+			>.nav-item
+				&:nth-child(5)
+					background: #d6b64f
+
+.canhcam-giaiphap-page
+	.canhcam-header-2 
+		.main-nav 
+			>.nav-item
+				&:nth-child(6)
+					background: #d6b64f
+					
+.video-gallery,.image-gallery,.events,.canhcam-blog,.promotion
+	.canhcam-header-2 
+		.main-nav 
+			>.nav-item
+				&:nth-child(7)
+					background: #d6b64f
+
+.product-detail-page,.news-detail-page
+	.productdetailpager
+		display: none

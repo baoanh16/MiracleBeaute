@@ -60,19 +60,28 @@
 				h3
 					+fz(1.1rem)
 					+fw(600)
+					color: color-get($mau, den)
 					+transition(all .3s ease-in-out)
 					margin-bottom: 1.5rem
+					min-height: 63px
+					display: -webkit-box
+					text-overflow: ellipsis
+					-webkit-line-clamp: 3
+					overflow: hidden
+					-webkit-box-orient: vertical
+				.price
+					color: color-get($mau, den)
+					+fz(1.4rem)
+					+fw(600)
+					margin-bottom: .8rem
 					position: relative
 					&:after
 						content: ''
-						+pos(abs, calc(.8rem + 100%) 0 0 50%)
+						+pos(abs, -0.5rem null null 50%)
 						width: 50px
 						height: 1px
 						background: color-get($mau, xam-3)
 						transform: translateX(-50%)
-				.price
-					+fz(1.4rem)
-					color: color-get($mau, den)
 				.btn-primary
 					+pad(.375rem 1.75rem)
 					text-transform: uppercase

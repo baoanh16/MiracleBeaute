@@ -171,25 +171,25 @@
 						color: color-get($mau, den)
 						+transition(all .3s ease-in-out)
 						margin-bottom: 1.5rem
-						position: relative
 						min-height: 63px
 						display: -webkit-box
 						text-overflow: ellipsis
 						-webkit-line-clamp: 3
 						overflow: hidden
 						-webkit-box-orient: vertical
-						&:after
-							content: ''
-							+pos(abs, calc(.8rem + 100%) 0 0 50%)
-							width: 50px
-							height: 1px
-							background: color-get($mau, xam-3)
-							transform: translateX(-50%)
 					.price
 						color: color-get($mau, den)
 						+fz(1.4rem)
 						+fw(600)
 						margin-bottom: .8rem
+						position: relative
+						&:after
+							content: ''
+							+pos(abs, -0.5rem null null 50%)
+							width: 50px
+							height: 1px
+							background: color-get($mau, xam-3)
+							transform: translateX(-50%)
 					.btn-primary
 						+pad(.375rem 1.5rem)
 						text-transform: uppercase

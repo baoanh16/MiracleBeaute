@@ -4,7 +4,7 @@
 	<xsl:output method="html" indent="yes" />
 
 	<xsl:template match="/">
-		<div class="lang d-none d-lg-flex">
+		<div class="lang d-lg-flex">
 			<xsl:apply-templates select="/LanguageList/Language"></xsl:apply-templates>
 		</div>
 	</xsl:template>
