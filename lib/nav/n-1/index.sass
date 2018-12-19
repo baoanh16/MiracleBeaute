@@ -54,6 +54,16 @@
 			margin-bottom: 15px
 		&.owl-carousel
 			+pad(0 40px)
+
+			
+.hot
+	top: 25%
+	width: 130px
+	transform: translateX(80px)
+.book
+	top: calc(25% + 60px)
+	width: 165px
+	transform: translateX(115px)
 .hot,.book
 	box-shadow: 0 0 .5rem rgba(0,0,0,.5)
 	+mar(.75rem 0)
@@ -71,41 +81,37 @@
 	// overflow: hidden
 	.Module
 		height: 100%
+		width: 100%
 		.ModuleContent
 			height: 100%
-			a
+			.title
 				display: flex
-				width: 50px
-				height: 50px
-				justify-content: center
-				align-items: center
-				font-size: 24px
-				color: white
-	.title
-		// display: none
-		white-space: nowrap
-		h4
-			margin-bottom: 0
-			color: white
-			+pad(0 .75rem 0 0)
-		+media-breakpoint-up(lg)
-			display: block
-			opacity: 0
-			transition: all .2s ease-in-out
+				white-space: nowrap
+				>a
+					display: flex
+					height: 50px
+					width: 50px
+					justify-content: center
+					align-items: center
+					font-size: 24px
+					color: white
+				h4
+					margin-bottom: 0
+					display: flex
+					align-items: center
+					a
+						color: white
+						padding: 0
+				+media-breakpoint-up(lg)
+					transition: all .2s ease-in-out
+					h4
+						opacity: 0
+	+media-breakpoint-up(lg)
+		&:hover
+			transform: translateX(0)
+			.Module
+				.ModuleContent
+					.title
+						h4
+							opacity: 1
 			
-.hot
-	top: 25%
-	transform: translateX(65px)
-	+media-breakpoint-up(lg)
-		&:hover
-			transform: translateX(0)
-			.title
-				opacity: 1
-.book
-	top: calc(25% + 60px)
-	transform: translateX(120px)
-	+media-breakpoint-up(lg)
-		&:hover
-			transform: translateX(0)
-			.title
-				opacity: 1

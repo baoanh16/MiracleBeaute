@@ -217,15 +217,9 @@ Facebook: https://fb.com/canhcam.vn
 
 		<div class="hot">
 			<portal:ModuleWrapper ID="mdl319" runat="server" ConfigureModuleId="319" />
-			<div class="title">
-				<h4>Hotline</h4>
-			</div>
 		</div>
 		<div class="book">
 			<portal:ModuleWrapper ID="mdl320" runat="server" ConfigureModuleId="320" />
-			<div class="title">
-				<h4>Đặt lịch tư vấn</h4>
-			</div>
 		</div>
 		<!-- ////////////// End Footer ////////////// -->
 		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">

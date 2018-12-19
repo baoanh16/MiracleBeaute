@@ -255,4 +255,13 @@
 	<data name="ViewDetailText" xml:space="preserve">
 		<value>Xem chi tiết</value>
 	</data>
+	<data name="SendInfoText" xml:space="preserve">
+		<value>Gửi thông tin về làn da</value>
+	</data>
+	<data name="BookMeetText" xml:space="preserve">
+		<value>Đặt lịch hẹn ngay</value>
+	</data>
+	<data name="CommentText" xml:space="preserve">
+		<value>Bình Luận</value>
+	</data>
 </root>

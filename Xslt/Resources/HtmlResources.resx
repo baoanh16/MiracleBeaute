@@ -246,11 +246,19 @@
 	<data name="ZoneTuyenDungUrlText" xml:space="preserve">
 		<value>/TUYEN-dung</value>
 	</data>
-
 	<data name="WatchVideoTreatmentText" xml:space="preserve">
 		<value>Watch Video Treatment</value>
 	</data>
 	<data name="ViewDetailText" xml:space="preserve">
 		<value>Detail</value>
+	</data>
+	<data name="SendInfoText" xml:space="preserve">
+		<value>Send your skin information</value>
+	</data>
+	<data name="BookMeetText" xml:space="preserve">
+		<value>Book right away</value>
+	</data>
+	<data name="CommentText" xml:space="preserve">
+		<value>Comment</value>
 	</data>
 </root>

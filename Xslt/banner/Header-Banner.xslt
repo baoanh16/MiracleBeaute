@@ -11,11 +11,19 @@
 
 	<xsl:template match="Banner">
 		<div class="item">
+			<a>
+			<xsl:attribute name="href">
+				<xsl:value-of select="Url"></xsl:value-of>
+			</xsl:attribute>
+			<xsl:attribute name="target">
+				<xsl:value-of select="target"></xsl:value-of>
+			</xsl:attribute>
 			<img>
 			<xsl:attribute name="src">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 			</img>
+			</a>
 		</div>
 	</xsl:template>
 
