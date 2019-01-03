@@ -46,7 +46,7 @@
 								<hr>
 								</hr>
 								<div class="lists">
-									<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
+									<xsl:apply-templates select="/NewsDetail/NewsRelated"></xsl:apply-templates>
 								</div>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 	</xsl:template>
 
 
-	<xsl:template match="NewsOther">
+	<xsl:template match="NewsRelated">
 		<xsl:choose>
 			<xsl:when test="position()&lt;6">
 				<a class="item">
@@ -78,8 +78,10 @@
 						</xsl:attribute>
 						</img>
 						<figcaption>
-							<time>12.12.2017</time>
-							<h3>Hành trình chăm sóc da xuyên Việt 2018</h3>
+							<time>
+							<xsl:value-of select="CreatedDate"></xsl:value-of></time>
+							<h3>
+							<xsl:value-of select="Title"></xsl:value-of></h3>
 						</figcaption>
 					</figure>
 				</a>

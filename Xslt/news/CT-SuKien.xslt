@@ -78,8 +78,10 @@
 						</xsl:attribute>
 						</img>
 						<figcaption>
-							<time>12.12.2017</time>
-							<h3>Hành trình chăm sóc da xuyên Việt 2018</h3>
+							<time>
+							<xsl:value-of select="CreatedDate"></xsl:value-of></time>
+							<h3>
+							<xsl:value-of select="Title"></xsl:value-of></h3>
 						</figcaption>
 					</figure>
 				</a>
