@@ -16,7 +16,9 @@
 				</button>
 			</div> -->
 			<div id="filterSearch">
-				<h4><xsl:value-of select="/ZoneList/ProductListText"></xsl:value-of></h4>
+				<h4>
+					<xsl:value-of select="/ZoneList/ProductListText"></xsl:value-of>
+				</h4>
 				<ul class="list-group list-unstyled product-list">
 					<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 				</ul>
@@ -26,19 +28,13 @@
 
 	<xsl:template match="Zone">
 		<xsl:choose>
-			<xsl:when test="position() = 1">
-				<li class="dropdown-list active">
-					<h3>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</h3>
-					<ul class="list-group list-unstyled type-product">
-						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
-					</ul>
-				</li>
-			</xsl:when>
-			
 			<xsl:when test="position() = 5">
-				<li class="dropdown-list active">
+				<li class="dropdown-list">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>dropdown-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<a>
 						<xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
@@ -52,8 +48,37 @@
 					</ul> -->
 				</li>
 			</xsl:when>
-			<xsl:when test="position() != 1 and position() != 5">
+
+			<xsl:otherwise>
 				<li class="dropdown-list">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>dropdown-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<h3>
+						<xsl:value-of select="Title"></xsl:value-of>
+					</h3>
+					<ul class="list-group list-unstyled type-product" style="display:none">
+						<xsl:if test="IsActive='true'">
+							<xsl:attribute name="style">
+								<xsl:text>display:block</xsl:text>
+							</xsl:attribute>
+						</xsl:if>
+						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+					</ul>
+				</li>
+			</xsl:otherwise>
+
+
+			<!-- <xsl:when test="position() != 1 and position() != 5">
+				<li class="dropdown-list">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="class">
+							<xsl:text>dropdown-list active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					
 					<h3>
 						<xsl:value-of select="Title"></xsl:value-of>
 					</h3>
@@ -61,7 +86,7 @@
 						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
 					</ul>
 				</li>
-			</xsl:when>
+			</xsl:when> -->
 
 		</xsl:choose>
 	</xsl:template>
