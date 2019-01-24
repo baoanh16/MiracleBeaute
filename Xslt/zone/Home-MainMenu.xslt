@@ -147,7 +147,7 @@
 
 	<xsl:template match="Zone" mode="ChildLevel1">
 		<li class="nav-item">
-			<xsl:if test="count(Zone) > 0">
+			<xsl:if test="count(Zone) &gt; 0">
 				<xsl:attribute name="class">
 					<xsl:text>nav-item dropdown-list</xsl:text>
 				</xsl:attribute>
@@ -158,7 +158,7 @@
 				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
-			<xsl:if test="count(Zone)> 0">
+			<xsl:if test="count(Zone) &gt; 0">
 				<ul class="list-unstyled child-list level-2">
 					<xsl:apply-templates select="Zone" mode="ChildLevel2"></xsl:apply-templates>
 				</ul>
