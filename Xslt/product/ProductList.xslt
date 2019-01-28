@@ -115,11 +115,18 @@
                   <xsl:value-of select="OldPrice"></xsl:value-of>
                 </div>
               </xsl:if>
-              <xsl:if test="Price != ''">
-                <div class="new">
-                  <xsl:value-of select="Price"></xsl:value-of>
-                </div>
-              </xsl:if>
+           
+			  
+			  <xsl:choose>
+				  <xsl:when test="Price!=''">
+					<div class="new">
+					  <xsl:value-of select="Price"></xsl:value-of>
+					</div>
+				  </xsl:when>
+				  <xsl:otherwise>
+					<a href="tel:0932142224">Liên hệ</a>
+				  </xsl:otherwise>
+				</xsl:choose>
             </div>
             <a class="buy" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
               <xsl:attribute name="data-productid">

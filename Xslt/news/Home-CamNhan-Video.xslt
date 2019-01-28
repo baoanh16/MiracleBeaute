@@ -15,11 +15,8 @@
 
 	<xsl:template match="News">
 		<div class="item">
-			<iframe frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">
-				<xsl:attribute name="src">
-					<xsl:value-of select="BriefContent"></xsl:value-of>
-				</xsl:attribute>
-			</iframe>
+		
+					<xsl:value-of select="BriefContent"  disable-output-escaping="yes"/>
 		</div>
 	</xsl:template>
 

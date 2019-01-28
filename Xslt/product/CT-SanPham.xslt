@@ -53,13 +53,15 @@
                         <xsl:value-of select="/ProductDetail/PriceText"></xsl:value-of>
                       </td>
                       <td class="price">
-                        <xsl:if test="/ProductDetail/Price != ''">
-                          <xsl:value-of select="/ProductDetail/Price"></xsl:value-of>
-                        </xsl:if>
 
-                        <xsl:if test="/ProductDetail/Price = 0">
-                          <xsl:text>Liên hệ</xsl:text>
-                        </xsl:if>
+                        <xsl:choose>
+                          <xsl:when test="/ProductDetail/Price!=''">
+                            <xsl:value-of select="/ProductDetail/Price"></xsl:value-of>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <a href="tel:0932142224">Liên hệ</a>
+                          </xsl:otherwise>
+                        </xsl:choose>
                       </td>
                     </tr>
                   </tbody>
@@ -76,7 +78,8 @@
                   <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Nav"> </xsl:apply-templates>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" role="tab" href="#tabComment" aria-controls="tabComment" id="tabComment-tab">
-                      <xsl:text>Bình luận</xsl:text>
+
+                      <xsl:value-of select="/ProductDetail/CommentText" disable-output-escaping="yes"></xsl:value-of>
                     </a>
                   </li>
                 </ul>
@@ -84,7 +87,11 @@
               <div class="tab-content" id="nav-tabContent">
                 <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Content"></xsl:apply-templates>
                 <div class="tab-pane fade" id="tabComment" role="tabpanel" aria-labelledby="tabComment-tab">
-
+                  <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="10" data-width="100%">
+                    <xsl:attribute name="data-href">
+                      <xsl:value-of select="FullUrl"/>
+                    </xsl:attribute>
+                  </div>
                 </div>
               </div>
             </div>
@@ -108,7 +115,7 @@
           <div class="row">
             <div class="col">
               <div class="owl-carousel owl-theme">
-                <xsl:apply-templates select="/ProductDetail/ProductOther"> </xsl:apply-templates>
+                <xsl:apply-templates select="/ProductDetail/ProductRelated"> </xsl:apply-templates>
 
               </div>
             </div>
@@ -202,7 +209,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="ProductOther">
+  <xsl:template match="ProductRelated">
     <div class="item">
       <a class="item-detail">
         <xsl:attribute name="href">
@@ -227,6 +234,9 @@
             </h3>
             <p class="price">
               <xsl:value-of select="Price"></xsl:value-of>
+              <xsl:if test="/ProductDetail/Price = '' ">
+                <a tel=":0932142224">Liên hệ</a>
+              </xsl:if>
             </p>
             <div class="btn btn-primary">
               <xsl:value-of select="/ProductDetail/ReadNowText"></xsl:value-of>

@@ -81,7 +81,7 @@
 										<span class="fab fa-youtube"></span>
 										<xsl:value-of select="/ProductDetail/WatchVideoTreatmentText" disable-output-escaping="yes"></xsl:value-of>
 									</a>
-									<a class="btn btn-primary" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
+									<a class="btn btn-primary facybox" data-fancybox="popup-2" data-src="#book-meeting" href="javascript:;">
 										<xsl:value-of select="/ProductDetail/BookNowText" disable-output-escaping="yes"></xsl:value-of>
 									</a>
 								</div>
